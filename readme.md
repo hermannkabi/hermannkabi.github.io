@@ -5,3 +5,4 @@ Want to see my projects? Here they are!
 
 * [Diner](https://hermannkabi.github.io/diner)
 * [LearningAid](https://hermannkabi.github.io/learningaid)
+* [Quanto](https://hermannkabi.github.io/quanto)
