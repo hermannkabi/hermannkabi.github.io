@@ -1,10 +1,10 @@
-#LearningAid
+# LearningAid
 
 
-##What?
+## What?
 LearningAid is a project of mine that makes it easy to learn. Learning words is boring - there are often a lot of them and it takes a long time. So just use LearningAid.
 
-##How?
+## How?
 LearingAid is still in development and not available yet. It will be available for Android from the Play Store.
 
 First, create a game, or Helper as they are called in the app.
@@ -15,9 +15,9 @@ To play, just tap the Helper in the My Helpers screen. Hold the Helper to edit.
 Happy learning!
 
 
-##When?
+## When?
 The app needs new features and polish, but it is usable at this point so it will be public quite soon, but no promises!
 
-##Who?
+## Who?
 This is meant for everyone - for students learning new languages, for people who like to play quizzes and so on.
 
