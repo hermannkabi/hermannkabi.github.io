@@ -21,7 +21,7 @@
 
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 440px) {
   #addtext {
     display: none;
   }
