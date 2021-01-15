@@ -2,6 +2,19 @@
   #me {
     display: none;
   }
+}
+
+@media screen and (max-width: 300px) {
+  #addtext {
+    display: none;
+  }
+  #ending {
+    display: none;
+  }
+  .logoimg {
+    display: none;
+  }
+}
 
   .card {
     background-color: #a3ddcb;
@@ -20,7 +33,7 @@
     font-family: Montserrat;
     font-size: 60px;
   }
-}
+
 
 .button {
   background-color: blue;
