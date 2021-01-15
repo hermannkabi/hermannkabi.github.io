@@ -2,6 +2,23 @@
   #me {
     display: none;
   }
+  .card {
+    background-color: #a3ddcb;
+    width: 90%;
+    padding: 16px;
+    margin: auto;
+    height: 50vh;
+    border-radius: 9px;
+  }
+  .title {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 6%;
+    margin-left: 7%;
+    font-family: Montserrat;
+    font-size: 60px;
+  }
+
 }
 
 @media screen and (max-width: 300px) {
@@ -16,23 +33,6 @@
   }
 }
 
-  .card {
-    background-color: #a3ddcb;
-    width: 80%;
-    padding: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 50vh;
-    border-radius: 9px;
-  }
-  .title {
-    font-size: 20px;
-    margin: 0;
-    padding-top: 6%;
-    margin-left: 7%;
-    font-family: Montserrat;
-    font-size: 60px;
-  }
 
 
 .button {
@@ -83,12 +83,11 @@ body {
 
 .card {
   background-color: #a3ddcb;
-  width: 80%;
+  width: 90%;
   padding: 16px;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 80vh;
+  height: 55vh;
   border-radius: 9px;
+  margin: auto;
 }
 
 
