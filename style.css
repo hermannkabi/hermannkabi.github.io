@@ -49,10 +49,10 @@ body {
 
 .title {
   margin: 0;
-  padding-top: 6%;
+  padding-top: 5vh;
   margin-left: 7%;
   font-family: Montserrat;
-  font-size: 60px;
+  font-size: 7vh;
 }
 
 .main_content {
@@ -81,15 +81,15 @@ body {
 .card {
   background-color: #a3ddcb;
   width: 90%;
-  padding: 16px;
+  padding: 4%;
   height: 55vh;
-  border-radius: 9px;
+  border-radius: 1vh;
   margin: auto;
 }
 
 
 .linktitle {
-  font-size: 49px;
+  font-size: 6.6vh;
   font-family: Montserrat;
   font-weight: 400;
   color: white;
@@ -99,14 +99,14 @@ body {
 .title3 {
   margin: 0;
   color: grey;
-  font-size: 23px;
+  font-size: 4vh;
   font-family: Montserrat;
 }
 
 
 .title2{
   font-family: Montserrat;
-  font-size: 28px;
+  font-size: 4.5vh;
   color: white;
   margin: 0;
   padding: 16px;
