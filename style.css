@@ -37,12 +37,9 @@
 
 .button {
   background-color: blue;
-  border-radius: 7px;
   color: white;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 
