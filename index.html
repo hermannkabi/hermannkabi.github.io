@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
-
     <meta charset="utf-8">
-    <meta name="description" content="Hermann Käbi's Website. I am a developer using Flutter to create apps for fun">
-    <meta name="keywords" content="KabiApps, kabi apps, programmer, programming, developer, Hermann, Käbi, Hermann Käbi, flutter, app, website, github">
-    <meta name="author" content="Hermann Käbi">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/logoblue.jpg">
-    <title>Hermann Käbi's Personal Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermann Käbi</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&family=Sacramento&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="top_container">
+      <h1>I'm Hermann.</h1>
+      <h2>I like coding</h2>
 
-
-
-    <div class="header">
-      <img id="me" style="top:0; right: 0; height: 40vh; float: right; overflow: hidden;" src="assets/hermann.jpg" alt="Hermann">
-
-      <p class="title" style="overflow: none;">Hermann Käbi</p>
-      <span style="font-family: Montserrat; font-size: 5vh; color: grey; margin: 0; margin-left: 7%; display: block; overflow: auto;">My hobby is programming.</p>
+      <img style="text-align:right;" class="hermann-first" src="images/backgroundless-hermann.png" alt="Mountain">
 
     </div>
 
-    <div class="main_content">
-      <div style="height: 25vh">
-        <p class="title2">My Projects</p>
+    <div class="middle-container">
+      <div class="profile">
+        <h2>Hi</h2>
+        <p>I am Hermann and this is my site. I use Flutter to create apps for mobile and web. I am also currently learning web development</p>
       </div>
-      <div class="card" style="position: relative;">
-        <a href="https://hermannkabi.com/diner">
-          <img class="logoimg" src="assets/diner.jpg" alt="Diner Logo" style="height: 90px; float: right;">
-        </a>
+      <hr>
+      <div id="my-projects" class="skills">
+        <h2>My Projects</h2>
+        <h4>(Not all of them)</h4>
 
-        <a href="https://hermannkabi.com/diner" class="linktitle">Diner</a>
-        <p class="title3">WEB APP</p>
-        <p style="height: 2.5vh;"></p>
-        <p class="title4">Diner is a voting app.</p>
-        <br>
-        <p class="text">Can't decide a dinner place with your family?</p>
-        <span id="addtext" class="text" style="font-size: 25px; position: absolute; bottom: 4px; left: 4%; font-size: 3.5vh;">Don't choose arguing. Choose Diner.</span>
+        <div class="skill-row">
+          <a href="https://hermannkabi.com/quanto/surveys"><img class="skill-img-right" src="https://hermannkabi.com/assets/quantosurveys.png" alt="QuantoSurveys"></a>
+          <a href="https://hermannkabi.com/quanto/surveys"><h3 class="skill-text-right">QuantoSurveys</h3></a>
+          <p class="skill-text-right">QuantoSurveys is my latest big Flutter project. With QuantoSurveys you can create, distribute and analyse data from surveys made for your audience.<br>With the newest release of QuantoSurveys, you can switch on Exam Mode - grade and release marks on one website. And the best part? It happens with a flick of a switch.<br>QuantoSurveys is available on the <a href="https://hermannkabi.com/quanto/surveys">Web</a></p>
+        </div>
+        <div class="skill-row">
+          <a href="https://hermannkabi.com/files"><img class="skill-img-left" src="https://github.com/hermannkabi/hermannkabi.github.io/blob/9b13e6cea973eb75bda37d163c0db799322b4a73/assets/filesweb.png?raw=true" alt="Files"></a>
+          <a href="https://hermannkabi.com/files"><h3 class="skill-text-left" >Files</h3></a>
+          <p class="skill-text-left">I have quite a lot of files. Some of them are important to be accessible everywhere, so have to be on the cloud. The problem with Drive and Dropbox is, you have to log in and you don't always remeber these credentials.<br>I made Files, a simple web app that solves this problem. I can add and delete files and folders on the web. And they are available everywhere. <br>Check it out <a href="https://hermannkabi.com/files/">here</a></p>
+        </div>
+        <div class="skill-row">
+          <a href="https://hermannkabi.com/books"><img class="skill-img-right" src="https://hermannkabi.com/assets/logoblue.jpg" alt="Books by Hermann"></a>
+          <a href="https://hermannkabi.com/books"><h3 class="skill-text-right">Books by Hermann</h3></a>
+          <p class="skill-text-right">Books is a new and simple book-reviewing site. With Books, authorized members can add books, add or edit reviews, and much more. Other members can access all the reviews without logging in.<br>Books is made to be a kind of blog - where I keep track of the books I have read.<br>Books is available on the <a href="https://hermannkabi.com/books">Web</a></p>
+        </div>
+        <div class="skill-row">
+          <a href="https://hermannkabi.com/diner"><img class="skill-img-left" src="https://hermannkabi.com/assets/diner.jpg" alt=""></a>
+          <a href="https://hermannkabi.com/diner"><h3 class="skill-text-left" >Diner</h3></a>
+          <p class="skill-text-left">Diner is a voting app. You can use it to decide where to take-out. You can add customizable places and foods and vote for your favourite.<br><br>Diner is available as a web app <a href="https://hermannkabi.com/diner/#/">here</a></p>
+        </div>
       </div>
+      <hr>
+        <div class="contact-me">
+          <h2 style="color: #11999E;">Get In Touch</h2>
+          <h3 style="color: #11999E;">You can get in touch with me with the following info:</h3>
+          <a style="color: #11999E;" href="mailto:hermann.kaebi@gmail.com">hermann.kaebi@gmail.com</a>
+          <br>
+          <a href="#my-projects"><img style="height:40px;" src="images/arrow-up.gif" alt="Go Up"></a>
+          <br>
+        </div>
 
-    </div>
-    <div class="main_content" style="background-color: #79a3b1">
-      <p style="height: 25vh; margin: 0;"></p>
-      <div class="card" style=" position: relative; background-color: #456268">
-        <a href="https://hermannkabi.com/learningaid">
-          <img class="logoimg" style="overflow: hidden; float: right; height: 90px;" src="assets/LearningAid.jpg" alt="LearningAid">
-        </a>
-        <a class="linktitle" href="https://hermannkabi.com/learningaid">LearningAid</a>
-        <p class="title3">MOBILE APP</p>
-        <p class="title4" style="position: absolute; bottom: 32vh;">LearningAid makes it easy to learn!</p>
-        <br>
-        <span class="text" style="word-wrap: break-word; overflow: hidden; position: absolute; bottom: 16vh;">Learning words is boring - there are often a lot of them and it takes a long time</span>
-        <span class="text" id="addtext" style="position: absolute; font-size: 3.5vh; bottom: 4px; left: 4%;">So just use LearningAid</span>
-      </div>
-    </div>
-    <div class="main_content" style="height: 15vh; background-color: #30475e; position: relative;">
-      <span id="ending" style="padding: 0; text-align: center; margin: 0; top: 10px; font-family: Montserrat; font-size: 45px; color: white;">And that's it!</span>
-      <span style="bottom: 15px; left: 15px; position: absolute; margin: 0; color: white; font-family: Montserrat; font-size: 20px;">© 2021 Hermann Käbi</span>
-    </div>
+        <div class="bottom-container">
+          <a class="footer-link" href="https://github.com/hermannkabi">GitHub</a>
+          <a class="footer-link" href="https://twitter.com/HermannKabi">Twitter</a>
+          <a class="footer-link" href="https://hermannkabi.com/">Website</a>
+          <br>
+          <br>
+          <br>
+          <p style="color:#11999E;" id="bottom-cr">© 2021 Hermann Käbi.</p>
+        </div>
+
+
 
   </body>
 </html>
