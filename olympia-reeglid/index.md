@@ -1,16 +1,13 @@
 <h1>Olümpia reeglid</h1>
-<br>
 Viimati parandatud: 17.04.2021, 12:15
-<br>
 
 
 1. Kõik võistlejad peavad käituma vastavalt headele tavadele ja olümpiareeglitele. Reeglite või tavade rikkumise eest võib olümpiakomitee trahvida võistlejat punkti 2 alusel.
-<br>
 2. Reeglid
    <br>
    1) Sohitegemine, valetamine, tulemuste muutmine või selle üritamine on karistatav 5-10 trahvipunktiga või selle spordiala võistleja parima tulemuse annulleerimisega. (3.1.a)
    <br>      
-   a) Komitee heakskiidetud apellatsiooni alusel on olümpiakomiteel võimalik tulemusi muuta
+      a) Komitee heakskiidetud apellatsiooni alusel on olümpiakomiteel võimalik tulemusi muuta
       <br>
       b) Võistleja süüdimõistmisel on olümpiakomiteel võimalik tulemusi muuta
       
