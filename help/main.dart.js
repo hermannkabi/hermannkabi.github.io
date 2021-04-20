@@ -15336,7 +15336,7 @@ n=P.bu(7,null,!1,t.tI)
 m=t.S
 l=t.u3
 new N.EZ(null,q,!0,new P.aK(new P.a_(p,t.U),t.T),!1,null,!1,!1,null,$,null,!1,0,!1,$,null,new N.Jv(P.aW(t.M)),$,$,o,null,N.aok(),new Y.AE(N.aoj(),n,t.f7),!1,0,P.w(m,t.b1),P.bo(m),H.c([],l),H.c([],l),null,!1,C.eU,!0,!1,null,C.F,C.F,null,0,null,!1,P.jn(null,t.cL),new O.Tn(P.w(m,t.p6),P.w(t.yd,t.rY)),new D.PO(P.w(m,t.eK)),new G.Tq(),P.w(m,t.ln),$,!1,C.wO).Oi()}q=$.b8
-q.K7(new F.Bu(["teabrewer"],null))
+q.K7(new F.Bu(["teabrewer","learningaid"],null))
 q.zL()
 return P.a8(null,r)}})
 return P.a9($async$a40,r)}},U={
@@ -57125,12 +57125,12 @@ s.Kn()
 s.a.a27()},
 $S:1}
 V.kN.prototype={
-aC:function(){var s=t.z
-return new V.GS(P.av(["teabrewer","TeaBrewer"],s,s),["estonian","english"],P.av(["estonian",C.qc,"english",C.me],t.bi,t.yM),P.av(["teabrewer",H.c(["iOS"],t.i)],s,s),C.me,D.XQ(null),D.XQ(null),D.XQ(null),C.l)}}
+aC:function(){var s=t.z,r=t.i
+return new V.GS(P.av(["teabrewer","TeaBrewer","learningaid","LearningAid"],s,s),["estonian","english"],P.av(["estonian",C.qc,"english",C.me],t.bi,t.yM),P.av(["teabrewer",H.c(["iOS"],r),"learningaid",H.c(["Android","iOS"],r)],s,s),C.me,D.XQ(null),D.XQ(null),D.XQ(null),C.l)}}
 V.GS.prototype={
-Jo:function(a){var s,r,q,p=H.c([],t.oF)
-for(s=this.r.h(0,this.a.c),s.length,r=0;r<1;++r){q=s[r]
-p.push(new A.hP(new V.a_A(this,q,a),q,C.kr.h(0,200),C.yg.h(0,200),null))}return p},
+Jo:function(a){var s,r,q,p,o=H.c([],t.oF)
+for(s=this.r.h(0,this.a.c),r=s.length,q=0;q<s.length;s.length===r||(0,H.K)(s),++q){p=s[q]
+o.push(new A.hP(new V.a_A(this,p,a),p,C.kr.h(0,200),C.yg.h(0,200),null))}return o},
 IW:function(a){var s=this,r=null,q=B.a5l(H.c([E.a5O(s.z,L.R1(r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.lR("enterName"),r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),1,r),E.a5O(s.Q,L.R1(r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.lR("enterEmail"),r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),1,r),E.a5O(s.ch,L.R1(r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,s.lR(a),r,r,r,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),5,4),new A.hP(new V.a_y(s,a),"Submit form",C.yf.h(0,400),C.cv,r)],t.fQ),!0)
 return new A.re(q,C.j2,r)},
 b1:function(){var s,r=this,q="/?language="
