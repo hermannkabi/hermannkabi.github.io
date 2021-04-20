@@ -1,6 +1,6 @@
 {
-    "name": "Help",
-    "short_name": "Help",
+    "name": "help",
+    "short_name": "help",
     "start_url": "./",
     "display": "standalone",
     "background_color": "#0175C2",

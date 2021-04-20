@@ -57189,7 +57189,7 @@ V.rH.prototype={
 i:function(a){return this.b}}
 V.nb.prototype={
 V:function(a,b){var s=null
-return M.a5J(T.qr(T.a4N(H.c([L.jN("Welcome to Help",s,s,s,A.jP(s,s,s,s,s,s,s,s,s,s,s,34,s,C.bU,s,s,!0,s,s,s,s,s,s),s,s),T.oc(s,25,s),L.jN("If you need help with my apps or wish to report bugs, click the help button in the app's settings!",s,s,s,A.jP(s,s,s,s,s,s,s,s,s,s,s,27,s,C.B,s,s,!0,s,s,s,s,s,s),C.eZ,s)],t.fQ),C.qM),s,s))}}
+return M.a5J(T.qr(T.a4N(H.c([L.jN("Welcome to Help!",s,s,s,A.jP(s,s,s,s,s,s,s,s,s,s,s,34,s,C.bU,s,s,!0,s,s,s,s,s,s),s,s),T.oc(s,25,s),L.jN("If you need help with any my apps or wish to report bugs, click the help button in the app's settings!",s,s,s,A.jP(s,s,s,s,s,s,s,s,s,s,s,27,s,C.B,s,s,!0,s,s,s,s,s,s),C.eZ,s)],t.fQ),C.qM),s,s))}}
 F.Bu.prototype={
 V:function(a,b){return new S.rW("/",new F.Sh(this),"Help",X.aaO(null,C.na),!1,null)}}
 F.Sh.prototype={
