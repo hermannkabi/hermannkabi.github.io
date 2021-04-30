@@ -15336,7 +15336,7 @@ n=P.bu(7,null,!1,t.tI)
 m=t.S
 l=t.u3
 new N.EZ(null,q,!0,new P.aK(new P.a_(p,t.U),t.T),!1,null,!1,!1,null,$,null,!1,0,!1,$,null,new N.Jv(P.aW(t.M)),$,$,o,null,N.aok(),new Y.AE(N.aoj(),n,t.f7),!1,0,P.w(m,t.b1),P.bo(m),H.c([],l),H.c([],l),null,!1,C.eU,!0,!1,null,C.F,C.F,null,0,null,!1,P.jn(null,t.cL),new O.Tn(P.w(m,t.p6),P.w(t.yd,t.rY)),new D.PO(P.w(m,t.eK)),new G.Tq(),P.w(m,t.ln),$,!1,C.wO).Oi()}q=$.b8
-q.K7(new F.Bu(["teabrewer","learningaid"],null))
+q.K7(new F.Bu(["teabrewer","learningaid","golfitulemused"],null))
 q.zL()
 return P.a8(null,r)}})
 return P.a9($async$a40,r)}},U={
@@ -57126,7 +57126,7 @@ s.a.a27()},
 $S:1}
 V.kN.prototype={
 aC:function(){var s=t.z,r=t.i
-return new V.GS(P.av(["teabrewer","TeaBrewer","learningaid","LearningAid"],s,s),["estonian","english"],P.av(["estonian",C.qc,"english",C.me],t.bi,t.yM),P.av(["teabrewer",H.c(["iOS"],r),"learningaid",H.c(["Android","iOS"],r)],s,s),C.me,D.XQ(null),D.XQ(null),D.XQ(null),C.l)}}
+return new V.GS(P.av(["teabrewer","TeaBrewer","learningaid","LearningAid","golfitulemused","Golfitulemused"],s,s),["estonian","english"],P.av(["estonian",C.qc,"english",C.me],t.bi,t.yM),P.av(["teabrewer",H.c(["iOS"],r),"learningaid",H.c(["Android","iOS","Web"],r),"golfitulemused",H.c(["Android","iOS"],r)],s,s),C.me,D.XQ(null),D.XQ(null),D.XQ(null),C.l)}}
 V.GS.prototype={
 Jo:function(a){var s,r,q,p,o=H.c([],t.oF)
 for(s=this.r.h(0,this.a.c),r=s.length,q=0;q<s.length;s.length===r||(0,H.K)(s),++q){p=s[q]
