@@ -1,8 +1,7 @@
-# Loovtöö
-Hermann Käbi
-
-Loovtööd saab alla laadida siit:
+<h1 id="loovtoo">Loovtöö</h1>
+<p>Hermann Käbi</p>
+<p>Loovtööd saab alla laadida siit:
 <br>
-[PDF](https://hermannkabi.com/loovtoo/failid/loovtoo.pdf) (PDF-is ei tööta fail perfektselt, GIF failid ei mängi)
+<a href="https://hermannkabi.com/loovtoo/failid/loovtoo.pdf">PDF</a> (PDF-is ei tööta fail perfektselt, GIF failid ei mängi)
 <br>
-[DOCX](https://hermannkabi.com/loovtoo/failid/loovtoo.docx)
+<a href="https://hermannkabi.com/loovtoo/failid/loovtoo.docx">DOCX</a></p>
