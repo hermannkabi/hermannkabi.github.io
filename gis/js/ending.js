@@ -1,4 +1,12 @@
-var map1 = JSON.parse(sessionStorage.answers);
+var map1 = {};
+if(typeof(Storage)!=="undefined"){
+  try{
+    map1 = JSON.parse(sessionStorage.answers);
+  }catch(e){
+    console.log(e);
+    
+  }
+}
 var password = "";
 var vals = Object.keys(map1).map(function(key) {
     return map1[key];
