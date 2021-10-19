@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+  .question-img{
+    margin: 10px;
+  }
+  html{
+    text-align: center;
+  }
+}
+
+h1{
+  font-family: "Poppins";
+}
+
+.question-img{
+  max-height: 300px;
+  max-width: 300px;
+  margin: 20px 40px 30px 40px;
+  display: inline-block;
+  float: left;
+}
+.img-wrapper{
+  clear: left;
+}
+.question{
+  padding-top: 20px;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+.question-text{
+  font-family: "Poppins";
+}
+.question-link{
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  font-family: "Poppins";
+}
+.question-input{
+  height: 25px;
+  margin: 20px 0;
+}
+.question-btn{
+  height: 30px;
+  margin: 20px 0;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+}
