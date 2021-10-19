@@ -4,7 +4,7 @@ if(typeof(Storage)!=="undefined"){
     map1 = JSON.parse(sessionStorage.answers);
   }catch(e){
     console.log(e);
-    
+
   }
 }
 var password = "";

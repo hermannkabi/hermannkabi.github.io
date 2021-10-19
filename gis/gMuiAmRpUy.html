@@ -27,7 +27,7 @@
 
   </body>
   <script type="module">
-    import{getFileName} from "js/master.js";
+    import{getFileName} from "/gis/js/master.js";
     $(".question-btn").click(function (){
       var answer = $(".question-input").val();
       if(IsJsonString(sessionStorage.answers)){
@@ -44,5 +44,5 @@
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="/js/question.js" charset="utf-8"></script>
+  <script src="js/question.js" charset="utf-8"></script>
 </html>
