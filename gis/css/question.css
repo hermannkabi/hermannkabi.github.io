@@ -1,10 +1,15 @@
 @media only screen and (max-width: 600px) {
   .question-img{
-    margin: 10px;
+    margin: 0 !important;
+    max-height: 30vh !important;
+    max-width: 95vw !important;
+    float: none !important;
+    text-align: center !important;
   }
   html{
     text-align: center;
   }
+
 }
 
 body{
