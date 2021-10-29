@@ -10,7 +10,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Küsimus 1 | GIS päev 2021 viktoriin</title>
+    <title>Küsimus 2 | GIS päev 2021 viktoriin</title>
     <link rel="shortcut icon" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,23 +23,22 @@
   <body>
       <h1>Küsimus 1</h1>
       <div class="img-wrapper">
-        <img class="question-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/MID_building_16_September_2010.jpg/2560px-MID_building_16_September_2010.jpg" alt="Image">
-        <h2 class="question">Mis asutus selles majas tegutseb?</h2>
-        <p class="question-text">Vastuseks anna tänavanime (ladina tähestikus) 3. täht</p>
+        <img class="question-img" src="https://disease.sh/assets/img/flags/ee.png" alt="Image">
+        <h2 class="question">Mis riigi lipp see on?</h2>
+        <p class="question-text">Vastuseks anna riigi iseseisvumisaasta viimane number</p>
 
         <a class="question-link" onclick="showHint()">Vihje</a>
-        <p class="question-text hint-text" hidden>Google pakub võimalust pildi järgi otsida. Kirjuta otsingusse 'Google Reverse Image Search'</p>
+        <p class="question-text hint-text" hidden>Seda riiki võiks ikka teada</p>
       </div>
       <input class="question-input" type="text" name="" value="" placeholder="Vastus">
       <button class="question-btn" type="button" name="button">Järgmine küsimus</button>
-
   </body>
   <script type="module">
     import{getFileName} from "/gis/js/master.js";
     $(".question-btn").click(function (){
       var answer = $(".question-input").val();
       sessionStorage.answers += answer;
-      window.location.href = getFileName(2)+".html";
+      window.location.href = getFileName(3)+".html";
     });
 
   </script>
