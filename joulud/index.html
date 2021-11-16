@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jõulunimekiri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Mountains+of+Christmas&family=Shippori+Antique&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="title-wrapper">
+      <div class="title-card">
+        <h1>Jõulunimekiri</h1>
+        <h3>Hermanni kingiideed</h3>
+        <p style="color: black; font-size: 0.8rem;" class="present-desc">NB! Vajutades piltidele avanevad kohad, kust neid osta saab</p>
+      </div>
+      <div class="btn-wrapper">
+        <button class="button" type="button" name="button" onclick="openFullscreen()">ALUSTA</button>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div id="present-1" class="present-classic" style="display:inline-block;">
+        <h1 class="present-title">Raspberry Pi 4</h1>
+
+        <a href="https://raspberrypi.dk/en/product/raspberry-pi-4-model-b-starter-kit-2/"><img class="present-img" src="https://raspberrypi.dk/wp-content/uploads/2019/06/raspberry-pi-4-model-b-starter-kit-hvid.jpg" alt=""></a>
+        <a class="present-link" href="https://raspberrypi.dk/en/product/raspberry-pi-4-model-b-starter-kit-2/">Link</a>
+        <hr>
+        <p class="present-desc">Raspberry Pi on miniarvuti, mida saab programmeerida tegema pea ükskõik mida. Tahan seda, et luua oma server</p>
+        <button class="button" type="button" name="button" onclick="window.location.href='#present-2';">JÄRGMINE</button>
+
+      </div>
+      <div style="display:inline-block;" id="present-2" class="present-classic">
+        <h1>Elamuskingitus</h1>
+        <a href="https://kingitus.ee"><img class="present-img" src="https://cdn.kingitus.ee/cache/images/5f2ea7efa48bc1559d450ec73b1a4993.jpg" alt=""></a>
+        <a class="present-link" href="https://kingitus.ee">Link</a>
+        <hr>
+        <p class="present-desc">Eelmisestest aastatest on mulle eredalt meelde jäänud toredad kogemused, mis sain just tänu nendele kaartidele.</p>
+        <button class="button" type="button" name="button" onclick="window.location.href='#present-1';">EELMINE</button>
+
+        <button class="button" type="button" name="button" onclick="window.location.href='#present-3';">JÄRGMINE</button>
+
+      </div>
+    </div>
+    <div id="present-3" class="present-classic">
+      <h1>Riideese</h1>
+      <img class="present-img" src="https://world.benetton.com/dw/image/v2/BBSF_PRD/on/demandware.static/-/Sites-ucb-master/default/dwf8ebe7e3/images/Full_PDP_h/Benetton_21A_1002D1K01_108_BS_Full_PDP_h.jpg" alt="">
+      <hr>
+      <p class="present-desc">Samuti eelmistest aastatest meelde jäänud. On tore saada kingiks midagi, mida tegelikult ka igapäevaselt kasutad.</p>
+      <button class="button" type="button" name="button" onclick="window.location.href='#present-2';">EELMINE</button>
+
+      <button class="book-title-button button" type="button" name="button" onclick="window.location.href='#book-title';">JÄRGMINE</button>
+    </div>
+    <div id="book-title" class="present-grid present-classic">
+      <div style="grid-row:1" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+
+      </div>
+      <div style="grid-row:1" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+
+      </div>
+      <div style="grid-row:1" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+      </div>
+      <div style="grid-row:2;grid-column:2" class="">
+        <h1 class="present-title">RAAMATUD</h1>
+      </div>
+      <div style="grid-row:3" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+
+      </div>
+      <div style="grid-row:3" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+
+      </div>
+      <div style="grid-row:3" class="present-grid-element">
+        <img class="present-img" src="https://previews.123rf.com/images/konstantinmaslak/konstantinmaslak1904/konstantinmaslak190402334/121234324-blank-open-book-isolated-top-front-view-brown-hardcover-with-black.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid-container">
+      <div id="present-4" class="present-grid present-classic">
+        <div style="grid-row:1; grid-column: 2" class="">
+          <h1 style="margin-top:10px; margin-bottom: 0;" class="present-title">"Metro" seeria</h1>
+          <h2 class="present-title">Dmitry Glukhovsky</h2>
+          <hr>
+        </div>
+
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">1</h1>
+          <a class="book-link" href="https://rahvaraamat.ee/p/metro-2033/35569/et?isbn=9780575086258"><img class="present-img" src="https://m.media-amazon.com/images/I/51cADovcJtL.jpg" alt=""></a>
+
+        </div>
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">2</h1>
+          <a class="book-link" href="https://www.apollo.ee/metro-2034-250562.html"><img class="present-img" src="https://images-na.ssl-images-amazon.com/images/I/61t+ReLwwAL.jpg" alt=""></a>
+
+        </div>
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">3</h1>
+          <a class="book-link" href="https://rahvaraamat.ee/p/metro-2035/848159/et?isbn=9781539930723"><img class="present-img" src="https://m.media-amazon.com/images/I/411wiL0OiXL._AC_SY780_.jpg" alt=""></a>
+        </div>
+        <div style="grid-row:3; grid-column: 2" class="">
+          <button class="button" type="button" name="button" onclick="window.location.href='#present-3';">EELMINE</button>
+
+          <button class="button" type="button" name="button" onclick="window.location.href='#present-5';">JÄRGMINE</button>
+        </div>
+
+      </div>
+      <div id="present-5" class="present-classic present-grid">
+        <div style="grid-row:1; grid-column: 2" class="">
+          <h1 style="margin-top:10px; margin-bottom: 0;" class="present-title">"Foundation"</h1>
+          <h2 class="present-title">Isaac Asimov</h2>
+          <hr>
+        </div>
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">1</h1>
+          <a class="book-link" href="https://rahvaraamat.ee/p/foundation/828909/et?isbn=9780008117498"><img class="present-img" src="https://rahvaraamat.ee/_next/image?url=https%3A%2F%2Fra-product-image.s3.eu-north-1.amazonaws.com%2Ff6%2Fb3%2Ff6b37bac86525f389160f9636c9daa64_main_1.jpg&w=1920&q=75" alt=""></a>
+
+        </div>
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">2</h1>
+          <a class="book-link" href="https://rahvaraamat.ee/p/foundation-and-empire/830257/et?isbn=9780008117504"><img class="present-img" src="https://rahvaraamat.ee/_next/image?url=https%3A%2F%2Fra-product-image.s3.eu-north-1.amazonaws.com%2Fed%2F26%2Fed26a76094d072fd33a7414d07cd61c5_main_1.jpg&w=1920&q=75" alt=""></a>
+
+
+        </div>
+        <div style="grid-row:2" class="present-grid-element">
+          <h1 style="font-family: 'Karla'; font-size: 5rem;">3</h1>
+          <a class="book-link" href="https://rahvaraamat.ee/p/second-foundation/830256/et?isbn=9780008117511"><img class="present-img" src="https://rahvaraamat.ee/_next/image?url=https%3A%2F%2Fra-product-image.s3.eu-north-1.amazonaws.com%2F2c%2Fba%2F2cba75208d27ea76a546b7fc04912502_main_1.jpg&w=1920&q=75" alt=""></a>
+
+        </div>
+        <div style="grid-row:3; grid-column: 2" class="">
+          <button class="button" type="button" name="button" onclick="window.location.href='#present-4';">EELMINE</button>
+
+          <button class="button" type="button" name="button" onclick="window.location.href='#end'">EDASI</button>
+        </div>
+      </div>
+
+    </div>
+    <div id="end" class="present-classic">
+      <h1 class="present-title">Jõulunimekiri</h1>
+      <h2>Aitäh vaatamast!</h2>
+      <button class="button" type="button" name="button" onclick="window.location.href='#present-5';">EELMINE</button>
+      <button class="button" type="button" name="button" onclick="window.location.href='#';">ALGUSESSE</button>
+
+      <button class="download-button button" type="button" name="button">.DOCX FAIL</button>
+      <p class="present-desc">Kallis jõuluvana, loodan, et said inspiratsiooni!</p>
+      <p class="bottom-text" style="position: absolute; margin-top: 52vh; left: calc(50vw - 108px)">Hermann Käbi, november 2021</p>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>

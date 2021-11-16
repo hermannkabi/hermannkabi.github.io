@@ -1,0 +1,108 @@
+html{
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+body{
+  font-family: "Karla";
+  background-color: #ff5c58;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+h1{
+  font-family: "Mountains of Christmas";
+  font-size: 5rem;
+}
+.title-wrapper{
+  height: 60vh;
+}
+.title-card{
+  width: 50%;
+  margin: auto;
+  margin-top: calc(50vh - 154px);
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 20px 50px 30px 50px;
+  border-radius: 4px;
+  box-shadow: 4px 4px #F0E9D2;
+}
+.btn-wrapper{
+  text-align: center;
+}
+
+.button{
+  cursor: pointer;
+  margin: 20px 10px;
+  background-color: #105652;
+  color: white;
+  outline: none;
+  border: none;
+  height: 50px;
+  padding: 6px 35px;
+}
+.button:hover{
+  border: 2px solid green;
+}
+.button:active{
+  border-bottom: 4px solid green;
+  border-right: 4px solid green;
+}
+.present-classic{
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.present-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.present-title{
+  text-align: center;
+}
+.present-img{
+  display: block;
+  margin: auto;
+  max-height: 400px;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 1px 2px;
+}
+.present-link{
+  margin: 20px;
+  text-decoration: underline;
+  font-family: "Shippori Antique";
+  font-size: 25px;
+  color: white;
+}
+.present-desc{
+  font-family: "Shippori Antique";
+  font-size: 30px;
+
+}
+hr{
+  width: 30%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.book-link{
+  color: black;
+}
