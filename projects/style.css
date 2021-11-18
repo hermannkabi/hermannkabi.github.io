@@ -87,7 +87,7 @@ body{
   bottom: 0;
 }
 .link{
-  margin: 27px 45px;
+  margin: 27px 20px;
   display: block;
   color: white;
   text-decoration: none;
@@ -107,4 +107,27 @@ body{
   font-family: "Fira Mono";
   font-size: 1.5rem;
   margin: 15px 20px 20px 90px;
+}
+.project{
+  margin: 30px;
+}
+img{
+  max-width: 150px;
+  max-height: 150px;
+  float: right;
+  margin: 10px 20px;
+}
+.project-text{
+  margin: 20px;
+  font-family: "Fira Mono";
+  font-size: 1rem;
+}
+span.clear { clear: right; display: block; }
+hr{
+  width: 30%;
+  border: 0;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: white; 
 }
