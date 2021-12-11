@@ -83,7 +83,7 @@ body{
   margin-top: calc(310px - 159px);
   margin-bottom: 0;
   overflow: auto;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .link{
