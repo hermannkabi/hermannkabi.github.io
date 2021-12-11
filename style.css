@@ -41,8 +41,8 @@
     margin-left: 0 !important;
     margin-bottom: 0 !important;
   }
-  body{
-    overflow: hidden;
+  body, html{
+    overflow: hidden !important;
   }
 
 }
