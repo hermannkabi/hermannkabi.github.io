@@ -27,7 +27,7 @@ $("#submit-btn").click(function (){
                  "name":"Hermann Käbi"
               }
            ],
-           "subject":"Füüsika lahtine võistlus",
+           "subject":"Contact Hermann",
            "htmlContent":message
         })
       },
