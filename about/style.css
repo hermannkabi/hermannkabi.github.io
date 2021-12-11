@@ -123,3 +123,15 @@ img{
 .name{
   color: #B91646;
 }
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 5px;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
