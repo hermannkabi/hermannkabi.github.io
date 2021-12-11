@@ -65,7 +65,7 @@ body{
 }
 .white-stripe{
   background-color: white;
-  height: 5a00px;
+  height: 500px;
   width: 45px;
   position: absolute;
   bottom: 0;
@@ -96,7 +96,7 @@ body{
 }
 
 .link:hover{
-  text-decoration: underline 6px grey;
+  text-decoration: underline 6px #F5EEDC;
 }
 
 .bottom{
@@ -129,5 +129,5 @@ hr{
   height: 1px;
   margin-top: 30px;
   margin-bottom: 20px;
-  background-color: white; 
+  background-color: white;
 }

@@ -105,7 +105,7 @@ body{
 }
 
 .link:hover{
-  text-decoration: underline 6px grey;
+  text-decoration: underline 6px #F5EEDC;
 }
 
 .bottom{
