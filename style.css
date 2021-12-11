@@ -42,6 +42,7 @@
     margin-bottom: 0 !important;
   }
   body, html{
+    position:relative; // that's it
     overflow: hidden !important;
   }
 
