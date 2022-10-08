@@ -11,28 +11,30 @@
     
   </head>
   <body>
-    <div class="wrapper">
-      <h1 id="title" class="big-title">CONTACT ME</h1>
-      <div class="blue-stripe"></div>
-      <div class="link-box">
-        <div style="">
-          <input class="name" type="text" name="" value="" placeholder="Name">
-          <input class="email" type="email" name="" value="" placeholder="Email">
+    <form action="https://formsubmit.co/365da52d9d42c9ec402a974de10e2d52" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://hermannkabi.com">
+      <div class="wrapper">
+        <h1 id="title" class="big-title">CONTACT ME</h1>
+        <div class="blue-stripe"></div>
+        
+        <div class="link-box">
+          <div>
+            <input class="name" type="text" name="name" value="" placeholder="Name" required>
+            <input class="email" type="email" name="email" value="" placeholder="Email" required>
+          </div>
+          <div style="row: 1; column: 0;">
+            <textarea class="message" name="message" rows="12" cols="61" placeholder="Message" required></textarea>
+          </div>
+          <div style="row:2; column:0;">
+            <button id="submit-btn" type="submit" name="submit">SUBMIT</button>
+          </div>
         </div>
-        <div style="row: 1; column: 0;">
-          <textarea class="message" name="name" rows="12" cols="61" placeholder="Message"></textarea>
-        </div>
-        <div style="row:2; column:0;">
-          <p class="error"></p>
-          <p class="success"></p>
-
-          <button id="submit-btn" type="button" name="button">SUBMIT</button>
-        </div>
-
+        <div class="white-stripe"></div>
       </div>
-      <div class="white-stripe"></div>
-    </div>
+    </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
