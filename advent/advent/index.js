@@ -132,7 +132,7 @@ function getDay(){
     var nowDate = Date.now();
     var dayOfMonth = (new Date(nowDate)).getDate();
     // var dayOfMonth = 20;
-    if((nowDate >= 1671840000000)){
+    if((nowDate >= 1671840000000 || nowDate <= 1669500000000)){
         $(".shape-container").hide();
         $("#over").show();
     }
