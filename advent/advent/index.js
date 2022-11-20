@@ -40,6 +40,7 @@ var data = {
     3:{
         "color":colors[2],
         "shape":shapes[0],
+        "voucher":"Palju õnne! Sünnipäeva puhul võid minult tänase päeva jooksul 3 komplimenti küsida",
     },
     4:{
         "link":"https://hermannkabi.com",
@@ -59,6 +60,7 @@ var data = {
     8:{
         "color":colors[6],
         "shape":shapes[0],
+        "voucher":"Üks kord Volliga õue lähen ma (kehtib selle nädala lõpuni)",
     },
     9:{
         "color":colors[0],
@@ -74,6 +76,7 @@ var data = {
     12:{
         "color":colors[2],
         "shape":shapes[1],
+        "voucher":"Toon sulle täna poest sinu valikul midagi väikest",
     },
     13:{
         "color":colors[3],
@@ -119,6 +122,7 @@ var data = {
     23:{
         "color":colors[5],
         "shape":shapes[2],
+        "voucher":"Õpetan sulle soovi korral ühe jõululuuletuse",
     },
 
 }
