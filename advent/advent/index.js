@@ -125,8 +125,13 @@ var data = {
 
 
 function getDay(){
-    var dayOfMonth = (new Date(Date.now())).getDate();
+    var nowDate = Date.now();
+    var dayOfMonth = (new Date(nowDate)).getDate();
     // var dayOfMonth = 20;
+    if((nowDate >= 1671840000000)){
+        $(".shape-container").hide();
+        $("#over").show();
+    }
     if(data[dayOfMonth] != null){
         if(data[dayOfMonth]["link"] != null){
             console.log(data[dayOfMonth]["link"]);
