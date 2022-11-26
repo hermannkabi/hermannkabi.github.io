@@ -25,7 +25,7 @@ var humanReadable = {
 var data = {
     //November
     27:{
-        "link":"https://hermannkabi.com",
+        "link":"https://hermannkabi.com/advent/tere",
     },
     //December
 
@@ -43,7 +43,7 @@ var data = {
         "voucher":"Palju õnne! Sünnipäeva puhul võid minult tänase päeva jooksul 3 komplimenti küsida",
     },
     4:{
-        "link":"https://hermannkabi.com",
+        "link":"https://hermannkabi.com/advent/esimene",
     },
     5:{
         "color":colors[3],
@@ -71,7 +71,7 @@ var data = {
         "shape":shapes[1],
     },
     11:{
-        "link":"m",
+        "link":"https://hermannkabi.com/advent/teine",
     },
     12:{
         "color":colors[2],
@@ -100,7 +100,7 @@ var data = {
         "shape":shapes[2],
     },
     18:{
-        "link":"#",
+        "link":"https://hermannkabi.com/advent/kolmas",
     },
     19:{
         "color":colors[1],
