@@ -1,18 +1,18 @@
 body{
-    background-color: #b70f0a;
-    color: white;
-    font-family: "Josefin Slab", sans-serif;
+    background-color: black;
     text-align: center;
-    
 }
 
-.wish-container{
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h1{
+    font-family: "Tangerine", cursive;
+    color: #DEA057;
 }
-[hidden]{
-    display:none;
-  }
-  
+
+#center{
+    height: 390px;
+    width: 225px;
+    position: absolute;
+    top: calc(50% - 195px);
+    left: calc(50% - 108px);
+    text-align: center;
+}
