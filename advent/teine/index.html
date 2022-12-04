@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. advent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <h1>Tere, Iiris!</h1>
+    <h3>Kolmanda advendi puhul tegin sulle väikese mängu. Vajuta allolevat 'Alusta mängu' nuppu</h3>
+
+    <br><br><br><br><br><br><br>
+    <p id="error" hidden>
+        Error: Snapshot </code> is not defined in line 64. The error's stack path: 'C:\Users\herma\WebDev\advent', exception was found in file 'otsi_keldrist.py'
+    </p>
+    <button id="btn" onclick="onPress()" class="btn">Alusta mängu</button>
+
+
+    <script>
+        function onPress(){
+            setTimeout(() => {
+                alert("Error: File 'serve_game.js' was corrupted (at line 3484, position 12)");
+                alert("Error: File 'begin_game.js' was corrupted (at line 34, position 10)");
+                alert("Error: Aborting game. Errors occured, see terminal for details");
+                document.getElementById("error").style.display = "block";
+                document.getElementById("btn").style.display = "none";
+
+            }, 600);
+
+        
+        }
+    </script>
+</body>
+</html>

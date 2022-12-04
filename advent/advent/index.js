@@ -60,7 +60,7 @@ var data = {
     8:{
         "color":colors[6],
         "shape":shapes[0],
-        "voucher":"Üks kord Volliga õue lähen ma (kehtib selle nädala lõpuni)",
+        "voucher":"Üks kord Volliga õue lähen ma (kehtib selle nädala lõpuni) (Kehtib ainult nädalavahetusel)",
     },
     9:{
         "color":colors[0],
