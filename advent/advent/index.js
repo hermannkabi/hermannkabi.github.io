@@ -1,6 +1,6 @@
 var colors = {
     0:"#f06e9c", //Pink
-    1:"#dff716", //Yellow
+    1:"#FFFF00", //Yellow
     2:"#ff6624", //Orange
     3:"#48b547", //Green
     4:"#9c29b7", //Purple
