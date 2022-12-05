@@ -34,7 +34,7 @@ var data = {
         "shape":shapes[0],
     },
     2:{
-        "color":colors[1],
+        "color":colors[3],
         "shape":shapes[0],
     },
     3:{
@@ -46,7 +46,7 @@ var data = {
         "link":"https://hermannkabi.com/advent/esimene",
     },
     5:{
-        "color":colors[3],
+        "color":colors[1],
         "shape":shapes[0],
     },
     6:{
