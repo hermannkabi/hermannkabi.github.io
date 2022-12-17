@@ -27,11 +27,11 @@ function startGame(){
         }
 
         if(time == (12*60 + 33)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             childrenScore ++;
         }
         if(time == (18*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             childrenScore ++;
         }
        
@@ -60,31 +60,31 @@ function secondHalf(){
         
         
         if(time == (59*60 + 42)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             parentScore ++;
         }
         if(time == (68*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             parentScore ++;
         }
         if(time == (75*60 + 51)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             parentScore ++;
         }
         if(time == (77*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             childrenScore ++;
         }
         if(time == (81*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             childrenScore ++;
         }
         if(time == (87*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             parentScore ++;
         }
         if(time == (97*60)){
-            alert("VÄRAV!!!");
+            alert("LESSGOOO!!!");
             parentScore ++;
         }
         var mins = zeroPad(Math.floor(time / 60), 2);
