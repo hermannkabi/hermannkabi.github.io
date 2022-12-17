@@ -4,7 +4,8 @@ const message = params.get("m");
 
 
 if(message != null){
-    window.location.href = "";
+    const parameters = new URLSearchParams(window.location.search);
+    parameters.delete(m);
     $("#top-message").text(message);
     $("#top-message").removeClass("message-hidden");
 
