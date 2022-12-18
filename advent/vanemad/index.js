@@ -98,7 +98,8 @@ function secondHalf(){
 
 function endGame(){
     alert("Lõpuvile! Suurepärane 5:4 võit Marile ja Ristole");
-    $("#scoring").hide();
+    $("#text-content").text("Palju õnne, Mari ja Risto");
+$("#scoring").hide();
     $("#end").show();
     
 }
