@@ -100,7 +100,7 @@ var data = {
         "shape":shapes[2],
     },
     18:{
-        "link":"https://hermannkabi.com/advent/kolmas",
+        "link":"https://hermannkabi.com/advent/viimane",
     },
     19:{
         "color":colors[1],
