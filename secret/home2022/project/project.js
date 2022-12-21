@@ -17,8 +17,8 @@ if(id == "paremgolf"){
     <h2>Year</h2>
     <p>2022</p>
     <h2>www</h2>
-    <a href="https://play.google.com/store/apps/details?id=com.hermannkabi.golfitulemused">Google Play</a>
-    <a href="https://apps.apple.com/tt/app/golfitulemused/id1564386222">App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.hermannkabi.parem_golf">Google Play</a>
+    <a href="https://apps.apple.com/us/app/paremgolf/id6443506351">App Store</a>
     `);
     $("#app-info").append(`
     <h1>About the app</h1>
@@ -48,11 +48,11 @@ if(id == "paremgolf"){
     <h2>Year</h2>
     <p>2021</p>
     <h2>www</h2>
-    <a href="https://survey-me.web.app">Website</a>
+    <a href="https://hermannkabi.com/books">Website</a>
     `);
     $("#app-info").append(`
     <h1>About the app</h1>
-    <p>SurveyMe is a simple surveying and analysing app. It is an improved version of my app, Quanto Surveys, with better and more concise UI and reliability, but has less features.</p>
+    <p>BookReview is a simple website I made to record the books I've read and review them.</p>
     `);
 
 }else if(id == "golfitulemused"){
@@ -70,7 +70,7 @@ if(id == "paremgolf"){
     `);
     $("#app-info").append(`
     <h1>About the app</h1>
-    <p>SurveyMe is a simple surveying and analysing app. It is an improved version of my app, Quanto Surveys, with better and more concise UI and reliability, but has less features.</p>
+    <p>Golfitulemused was my golf app before ParemGolf. Now that the new app is avaiable, with more features and a better UI, Golfitulemused is not very useful anymore, but it is a nice reminder of where I started from and how far I've come.</p>
     `);
 
 }else{
