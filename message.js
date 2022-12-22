@@ -4,8 +4,7 @@ const message = params.get("m");
 
 
 if(message != null){
-    const parameters = new URLSearchParams(window.location.search);
-    parameters.delete(m);
+    
     $("#top-message").text(message);
     $("#top-message").removeClass("message-hidden");
 
@@ -14,6 +13,7 @@ if(message != null){
         $("#top-message").addClass("message-hidden");
         setTimeout(() => {
             $("#top-message").css("display", "none");
+            window.history.replaceState({}, document.title, "/" + "");
         }, 5000);
     }, 5000);
 
