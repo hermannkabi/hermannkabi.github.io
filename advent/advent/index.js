@@ -124,7 +124,9 @@ var data = {
         "shape":shapes[2],
         "voucher":"Õpetan sulle soovi korral ühe jõululuuletuse",
     },
-    24:"https://hermannkabi.com/advent/24"
+    24:{
+        "link":"https://hermannkabi.com/advent/24",
+    }
 
 }
 
