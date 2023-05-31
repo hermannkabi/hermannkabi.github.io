@@ -106,6 +106,18 @@
     .project h1::before, .technology h1::before{
         vertical-align: middle;
     }
+    
+    textarea, input{
+        width: 100% !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; 
+        font-size: 24px;
+    }
+
+    #about p {
+        max-width: 90% !important;
+    }
 
 }
 
@@ -443,14 +455,28 @@ a{
 
 
 input{
-    height: 50px;
+    height: 60px !important;
+}
+
+textarea{
+    height: 250px !important;
+    max-height: 250px;
 }
 
 textarea, input{
-    width: auto;
+    width: 400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    font-size: 24px;
 }
 
-
+.send-btn{
+    padding: 8px 24px;
+    height: 50px;
+    width: 150px;
+    font-size: 24px;
+}
 
 /* Before imgs */
 

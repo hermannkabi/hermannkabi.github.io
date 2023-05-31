@@ -257,10 +257,15 @@
     <section id="contact">
         <h1 class="section-header">võta <span class="primary-color">ühendust</span></h1>
 
-        <input type="text" placeholder="Nimi">
-        <input type="email" placeholder="E-posti aadress">
-        <textarea name="" id="" placeholder="Sinu sõnum..."></textarea><br>
-        <button class="filled">Saada kiri</button>
+        <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
+            <input type="hidden" name="_autoresponse" value="Tere! Tänan, et võtsid minuga ühendust. Vastan sulle esimesel võimalusel sellele e-posti aadressile.">
+            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=Thanks for getting in touch!">
+            <input name="Nimi" type="text" placeholder="Nimi">
+            <input name="E-post" type="email" placeholder="E-posti aadress">
+            <textarea name="Sõnum" id="" placeholder="Sinu sõnum..."></textarea><br>
+            <button class="filled send-btn">Saada</button>
+        </form>
     </section>
     
 
@@ -302,8 +307,11 @@
             const group = $(this).parent().attr("group");
             // Don't do anything if you just scroll through
             animatedOpacityTimeout = setTimeout(() => {
-                $(".project-parent[group="+group+"] .project").css("opacity", "0");
-                $(this).css("opacity", "1");
+                if($(window).width() > 900){
+                    $(".project-parent[group="+group+"] .project").css("opacity", "0");
+                    $(this).css("opacity", "1");
+
+                }
             }, 50);
             showContentTimeout = setTimeout(() => {
                 // if($(this).hasClass("scroll-help") && $(window).width() > 900){
