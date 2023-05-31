@@ -284,7 +284,7 @@ a{
 
 
 #about p{
-    max-width: 50%;
+    max-width: 60%;
 }
 
 
@@ -516,6 +516,10 @@ textarea, input{
     margin-right: 16px;
 }
 
+.python::before{
+    content: url(https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png?w=20);
+    margin-right: 16px;
+}
 .python-large::before{
     content: url(https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png?w=40);
     margin-right: 16px;
