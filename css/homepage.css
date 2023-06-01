@@ -531,6 +531,7 @@ textarea, input{
 .message-hidden{
     transition: opacity 400ms;
     opacity: 0;
+    pointer-events: none;
 }
 
 /* Before imgs */
