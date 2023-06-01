@@ -29,9 +29,11 @@
     <div id="navbar-margin"></div>
     
     <section>
-        <div class="popup message-hidden" id="top-message"></div>
         <div class="main-container">
+            <div class="popup message-hidden" id="top-message" hidden></div>
+
             <div class="top-spacer"></div>
+            
             <h1 class="main-heading first appear">Hei, hei, <br>olen <span class="primary-color">Hermann</span></h1>
             <img src="https://hermannkabi.com/assets/hermann.jpg" alt="Pilt" id="main-photo" class="third appear">
             <p class="subheader primary-color second appear"><span class="hobbies">Programmeerimis</span>entusiast</p>
@@ -262,7 +264,7 @@
         <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST" class="">
             <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
             <input type="hidden" name="_autoresponse" value="Tere! Tänan, et võtsid minuga ühendust. Vastan sulle esimesel võimalusel sellele e-posti aadressile.">
-            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=Thanks for getting in touch!">
+            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=thanks!">
             <input name="Nimi" type="text" placeholder="Nimi" class="animate-opacity">
             <input name="E-post" type="email" placeholder="E-posti aadress" class="animate-opacity">
             <textarea name="Sõnum" id="" placeholder="Sinu sõnum..." class="animate-opacity"></textarea><br>
@@ -368,7 +370,7 @@
 
 
         if(message != null){
-            console.log(message);
+            console.log(message == "thanks" ? "Aitäh kirjutamast! Vastan esimesel võimalusel!" : message);
             window.history.replaceState({}, document.title, "/" + "");
             $("#top-message").text(message);
             $("#top-message").removeClass("message-hidden");
