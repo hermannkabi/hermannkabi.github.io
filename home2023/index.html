@@ -29,25 +29,26 @@
     <div id="navbar-margin"></div>
     
     <section>
+        <div class="popup message-hidden" id="top-message"></div>
         <div class="main-container">
             <div class="top-spacer"></div>
-            <h1 class="main-heading">Hei, hei, <br>olen <span class="primary-color">Hermann</span></h1>
-            <img src="https://hermannkabi.com/assets/hermann.jpg" alt="Pilt" id="main-photo">
-            <p class="subheader primary-color"><span class="hobbies">Programmeerimis</span>entusiast</p>
+            <h1 class="main-heading first appear">Hei, hei, <br>olen <span class="primary-color">Hermann</span></h1>
+            <img src="https://hermannkabi.com/assets/hermann.jpg" alt="Pilt" id="main-photo" class="third appear">
+            <p class="subheader primary-color second appear"><span class="hobbies">Programmeerimis</span>entusiast</p>
         </div>
     </section>
 
     <section id="about">
         <h1 class="section-header">veidi <span class="primary-color">minust</span></h1>
-        <p>Hei, minu nimi on Hermann Käbi. Olen 17-aastane programmeerimisentusiast. Juba viimased paar aastat olen õppinud nii mobiili- kui veebiarendust. Sellest ajast olen loonud põnevaid ja ilusaid projekte, mõnda neist saad näha <a class="no-style" style="text-decoration: underline; cursor: pointer;" href="#projects">siin</a>.</p>
-        <p>Alustasin programmeerimist juba varakult, umbes seitsmeaastasena <span class="python">Pythonis</span>, kuid vaevalt saab mu paarirealiste koodide kirjutamist "päris" programmeerimiseks nimetada. Mida aeg edasi, seda komplekssemaks mu koodid muutusid ja seda enam unistasin tegelikult kasutatavate rakenduste tegemisest. Seda teekonda alustasin samuti Pythonis, Tkinteri teegiga todoliste tehes. Kuid siis, 2020. aasta aprillikuus, koroona-ajal kodus istudes otsustasin oma kauaaegse unistuse teoks teha. Alustasin mobiiliarenduse õppimist <span class="flutter">Flutteriga</span> loovtöö kirjutamiseks, kuid mõistsin kiiresti, et sedasorti rakenduste tegemine on minu suur kirg. Aasta hiljem, kui aega veidi rohkem, alustasin ka veebiarenduse õppimist. Mõlemad on mulle olulised ja täiendavad üksteist hästi. Veebiarendust olen aga viimasel ajal rohkem õppinud ja proovinud ka mõnda raamistikku, täpsemalt Djangot. Järgmisel aastal teen uurimistööd, kasutades selleks Laraveli, nii et suvel õpin ka seda.</p>
-        <p>Väljaspool koodi tegelen golfiga, jooksen ja muidugi ka õpin Tallinna Reaalkooli 10. klassis.</p>
+        <p class="animate-opacity">Hei, minu nimi on Hermann Käbi. Olen 17-aastane programmeerimisentusiast. Juba viimased paar aastat olen õppinud nii mobiili- kui veebiarendust. Sellest ajast olen loonud põnevaid ja ilusaid projekte, mõnda neist saad näha <a class="no-style" style="text-decoration: underline; cursor: pointer;" href="#projects">siin</a>.</p>
+        <p class="animate-opacity">Alustasin programmeerimist juba varakult, umbes seitsmeaastasena <span class="python">Pythonis</span>, kuid vaevalt saab mu paarirealiste koodide kirjutamist "päris" programmeerimiseks nimetada. Mida aeg edasi, seda komplekssemaks mu koodid muutusid ja seda enam unistasin tegelikult kasutatavate rakenduste tegemisest. Seda teekonda alustasin samuti Pythonis, Tkinteri teegiga todoliste tehes. Kuid siis, 2020. aasta aprillikuus, koroona-ajal kodus istudes otsustasin oma kauaaegse unistuse teoks teha. Alustasin mobiiliarenduse õppimist <span class="flutter">Flutteriga</span> loovtöö kirjutamiseks, kuid mõistsin kiiresti, et sedasorti rakenduste tegemine on minu suur kirg. Aasta hiljem, kui aega veidi rohkem, alustasin ka veebiarenduse õppimist. Mõlemad on mulle olulised ja täiendavad üksteist hästi. Veebiarendust olen aga viimasel ajal rohkem õppinud ja proovinud ka mõnda raamistikku, täpsemalt Djangot. Järgmisel aastal teen uurimistööd, kasutades selleks Laraveli, nii et suvel õpin ka seda.</p>
+        <p class="animate-opacity">Väljaspool koodi tegelen golfiga, jooksen ja muidugi ka õpin Tallinna Reaalkooli 10. klassis.</p>
     </section>
 
     <section id="projects">
         <h1 class="section-header">minu <span class="primary-color">projektid</span></h1>
-        <div class="project-parent" group="projects">
-            <div class="pro-div1 project" >
+        <div class="project-parent " group="projects">
+            <div class="pro-div1 project animate-opacity animate-opacity-100" >
                 <div class="project-front">
                     <h1>ParemGolf</h1>
                     <p>ParemGolf on golfiäpp, millega saab salvestada oma tulemusi, automaatselt statistikat teha ja ka rajal olles on see kasulik!</p>    
@@ -71,7 +72,7 @@
                     <p>Minu kõige edasijõudnum mobiiliprojekt, kus kasutasin kõiki teadmisi nii Flutterist kui kasutajaliidese loomisest. Kuigi tagantjärele teeksin mõned lahendused teisiti, on see siiski minu mobiiliarenduse viimane tase.</p>
                 </div>
             </div>
-            <div class="pro-div2 project" style="color: black;">
+            <div class="pro-div2 project animate-opacity animate-opacity-200" style="color: black;">
                 <div class="project-front">
                     <h1>Books</h1>
                     <p>Ülilihtne veebileht minu lemmikraamatute kajastamiseks</p>
@@ -92,7 +93,7 @@
                     <p>Hästi lihtne leht, mille tegin 2021. aastal veebiarenduse õppimiseks. Tagantjärele olen uhke kahe aasta taguse endaga, sest leht näeb ikka veel täitsa hea välja. Suurim probleem on, et ma ei viitsi üldse sinna loetud raamatuid lisada :)</p>
                 </div>
             </div>
-            <div class="pro-div3 project">
+            <div class="pro-div3 project animate-opacity animate-opacity-300">
                 <div class="project-front">
                     <h1>Füüsikaõppe leht (WIP)</h1>
                     <p>Põnev projekt, mille käigus õpin ise Djangot ja õpetan teistele füüsikat</p>    
@@ -113,7 +114,7 @@
                     <p>See on esimene tarkvara, mida olen teinud koostöös teiste arendajatega: nimelt on see projekt programmeerimistunni jaoks tehtud koos kahe minu klassivennaga. Ausalt öeldes tegin suurema osa (front-end + enamus back-endi ka) ise ära, aga jätsin ka klassikaaslastele võimaluse Djangot õppida. Selle lehe front-endi paindlikkusega jäin nii rahule, et kasutasin seda alusena ka oma kodulehel.</p>
                 </div>
             </div>
-            <div class="pro-div4 project">
+            <div class="pro-div4 project animate-opacity animate-opacity-400">
                 <div class="project-front">
                     <h1>Söögiaeg</h1>
                     <p>Kuidas küll otsustada, mida söögiks teha?</p>    
@@ -139,8 +140,8 @@
     <br><br><br>
     <section id="tech">
         <h1 class="section-header">minu <span class="primary-color">oskused</span></h1>
-        <div class="project-parent" group="techstack">
-            <div class="tech-div1 project">
+        <div class="project-parent animate-opacity" group="techstack">
+            <div class="tech-div1 project animate-opacity animate-opacity-100">
                 <div class="project-front">
                     <h1 class="flutter-large">Flutter</h1>
                 </div>
@@ -160,7 +161,7 @@
                     <p>Flutter on esimene kasutajaliidese raamistik, mida olen õppinud. Mulle jäi kohe silma selle süntaksi arusaadavus ja ülisuur kohandatavus. Lisaks avaldas muljet ka pidevad uuendused (nt null safety, uued platvormid jne) ja paljude teekide olemasolu. Nende tegurite mõjul olen jäänud Flutterit rõõmuga kasutama siiani ja tegin seda kasutades 8. klassis ka <a href="https://hermannkabi.com/loovtoo/">loovtöö</a>.</p>
                 </div>
             </div>
-            <div class="tech-div2 project scroll-help">
+            <div class="tech-div2 project scroll-help animate-opacity animate-opacity-200">
                 <div class="project-front">
                     <h1 class="python-large">Python</h1>
                 </div>
@@ -180,7 +181,7 @@
                     <p>Ei, õppimise algusaasta ei valeta! Küll aga on veidi eksitav. 2013 aastal olin ma seitsme-aastane ja just programmeerimisega alustanud. See tähendas aastaid oma lõbuks paarirealiste Pythoni-koodikeste kirjutamist. Siis võtsin kätte ja kirjutasin paar funktsionaalset programmi (meelde tuleb näiteks peastarvutamise õppeprogramm). Vahepeale jäi kindlasti hea mitu aastat muid tegevusi, aga mingi hetk avastasin Tkinteri näol kasutajaliidese ja tegin Todoliste, paroolihaldureid jne. Ühel hetkel jäi ka sellest väheks ja siis hakkasingi õppima mobiiliarendust. Pythonisse tõi mind tagasi gümnaasiumisse minek, sest  kasutame seda programmeerimistunnis. </p>
                 </div>
             </div>
-            <div class="tech-div3 project">
+            <div class="tech-div3 project animate-opacity animate-opacity-300">
                 <div class="project-front">
                     <h1 class="django-large">Django</h1>
                 </div>
@@ -200,7 +201,7 @@
                     <p>Djangot hakkasin õppima programmeerimistunni jaoks 2023. aasta aprillis. See oli mulle uus ja väga paeluv kogemus. Raamistik tegi nii palju, nagu routing, andmebaas, autentimine jne, sinu eest ise ära, et kogu arendusprotsess tundus veidike sohitegemisena. Siiski olen õppinud,et just nii peakski veebiarendus käima.</p>
                 </div>
             </div>
-            <div class="tech-div4 project">
+            <div class="tech-div4 project animate-opacity animate-opacity-400">
                 <div class="project-front">
                     <h1 class="js-large">JavaScript</h1>
                 </div>
@@ -220,7 +221,7 @@
                     <p>Alates veebiarenduse õppimise algusega olen internetis kohanud palju JavaScripti-vastaseid. Olen nõus, et sellel keelel on palju veidrusi, kuid süntaks on väga klassikaline ja erakordselt lihtne, tehes veebiarenduse kättesaadavamaks. Seetõttu olen mina oma paariaastase kogemuse põhjalt valmis ütlema, et JavaScript ei ole minu arvates sugugi halb keel. Ka seesama veebileht kasutab ju seda.</p>
                 </div>
             </div>
-            <div class="tech-div5 project scroll-help">
+            <div class="tech-div5 project scroll-help animate-opacity animate-opacity-500">
                 <div class="project-front">
                     <h1 class="html-large">HTML</h1>
                 </div>
@@ -236,7 +237,7 @@
                     <p>Kui ma veebiarenduse õppimisega alustasin, kartsin HTMLi enim. Olin 7. klassis informaatikas väga pinnapealselt seda keelt õppinud ja teadsin, et süntaks on veider, palju tähiseid ja ebatavalisi sümboleid. Minu suureks üllatuseks osutus selline tagi-põhine süntaks erakordselt võimsaks ja kasutades koodiredaktorit pole ka vaja pidevalt suurem-kui märke otsida.</p>
                 </div>
             </div>
-            <div class="tech-div6 project scroll-help">
+            <div class="tech-div6 project scroll-help animate-opacity animate-opacity-600">
                 <div class="project-front">
                     <h1 class="css-large">CSS</h1>
                 </div>
@@ -258,14 +259,14 @@
     <section id="contact">
         <h1 class="section-header">võta <span class="primary-color">ühendust</span></h1>
 
-        <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST">
+        <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST" class="">
             <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
             <input type="hidden" name="_autoresponse" value="Tere! Tänan, et võtsid minuga ühendust. Vastan sulle esimesel võimalusel sellele e-posti aadressile.">
             <input type="hidden" name="_next" value="https://hermannkabi.com/?m=Thanks for getting in touch!">
-            <input name="Nimi" type="text" placeholder="Nimi">
-            <input name="E-post" type="email" placeholder="E-posti aadress">
-            <textarea name="Sõnum" id="" placeholder="Sinu sõnum..."></textarea><br>
-            <button class="filled send-btn">Saada</button>
+            <input name="Nimi" type="text" placeholder="Nimi" class="animate-opacity">
+            <input name="E-post" type="email" placeholder="E-posti aadress" class="animate-opacity">
+            <textarea name="Sõnum" id="" placeholder="Sinu sõnum..." class="animate-opacity"></textarea><br>
+            <button class="filled send-btn animate-opacity">Saada</button>
         </form>
     </section>
     
@@ -343,5 +344,45 @@
 
         });
     </script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("visible-opacity");
+                }
+            });
+        });
+
+        const hidden = document.querySelectorAll(".animate-opacity");
+
+        hidden.forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const message = params.get("m");
+
+
+        if(message != null){
+            console.log(message);
+            window.history.replaceState({}, document.title, "/" + "");
+            $("#top-message").text(message);
+            $("#top-message").removeClass("message-hidden");
+
+            $("#top-message").addClass("message");
+            setTimeout(() => {
+                $("#top-message").addClass("message-hidden");
+                setTimeout(() => {
+                    $("#top-message").css("display", "none");
+                }, 5000);
+            }, 5000);
+
+        }
+    </script>
+    
 </body>
 </html>

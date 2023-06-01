@@ -241,6 +241,16 @@ a{
     max-width: 60%;
 }
 
+@keyframes opacity-anim{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .appear{
     opacity: 0;
     animation: opacity-anim;
@@ -305,6 +315,7 @@ a{
     background-color: #1c2431E6;
     border-radius: 24px;
     /* aspect-ratio: 1; */
+    animation: ;
 }
 
 .pro-div2 {
@@ -476,6 +487,51 @@ textarea, input{
     height: 50px;
     width: 150px;
     font-size: 24px;
+}
+
+
+.animate-opacity{
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.animate-opacity-100{
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+}
+
+.animate-opacity-200{
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+}
+
+.animate-opacity-300{
+    opacity: 0;
+    transition: opacity 600ms ease-out;
+}
+
+.animate-opacity-400{
+    opacity: 0;
+    transition: opacity 700ms ease-out;
+}
+
+.animate-opacity-500{
+    opacity: 0;
+    transition: opacity 800ms ease-out;
+}
+
+.animate-opacity-600{
+    opacity: 0;
+    transition: opacity 900ms ease-out;
+}
+
+.visible-opacity{
+    opacity: 1;
+}
+
+.message-hidden{
+    transition: opacity 400ms;
+    opacity: 0;
 }
 
 /* Before imgs */
