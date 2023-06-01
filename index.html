@@ -265,7 +265,7 @@
         <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST" class="">
             <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
             <input type="hidden" name="_autoresponse" value="Tere! Tänan, et võtsid minuga ühendust. Vastan sulle esimesel võimalusel sellele e-posti aadressile.">
-            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=thanks!">
+            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=thanks">
             <input name="Nimi" type="text" placeholder="Nimi" class="animate-opacity">
             <input name="E-post" type="email" placeholder="E-posti aadress" class="animate-opacity">
             <textarea name="Sõnum" id="" placeholder="Sinu sõnum..." class="animate-opacity"></textarea><br>
@@ -371,18 +371,18 @@
 
 
         if(message != null){
-            console.log(message == "thanks" ? "Aitäh kirjutamast! Vastan esimesel võimalusel!" : message);
-            window.history.replaceState({}, document.title, "/" + "");
-            $("#top-message").text(message);
+            $("#top-message").text(message == "thanks" ? "Aitäh kirjutamast! Vastan esimesel võimalusel!" : message);
             $("#top-message").removeClass("message-hidden");
-
+            $("#top-message").css("display", "block");
             $("#top-message").addClass("message");
+            window.history.replaceState({}, document.title, "/" + "");
+
             setTimeout(() => {
                 $("#top-message").addClass("message-hidden");
                 setTimeout(() => {
                     $("#top-message").css("display", "none");
                 }, 5000);
-            }, 5000);
+            }, 7000);
 
         }
     </script>
