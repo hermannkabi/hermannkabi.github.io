@@ -532,10 +532,8 @@ textarea, input{
     transition: opacity 400ms;
     opacity: 0;
     pointer-events: none;
-    margin: none;
-    padding: none;
-    height: 0;
-    width: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Before imgs */
