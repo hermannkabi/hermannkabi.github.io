@@ -1,10 +1,3 @@
 ## Hermann Käbi
-I am a programming enthusiast. I am currently developing apps with Flutter and Dart.
-I am also learning web development with HTML, CSS and JavaScript.
-Want to see my projects? Here they are!
-
-* [Diner](https://hermannkabi.github.io/diner)
-* [LearningAid](https://hermannkabi.github.io/learningaid)
-* [Quanto](https://hermannkabi.github.io/quanto)
-
-
+I am a programming enthusiast. I develop apps with Flutter and Dart.
+I also develop websites with HTML, CSS and JavaScript, and in the future, Django and Laravel.
