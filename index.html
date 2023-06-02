@@ -378,6 +378,11 @@
                 $("#top-message").addClass("message-hidden");
                 setTimeout(() => {
                     $("#top-message").css("display", "none");
+                    $("#top-message").css("margin", "0");
+                    $("#top-message").css("padding", "0");
+                    $("#top-message").css("height", "0");
+                    $("#top-message").css("width", "0");
+
                 }, 5000);
             }, 7000);
 
