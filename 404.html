@@ -12,6 +12,141 @@
 
 </head>
 <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bebas+Neue&family=Lora:ital@1&display=swap');
+
+        :root{
+            --primary-color: 80, 155, 250;
+            --background-color: 32, 49, 69;
+            --text-color: 223, 240, 237;
+            --secondary-color: 152, 157, 163;
+            --secondary-text-color: 255, 255, 255;
+            --highlight-color: #ABCDEF;
+            --navbar-color: 32, 49, 80;
+            --navbar-text-color: white;
+            --main-font: "Atkinson Hyperlegible";
+            --outline: 1px solid rgb(var(--primary-color));
+        }
+        body, html{
+            background: rgb(var(--background-color));
+            font-family: var(--main-font);
+            margin: 4px 16px;
+            color: rgb(var(--text-color));
+            transition: background-color 100ms, color 100ms;
+            -webkit-transition: background-color 100ms;
+            -o-transition: background-color 100ms;
+            -moz-transition: background-color 100ms;
+            scroll-behavior: smooth;
+        }
+        @media only screen and (max-width: 1300px) {
+            #main-photo{
+                float: right;
+                right: 25px !important;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            #main-photo{
+                display: none !important;
+            }
+            .subheader{
+                font-size: 20px !important;
+            }
+        }
+
+        .subheader{
+            font-size: 30px;
+        }
+        .popup{
+            text-align: center;
+            outline: var(--outline);
+            padding: 12px 12px;
+            width: max-content;
+            max-width: 50%;
+            color: rgb(var(--primary-color));
+            text-align: center;
+            border-radius: 6px;
+            transition: all 100ms linear;
+            margin: 8px auto;
+            cursor: pointer;
+        }
+
+        .popup:hover{
+            background-color: rgba(var(--primary-color), 0.1);
+        }
+
+        .popup::before{
+            content: "ⓘ";
+            margin-right: 8px;
+        }
+
+        .popup ul, .popup ol{
+            text-align: start;
+        }
+
+        .top-spacer{
+            height: 50px;
+        }
+
+        .main-heading{
+            font-size: 75px;
+            font-weight: normal;
+        }
+
+        @keyframes opacity-anim{
+            0%{
+                opacity: 0;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+        .appear{
+            opacity: 0;
+            animation: opacity-anim;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            animation-duration: 500ms;
+            transition: filter 750ms;
+        }
+
+        .first.appear{
+            animation-delay: 500ms;
+        }
+
+        .second.appear{
+            animation-delay: 900ms;
+        }
+
+        .third.appear{
+            animation-delay: 1500ms;
+        }
+
+        #main-photo{
+            position: absolute;
+            top: 175px;
+            right: 200px;
+            transform: rotate(-14deg);
+            max-height: 600px;
+            max-width: 350px;
+            -webkit-box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
+            -moz-box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
+            box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
+            /* transform-style: preserve-3d; */
+            transition: transform 300ms linear;
+            pointer-events: none;
+        }
+
+        #main-photo:hover{
+            background-color: red;
+            transform: rotateX(180deg) !important;
+        }
+
+        .primary-color{
+            color: rgb(var(--primary-color));
+        }
+    </style>
     <div class="main-container">
             <div class="top-spacer"></div>
             <h1 class="main-heading first appear"><span class="primary-color">404</span></h1>
