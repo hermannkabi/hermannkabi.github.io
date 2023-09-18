@@ -2,98 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | Hermann Käbi</title>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>404 - Ei leitud</title>
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
 
 </head>
 <body>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bebas+Neue&family=Lora:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway:wght@400;700&display=swap');
 
         :root{
-            --primary-color: 80, 155, 250;
-            --background-color: 32, 49, 69;
-            --text-color: 223, 240, 237;
-            --secondary-color: 152, 157, 163;
-            --secondary-text-color: 255, 255, 255;
-            --highlight-color: #ABCDEF;
-            --navbar-color: 32, 49, 80;
-            --navbar-text-color: white;
-            --main-font: "Atkinson Hyperlegible";
-            --outline: 1px solid rgb(var(--primary-color));
+            --background-color: #18171A;
+            --primary-color: #FF0909;
+            --text-font: "Raleway";
+            --display-font:"Major Mono Display";
+            --large-font: 72px;
+            --medium-font: 28px;
+            --small-font: 16px;
+
+            --btn-border-width:1px;
         }
-        body, html{
-            background: rgb(var(--background-color));
-            font-family: var(--main-font);
-            margin: 4px 16px;
-            color: rgb(var(--text-color));
-            transition: background-color 100ms, color 100ms;
-            -webkit-transition: background-color 100ms;
-            -o-transition: background-color 100ms;
-            -moz-transition: background-color 100ms;
-            scroll-behavior: smooth;
-        }
-        @media only screen and (max-width: 1300px) {
-            #main-photo{
-                float: right;
-                right: 25px !important;
+
+        @media only screen and (max-width: 600px){
+            :root{
+                --large-font: 48px !important;
+                --medium-font: 24px !important;
+                --small-font: 16px !important;
+            
             }
         }
 
-        @media only screen and (max-width: 900px) {
-            #main-photo{
-                display: none !important;
-            }
-            .subheader{
-                font-size: 20px !important;
-            }
-        }
-
-        .subheader{
-            font-size: 30px;
-        }
-        .popup{
-            text-align: center;
-            outline: var(--outline);
-            padding: 12px 12px;
-            width: max-content;
-            max-width: 50%;
-            color: rgb(var(--primary-color));
-            text-align: center;
-            border-radius: 6px;
-            transition: all 100ms linear;
-            margin: 8px auto;
-            cursor: pointer;
-        }
-
-        .popup:hover{
-            background-color: rgba(var(--primary-color), 0.1);
-        }
-
-        .popup::before{
-            content: "ⓘ";
-            margin-right: 8px;
-        }
-
-        .popup ul, .popup ol{
-            text-align: start;
-        }
-
-        .top-spacer{
-            height: 50px;
-        }
-
-        .main-heading{
-            font-size: 75px;
-            font-weight: normal;
-        }
-
-        @keyframes opacity-anim{
+        @keyframes fade-in{
             0%{
                 opacity: 0;
             }
@@ -102,56 +41,99 @@
                 opacity: 1;
             }
         }
-        .appear{
+        html{
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body{
             opacity: 0;
-            animation: opacity-anim;
+            animation: fade-in 500ms;
+            animation-delay: 100ms;
             animation-fill-mode: forwards;
-            animation-timing-function: ease-in;
-            animation-duration: 500ms;
-            transition: filter 750ms;
+            background-color: var(--background-color);
+            color: white;
+            font-family: var(--display-font);
+            text-align: center;
+            width: 100%;
+            overflow-x: hidden;
         }
 
-        .first.appear{
-            animation-delay: 500ms;
+        p{
+            font-family: var(--text-font);
+            font-size: var(--medium-font);
         }
 
-        .second.appear{
-            animation-delay: 900ms;
+        button{
+            position: relative;
+            border-radius: 0;
+            border: var(--btn-border-width) solid white;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-family: var(--display-font);
+            font-size: var(--small-font);
+            padding: 16px 24px;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 100ms;
         }
 
-        .third.appear{
-            animation-delay: 1500ms;
+        .fixed-width{
+            width: 170px;
         }
 
-        #main-photo{
+        .name-title{
+            font-size: var(--large-font);
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .job-title{
+            margin-top: 24px;
+        }
+
+        .title-group{
+            transition: transform 100ms;
+        }
+
+        .border{
             position: absolute;
-            top: 175px;
-            right: 200px;
-            transform: rotate(-14deg);
-            max-height: 600px;
-            max-width: 350px;
-            -webkit-box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
-            -moz-box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
-            box-shadow: 0px 0px 82px -23px rgba(var(--primary-color),1);
-            /* transform-style: preserve-3d; */
-            transition: transform 300ms linear;
-            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            transform: translate(-26px, -38px);
+            border: var(--btn-border-width) solid red;
+            opacity: 0;
+            transition: transform 100ms, opacity 100ms;
+            z-index: -10;
         }
 
-        #main-photo:hover{
-            background-color: red;
-            transform: rotateX(180deg) !important;
+        button:hover > .border{
+            opacity: 1;
+            transform: translate(-20px, -30px);
         }
 
-        .primary-color{
-            color: rgb(var(--primary-color));
+        button:hover{
+            transform: translate(-4px, -4px);
         }
+
     </style>
-    <div class="main-container">
-            <div class="top-spacer"></div>
-            <h1 class="main-heading first appear"><span class="primary-color">404</span></h1>
-            <img src="https://img.freepik.com/premium-photo/stressed-sad-developer-programming-server-database-feeling-frustrated-about-artificial-intelligence-failure-night-overworked-programmer-feeling-tired-working-with-html-it-code-workload_482257-53334.jpg?w=400" alt="Pilt" id="main-photo" class="third appear">
-            <p class="subheader second appear">Sellist lehte ei leitud</p>
-        </div>
+    <div class="title-group">
+        <h1 class="name-title"><span style="color: #FF0909;">4</span>04</h1>
+        <p class="job-title">Sellist lehekülge ei leitud!</p>
+    </div>
+    <br><br>
+    <div class="btn-group">
+        <button class="fixed-width" onclick="history.back()">
+            Tagasi
+            <div class="border" ></div>
+        </button>
+        &nbsp;
+        <button class="fixed-width" onclick="window.location.href = 'https://hermannkabi.com'">
+            Koduleht
+            <div class="border" ></div>
+        </button>
+    </div>
 </body>
 </html>
