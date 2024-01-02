@@ -157,6 +157,32 @@ a img{
 }   
 
 
+input, textarea, button{
+    border: none;
+    font-family: "Lexend";
+    padding: 12px 4px;
+    font-size: 16px;
+    display: block;
+    margin-block: 8px;
+    margin-inline: 0;
+    width: 300px;
+}
+
+textarea{
+    height: 100px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, button:focus{
+    outline: 2px solid wheat;
+    outline-offset: 1px;
+}
+
+button{
+    background-color: wheat;
+    cursor: pointer;
+    width: 308px;
+}
 
 
 @media only screen and (max-width:600px){
