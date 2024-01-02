@@ -15,6 +15,7 @@ body{
     color: white;
     font-family: Lexend;
     background-color: #121010;
+    
 }
 
 .banner{
@@ -57,6 +58,24 @@ body{
     transform: translateX(2px);
 }
 
+.footer{
+    background-color: #303030;
+    margin: -8px;
+    padding: 8px 16px;
+}
+
+.footer a {
+    display: block;
+    margin-block: 6px;
+    color: white !important;
+}
+
+.footer .copyright{
+    text-align: center;
+    color: grey;
+    margin-bottom: 0;
+}
+
 a{
     color: wheat;
     text-underline-offset: 2px;
@@ -75,6 +94,7 @@ a:visited{
 .main-content{
     margin-top: 8%;
     margin-inline: 10%;
+    min-height: 100vh;
 }
 
 .main-content.home{
