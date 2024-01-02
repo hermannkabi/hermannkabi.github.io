@@ -188,7 +188,7 @@ a img{
     .collection img{
         width: 260px;
         height: 140px;
-        left: 5%;
+        left: 15%;
     }
 
     .collection:hover img:nth-of-type(1){
