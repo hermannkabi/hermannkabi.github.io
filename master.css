@@ -1,283 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway:wght@400;700&display=swap');
-
-@media only screen and (max-width: 1000px){
-    .project{
-        display: block !important;
-        text-align: start !important;
-    }
-
-    .project img{
-        display: inline !important;
-        height: 300px !important;
-        max-width: 300px !important;
-        margin: 8px !important;
-        border-radius: 8px !important;
-    }
-
-    .project .img1{
-        border-top-left-radius: 32px !important;
-        border-bottom-left-radius: 32px !important;
-        margin-left: 0 !important;
-    }
-
-    .project .img2{
-        border-top-right-radius: 32px !important;
-        border-bottom-right-radius: 32px !important;
-        margin-right: 0 !important;
-    }
-
-    .project .description{
-        max-width: 100% !important;
-    }
-
-    .about-container{
-        display: block !important;
-        margin: 8px !important;
-        width: 100% !important;
-    }
-
-    .about-text > p {
-        text-align: start;
-    }
-
-    input, textarea{
-        width: 90% !important;
-        margin: 8px !important;
-    }
-
+@font-face {
+    font-family: Lexend;
+    font-weight: bold;
+    src: url(fonts/Lexend-Bold.ttf);
+}
+  
+@font-face {
+    font-family: Lexend;
+    src: url(fonts/Lexend-Regular.ttf);
 }
 
-@media only screen and (max-width: 720px){
-
-    .project{
-        margin: 8px !important;
-        margin-top: 60px !important;
-
-    }
-
-    .project img{
-        border-radius: 8px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .project .img1, .project .img2{
-        border-radius: 8px !important;
-        margin: 8px !important;
-    }
-
-    .btn-group button{
-        display: block;
-        margin: auto;
-    }
-}
-
-
-@keyframes fade-in{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-html{
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 body{
-    opacity: 0;
-    animation: fade-in 500ms;
-    animation-delay: 100ms;
-    animation-fill-mode: forwards;
-    background-color: var(--background-color);
+    font-size: 16px;
     color: white;
-    font-family: var(--display-font);
-    text-align: center;
-    width: 100%;
-    overflow-x: hidden;
+    font-family: Lexend;
+    background-color: #121010;
 }
 
-p{
-    font-family: var(--text-font);
-    font-size: var(--medium-font);
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button{
-    position: relative;
-    border-radius: 0;
-    border: var(--btn-border-width) solid white;
-    outline: none;
-    background-color: transparent;
+.banner .content{
+    margin-left: 8px;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.banner .info{
+    font-size: 20px;
+}
+
+.banner .links a{
+    text-decoration: none;
     color: white;
-    font-family: var(--display-font);
-    font-size: var(--small-font);
-    padding: 16px 24px;
-    cursor: pointer;
-    text-align: center;
-    transition: transform 100ms;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 4px;
 }
 
-.fixed-width{
-    width: 170px;
+.banner .links a span{
+    font-size: 18px;
+    transition: transform 200ms;
 }
 
-a, a:visited{
-    transition: text-underline-offset 200ms, color 200ms;
+.banner .links a:hover span{
+    transform: translateX(2px);
+}
+
+a{
+    color: wheat;
     text-underline-offset: 2px;
-    color: white;
+    transition: text-underline-offset 100ms;
 }
 
 a:hover{
     text-underline-offset: 4px;
-    color: var(--primary-color);
 }
 
-input, textarea{
-    outline: none;
-    font-size: var(--medium-font);
-    font-family: var(--display-font);
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    transition: border-color 100ms;
-    margin: 8px;
-    resize: none;
-}
-
-textarea{
-    height: 200px;
-}
-
-input:focus, textarea:focus{
-    border-color: var(--primary-color);
-}
-
-.border{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: translate(-26px, -38px);
-    border: var(--btn-border-width) solid red;
-    opacity: 0;
-    transition: transform 100ms, opacity 100ms;
-    z-index: -10;
-}
-
-button:hover > .border{
-    opacity: 1;
-    transform: translate(-20px, -30px);
-}
-
-button:hover{
-    transform: translate(-4px, -4px);
+a:visited{
+    color: wheat;
 }
 
 
-
-.red{
-    color: var(--primary-color);
+.main-content{
+    margin-top: 8%;
+    margin-inline: 10%;
 }
 
-.name-title{
-    font-size: var(--large-font);
-    margin-bottom: 0;
-    font-weight: normal;
+.main-content.home{
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.job-title{
-    margin-top: 24px;
-}
-
-.title-group{
-    transition: transform 100ms;
-}
-
-.sub-title{
-    font-weight: normal;
-    font-size: var(--medium-font);
-    padding-top: 32px;
-}
-
-.sub-title > span:first-child{
-    color: var(--primary-color);
-}
-
-section{
-    min-height: 100vh;
-}
-
-
-/* PROJECT */
-
-.project{
-    margin: 60px 32px;
-    display: flex;
-    gap: 24px;
-    margin-top: 120px;
-}
-
-.project .imgs{
-    margin-right: 16px;
-}
-
-
-.project img{
-    border-radius: 8px;
-    width: 300px;
-    max-height: 300px;
-    display: block;
-    object-fit: cover;
-}
-
-.project .img1{
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
-    margin-bottom: 16px;
-}
-
-.project .img2{
-    border-bottom-right-radius: 24px;
-    border-bottom-left-radius: 24px;
-}
-
-.project .header{
-    text-align: start;
-}
-
-.project .header h1{
-    font-weight: normal;
-    font-size: var(--large-font);
-    margin-bottom: 8px;
-    margin-top: 0;
-    word-wrap: anywhere;
-}
-
-.project .header .chips > p{
-    display: inline;
-}
-
-.project .header .chips > p:not(:first-child){
-    margin-inline: 24px;
-}
-
-.project .header .chips > p:first-child{
-    margin-left: 8px;
-}
-
-.project .description{
-    text-align: start;
+.main-content p, .main-content li{
     max-width: 50%;
 }
 
+h1.name{
+    font-size: 64px;
+    margin-block: 0;
+}
 
-.about-container{
-    display: flex;
-    gap: 32px;
-    justify-content: space-between;
-    width: 75%;
-    margin: auto;
+.icons{
+    margin-top: 16px;
+}
+
+.icons a{
+    margin-inline: 12px;
+}
+
+.icons a:first-of-type{
+    margin-left: 0;
+}
+
+a img{
+    height: 28px;
+    width: 28px;
+    user-select: none;
+}
+
+
+.image-container{
+    text-align: right;
+}
+
+
+.collection{
+    position: relative;
+    height: 500px;
+}
+
+.collection img{
+    border-radius: 8px;
+    width: 360px;
+    height: 240px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    border: 2px solid black;
+    transition: transform 400ms;
+}
+
+.collection img:nth-of-type(1){
+    transform: rotate(24deg);
+}
+
+.collection img:nth-of-type(2){
+    transform: rotate(-6deg);
+}
+
+.collection img:nth-of-type(3){
+    transform: rotate(6deg);
+}
+
+.collection:hover img:nth-of-type(1){
+    transform: translate(-100px, -150px) rotate(-2deg);
+}   
+
+.collection:hover img:nth-of-type(2){
+    transform: translate(16px, 48px) rotate(-6deg);
+}   
+
+.collection:hover img:nth-of-type(3){
+    transform: translate(-70px, 250px) rotate(4deg);
+}   
+
+
+
+
+@media only screen and (max-width:600px){
+
+    .main-content.home{
+        display: block;
+        margin-top: 128px;
+    }
+
+    .main-content{
+        margin-inline: 16px;
+        margin-top: 64px;
+    }
+
+    .main-content p, .main-content li{
+        max-width: 90%;
+    }
+
+    .image-container{
+        margin-top: 64px;
+        text-align: center;
+    }
+
+    h1.name{
+        font-size: 48px;
+        word-wrap: anywhere;
+    }
+
+    .collection img{
+        width: 260px;
+        height: 140px;
+        left: 5%;
+    }
+
+    .collection:hover img:nth-of-type(1){
+        transform: translate(0px, -50px) rotate(0deg);
+    }   
+    
+    .collection:hover img:nth-of-type(2){
+        transform: translate(0px, 50px) rotate(0deg);
+    }   
+    
+    .collection:hover img:nth-of-type(3){
+        transform: translate(0px, 150px) rotate(0deg);
+    }   
+    
 }
