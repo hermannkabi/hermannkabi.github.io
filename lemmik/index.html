@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="favorite.css">
 </head>
 <body>
+    <div class="dialog-back">
+        <div class="dialog">
+            <img src="https://cdn.waterstones.com/bookjackets/large/9780/7515/9780751573756.jpg" alt="">
+            <div class="info">
+                <h2>2001: A Space Odyssey</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
     <div class="main-content">
         <h1 class="name">MINU<br>LEMMIKUD</h1>
 
@@ -16,9 +25,9 @@
         <div class="fav-container">
             <div class="collection book">
                 <h2>RAAMATUD</h2>
-                <img src="https://cdn.waterstones.com/bookjackets/large/9780/7515/9780751573756.jpg" alt="">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651677426i/50885244.jpg" alt="">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1323890842i/13235105.jpg" alt="">
+                <img title="2001: A Space Odyssey" text="Nii nagu filmgi, on ka raamat mulle sügavale südamesse jäänud. Mäletan, kuidas olen korduvalt ja korduvalt seda lugenud, ent ikka suudab see lõpp mind täielikult endasse haarata ja lummata, nagu ei ükski teine." src="https://cdn.waterstones.com/bookjackets/large/9780/7515/9780751573756.jpg" alt="">
+                <img title="The Handmaid's Tale" text="Margaret Atwood on kirjanik, kelle kõik teosed, mida lugenud olen, mulle meeldinud on. Kuigi mul on tunne, et 'Testamendid' on vahest isegi parem raamat, tundus paslik panna siia tema kuulsaim, sest ilma selleta ei tähendaks järg ju midagi." src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651677426i/50885244.jpg" alt="">
+                <img title="Kafka mererannas" text="Ohh, Murakami! Kõik su raamatud on veidrad, isegi veidramad kui mina suudaks kirjutada (see ütleb mõndagi). Aga miks nad mulle nii meeldivad? Ma ei teagi, aga mind paelub sügavalt tema raamatute ülitavaline, isegi igav atmosfäär, mis kiiresti maagiliste elementidega seguneb. Mul tekivad külmavärinad, kui mõtlen taevale, kus on kaks kuud: üks suur, valge, teine väike ja roheline. Aga siin loendis pole '1Q84', vaid 'Kafka mererannas'. Aga võiks olla! Ja 'Tazaki Tsukuru' ka. Ütleme, et ongi, et nad kõik on siin ühe raamatu kaane all." src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1323890842i/13235105.jpg" alt="">
             </div>
             <div class="collection movie">
                 <h2>FILMID/SARJAD</h2>
@@ -47,6 +56,31 @@
         $(".collection").hover(function (){
             $("img", this).each(function (){
             });
+        });
+    </script>
+    <script>
+        $(".dialog-back").click(function (){
+            $(".dialog-back").fadeOut(50);
+        });
+
+        $(".dialog").click(function (e){
+            e.stopPropagation();
+        });
+
+        // Open dialog
+        $(".collection img").click(function (){
+            var title = $(this).attr("title");
+            var text = $(this).attr("text") ?? "";
+
+
+            if(title != null){
+                $(".dialog .info h2").text(title);
+                $(".dialog .info p").text(text);
+
+                $(".dialog img").attr("src", $(this).attr("src"));
+
+                $(".dialog-back").fadeIn(50);
+            }
         });
     </script>
 </body>
