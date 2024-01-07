@@ -133,9 +133,12 @@ a img{
     text-align: right;
 }
 
-
 .collection{
     position: relative;
+}
+
+.collection:not(.without-height){
+
     height: 500px;
 }
 
@@ -225,7 +228,7 @@ button{
     }
 
     h1.name{
-        font-size: 48px;
+        font-size: 40px;
         word-wrap: anywhere;
     }
 

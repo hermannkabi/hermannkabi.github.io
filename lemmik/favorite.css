@@ -28,7 +28,6 @@
 .collection.book img,.collection.movie img, .collection.game img, .collection.hobby img{
     width: 220px;
     height: 350px;
-    cursor: pointer;
 }
 
 .dialog-back{

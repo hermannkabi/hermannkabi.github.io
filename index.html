@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="master.css">
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
 <body>
-    <div class="banner"><div class="info material-symbols-outlined">info</div><div class="content">Uurimistöö</div><div class="links"><a href="https://www.overleaf.com/project/65661f21930fcaef1335de40">Overleaf</a><a href="ut">UT</a></div></div>
+    <div class="banner">
+        <div class="info material-symbols-outlined">info</div>
+        <div class="content">Uurimistöö</div>
+        <div class="links">
+            <a href="https://www.overleaf.com/project/65661f21930fcaef1335de40">Overleaf</a>
+            <a href="ut">UT</a>
+        </div>
+    </div>
 
 
     <div class="main-content home">
@@ -25,7 +32,7 @@
         </div>
 
         <div class="image-container">
-            <div class="collection">
+            <div class="collection without-height">
                 <img src="https://hermannkabi.com/assets/new2.jpg" alt="">
                 <img src="https://hermannkabi.com/assets/hermann.jpg" alt="">
                 <img src="https://hermannkabi.com/assets/new.jpg" alt="">
@@ -50,10 +57,46 @@
     </div>
 
     <script src="jquery.js"></script> 
+    
+
+
     <script>
-        // Banner link enhancments
-        $(".banner .links a").append(' <span class="material-symbols-outlined">arrow_forward</span>').attr("target", "_blank");
+
+        var customBanner = {
+            "title":"Riigikohtu kaasuskonkurss",
+            "links":[
+                {
+                    "title":"Link",
+                    "href":"kaasuskonkurss",
+                    "noblank":true,
+                },
+            
+            ],
+        };
+
+        var now = new Date(Date.now());
+
+        var startDate = new Date("01.12.2024");
+
+        var endDate = new Date("01.19.2024");
+
+        if(now.getTime() >= startDate.getTime() && now.getTime() <= endDate.getTime()){
+            $(".banner .content").text(customBanner.title);
+
+            $(".banner .links").empty();
+
+            for(var i = 0; i<customBanner.links.length; i++){
+                $(".banner .links").append("<a "+(customBanner.links[i].noblank ? "class='noblank'" : "")+" href='"+customBanner.links[i].href+"'>"+customBanner.links[i].title+"</a>");
+            }
+
+        }
     </script>
 
+
+    <script>
+        // Banner link enhancments
+        $(".banner .links a").append(' <span class="material-symbols-outlined">arrow_forward</span>');
+        $(".banner .links a:not(.noblank)").attr("target", "_blank");
+    </script>
 </body>
 </html>
