@@ -5,14 +5,16 @@ body{
     font-family: var(--main-font);
     padding-inline: 16px;
     font-size: 20px;
+    text-align: center;
 }
 
 section{
-    
+    margin: auto;
     padding: 8px;
-    background-color: rgb(var(--primary-btn-color),  0.15);
+    background-color: rgb(var(--primary-btn-color),  0.05);
     border-radius: 16px;
     margin-block: 8px;
+    width: 50%;
 }
 
 h1, h2, h3{
@@ -56,6 +58,12 @@ button:hover{
 
 button:focus-visible{
     transform: translateY(-2px);
+}
+
+button > img{
+    max-height: 20px;
+    max-width: 20px;
+    margin-right: 16px;
 }
 
 /* Secondary button */
@@ -118,7 +126,7 @@ a[alone]:hover > .material-icons:not(.no-anim){
 
 /* Text input */
 
-input, select{
+input, textarea, select{
     background-color: #d4dada;
     color: rgba(0, 0, 0, 0.8);
     font-family: "Kanit";
@@ -127,11 +135,29 @@ input, select{
     padding-block: 16px;
     padding-left: 8px;
     font-size: 20px;
+    margin-inline: 4px;
+    vertical-align: middle;
+}
+
+input{
+    height: 24px;
+}
+
+select{
+    height: 56px;
 }
 
 input:focus{
     outline: 2px solid rgb(var(--primary-btn-color));
 }
+
+input:disabled{
+    opacity: 0.75;
+    color: rgb(0,0,0, 0.5);
+    cursor: not-allowed;
+}
+
+
 
 /* Number input */
 
@@ -158,10 +184,10 @@ input:focus{
 }
 
 .number-edit-btn.remove{
-    left: 8px;
+    left: 16px;
 }
 .number-edit-btn.add{
-    right: 8px;
+    right: 16px;
 }
 
 /* Select */
