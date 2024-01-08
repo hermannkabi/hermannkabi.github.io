@@ -53,7 +53,7 @@
             <a href="lemmik">Minu lemmikud</a>
             <a href="kontakt">Võta ühendust</a>
         </div>
-        <p class="copyright">© 2024 Hermann Käbi</p>
+        <p class="copyright">© <span class="year"></span> Hermann Käbi</p>
     </div>
 
     <script src="jquery.js"></script> 
@@ -97,6 +97,10 @@
         // Banner link enhancments
         $(".banner .links a").append(' <span class="material-symbols-outlined">arrow_forward</span>');
         $(".banner .links a:not(.noblank)").attr("target", "_blank");
+    </script>
+    
+    <script>
+        $(".copyright .year").text((new Date(Date.now())).getFullYear());
     </script>
 </body>
 </html>
