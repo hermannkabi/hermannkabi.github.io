@@ -12,7 +12,8 @@
 </head>
 <body>
     <h1 style="margin-bottom: 0;">Tere tulemast!</h1>
-    <h3 style="color: grey; margin-top: 0; margin-bottom: 30px; font-family: 'Kanit';">See lehekülg on loodud kasutajaliidese tutvustamiseks</h3>
+    <h3 style="color: grey; margin-top: 0; margin-bottom: 30px; font-family: 'Lexend';">See lehekülg on loodud kasutajaliidese tutvustamiseks</h3>
+    <button id="theme">Vaheta teemat</button>
     <section id="btns">
         <h2>Nupud</h2>
         <p>Nupud on üks olulisim osa kasutajaliidesest, sest nende kaudu suhtleb kasutaja lehega, seega hea mulje nuppudest võib viia hea kasutajakogemuseni.</p>
@@ -71,5 +72,11 @@
         </select>
     </section>
     <br><br><br><br>
+
+    <script>
+        document.querySelector("#theme").addEventListener("click", function (){
+            document.documentElement.setAttribute("data-theme", document.documentElement.getAttribute("data-theme") == "dark" ? "light" : "dark");
+        });
+    </script>
 </body>
 </html>
