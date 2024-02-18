@@ -63,7 +63,7 @@
     <script>
 
         var customBanner = {
-            "title":"Riigikohtu kaasuskonkurss",
+            "title":"Kaasuskonkursi võit",
             "links":[
                 {
                     "title":"Link",
@@ -76,9 +76,9 @@
 
         var now = new Date(Date.now());
 
-        var startDate = new Date("01.12.2024");
+        var startDate = new Date(1705067281 * 1000);
 
-        var endDate = new Date("01.19.2024");
+        var endDate = new Date(1705672081 * 1000);
 
         if(now.getTime() >= startDate.getTime() && now.getTime() <= endDate.getTime()){
             $(".banner .content").text(customBanner.title);
