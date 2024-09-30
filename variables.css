@@ -1,10 +1,12 @@
 :root{
-    --background-color: #18171A;
-    --primary-color: #FF0909;
-    --text-font: "Raleway";
-    --display-font:"Major Mono Display";
-    --large-font: 72px;
-    --medium-font: 28px;
+    --background-color: #EAE8DD;
+    --text-color: black;
+    --grey-color: #A8A8A8;
+    --link-color: #658DF3;
+    --text-font: "Prata";
+    --display-font:"Prata";
+    --large-font: 56px;
+    --medium-font: 24px;
     --small-font: 16px;
 
     --btn-border-width:1px;
@@ -12,9 +14,8 @@
 
 @media only screen and (max-width: 600px){
     :root{
-        --large-font: 48px !important;
+        --large-font: 40px !important;
         --medium-font: 24px !important;
         --small-font: 16px !important;
-    
     }
 }
