@@ -233,6 +233,10 @@ button{
         flex-direction: column;
     }
 
+    .cv-section h2{
+        width: auto;
+    }
+
     .cv-section .details{
         grid-template-columns: 1fr;
     }

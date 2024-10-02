@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brat | Hermann Käbi</title>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: "Arial Narrow";
+            src: url(arialnarrow.ttf);
+        }
+
+        body{
+            background-color: #8ad000;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+            font-family: "Arial Narrow";
+            filter: blur(2px);
+            font-size: 64px;
+            word-wrap: anywhere;
+        }
+
+        h1[contenteditable]{
+            outline: none;
+            
+        }
+    </style>
+
+    <div class="container">
+        <h1 contenteditable="true" spellcheck="false">hermann</h1>
+    </div>
+</body>
+</html>
