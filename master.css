@@ -169,12 +169,13 @@ a:visited{
     flex-direction: row;
     gap: 24px;
     align-items: start;
-    margin-block: 32px;
+    margin-block: 48px;
 }
 
 .cv-section h2{
     width: 350px;
     margin-block: 0;
+    margin-top: 16px;
 }
 
 .cv-section .details{
