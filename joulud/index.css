@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+html{
+    background-color: #EED3B1;
+    font-family: "Geist Mono", sans-serif;
+    text-align: center;
+}
+
+.widgets{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #47663B;
+    height: 60px;
+    aspect-ratio: 1;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.widget.advent{
+    background-color: #1F4529;
+}
+
+.widget.disabled{
+    filter: grayscale() !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.widget:nth-of-type(2n+1){
+    margin-left: 60px;
+}
+
+.widget:nth-of-type(2n){
+    margin-right: 60px;
+}
+
+.widget:first-of-type{
+    margin-inline: 0;
+}
+
+.widget:last-of-type{
+    margin-inline: 0;
+}
+
+.widget .material-icons{
+    font-size: 32px;
+    color: white;
+}
+
+button{
+    transition: all 200ms;
+    background-color: #1F4529;
+    padding: 16px 56px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    color: white;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Geist Mono", monospace;
+}
+
+.inputs{
+    margin-bottom: 32px;
+}
+
+.inputs input{
+    all: unset;
+    font-family: "Geist Mono", monospace;
+    font-size: 48px;
+    width: 36px;
+    text-transform: uppercase;
+}

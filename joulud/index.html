@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jõulud 2024</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div>
+        <div class="widgets">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        const randomString = (n) => Array.from({ length: n }, () => Math.random().toString(36).charAt(2)).join('');
+
+        const gameData = [
+        {"id": randomString(8), "type": "normal", "code": "123456", "hint": "Tere tulemast! Tänane kood on 123456, aga teistel päevadel läheb sul juba raskemaks"},
+
+        {"id": randomString(8), "type": "advent", "code": "esimene"},
+        {"id": randomString(8), "type": "normal", "code": "123456", "hint": "Tere tulemast! Tänane kood on 123456, aga teistel päevadel läheb sul juba raskemaks"},
+        {"id": randomString(8), "type": "normal", "code": "134589", "hint": "5 9 8 3 1 4 kasvavas järjekorras"},
+        {"id": randomString(8), "type": "normal", "code": "314159", "hint": "100π"},
+        {"id": randomString(8), "type": "normal", "code": "112358", "hint": "Fibonacci"},
+        {"id": randomString(8), "type": "normal", "code": "235711", "hint": "esimesed viis algarvu"},
+        {"id": randomString(8), "type": "normal", "code": "273,15", "hint": "0 °C = ... K"},
+        {"id": randomString(8), "type": "advent", "code": "teine"},
+        {"id": randomString(8), "type": "normal", "code": "1000mN", "hint": "100-grammise õuna raskusjõud millinjuutonites (ühikuga)"},
+        {"id": randomString(8), "type": "normal", "code": "318560", "hint": "Eesti taasiseseisvumispäeva aasta, kuu ja päeva korrutis"},
+        {"id": randomString(8), "type": "normal", "code": "999983", "hint": "Suurim kuuekohaline algarv"},
+        {"id": randomString(8), "type": "normal", "code": "399384", "hint": "Sokratese surma-aasta ja Aristotelese sünniaasta"},
+        {"id": randomString(8), "type": "normal", "code": "RUKKIS", "hint": "„Kuristik ______“, J.D. Salingeri tuntuim romaan"},
+        {"id": randomString(8), "type": "normal", "code": "MAYDAY", "hint": "hädaabisignaal, mida öeldakse kolm korda järjest"},
+        {"id": randomString(8), "type": "advent", "code": "kolmas"},
+        {"id": randomString(8), "type": "normal", "code": "691200", "hint": "jõuludeni jäänud aeg sekundites"},
+        {"id": randomString(8), "type": "normal", "code": "AIRBUS", "hint": "nt A320, A380"},
+        {"id": randomString(8), "type": "normal", "code": "TULJAK", "hint": "tants või šokolaad"},
+        {"id": randomString(8), "type": "normal", "code": "29.mai", "hint": "Bütsantsi impeeriumi lõpukuupäev (aastal 1453)"},
+        {"id": randomString(8), "type": "normal", "code": "TSTTPD", "hint": "Maailma ühe populaarseima laulja initsiaalid ja tema viimase albumi lühend"},
+        {"id": randomString(8), "type": "normal", "code": "111111", "hint": "Esimese maailmasõja lõpukuupäev, -kuu ja -tund"},
+        {"id": randomString(8), "type": "advent", "code": "neljas"},
+        {"id": randomString(8), "type": "normal", "code": "100100", "hint": "(110)², kui 10=1010"},
+        {"id": randomString(8), "type": "normal", "code": "JÕULUD", "hint": "täna"}
+        ];
+
+        localStorage.setItem("joulud24-gamedata", JSON.stringify(gameData))
+
+        function getData(){
+            var currentDate = (new Date()).getDate();
+            //currentDate = 1;
+            
+            var data = localStorage.getItem("joulud24-data");
+            if(!data){
+                data = Array(gameData.length).fill(0).join(",");
+                localStorage.setItem("joulud24-data", data);
+            }
+
+            data = data.split(",");            
+
+            $(".widgets").empty();
+            for(var i=0; i<gameData.length; i++){                
+                $(".widgets").append(`<div data-code="`+gameData[i]["code"]+`" data-id="`+gameData[i]["id"]+`" class="widget `+gameData[i]["type"]+` `+(i>=currentDate || (i>0 && data[i-1] != "1") ? "disabled" : "")+`"><i class="material-icons">`+ (data[i] != "1" ? gameData[i]["type"] == "advent" ? "emoji_events" : "sports_esports" : "check") +`</i></div>`);
+            }
+        }
+
+        getData();
+        $(window).bind('storage', getData);
+
+        $(".widget").click(function (){
+            if($(this).hasClass("advent")){
+                window.location.href = "advent/"+$(this).attr("data-code");
+            }else{
+                window.location.href = "tavaline/?id="+$(this).attr("data-id");
+            }
+        });
+    </script>
+</body>
+</html>
