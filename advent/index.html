@@ -19,9 +19,7 @@
         const randomString = (n) => Array.from({ length: n }, () => Math.random().toString(36).charAt(2)).join('');
 
         const gameData = [
-        {"id": randomString(8), "type": "normal", "code": "123456", "hint": "Tere tulemast! Tänane kood on 123456, aga teistel päevadel läheb sul juba raskemaks"},
-
-        {"id": randomString(8), "type": "advent", "code": "esimene"},
+        {"id": randomString(8), "type": "advent", "link":"esimene", "code": "718563", "hint":"Otsi enda toast midagi magusat!"},
         {"id": randomString(8), "type": "normal", "code": "123456", "hint": "Tere tulemast! Tänane kood on 123456, aga teistel päevadel läheb sul juba raskemaks"},
         {"id": randomString(8), "type": "normal", "code": "134589", "hint": "5 9 8 3 1 4 kasvavas järjekorras"},
         {"id": randomString(8), "type": "normal", "code": "314159", "hint": "100π"},
@@ -51,7 +49,6 @@
 
         function getData(){
             var currentDate = (new Date()).getDate();
-            //currentDate = 1;
             
             var data = localStorage.getItem("joulud24-data");
             if(!data){
@@ -63,7 +60,7 @@
 
             $(".widgets").empty();
             for(var i=0; i<gameData.length; i++){                
-                $(".widgets").append(`<div data-code="`+gameData[i]["code"]+`" data-id="`+gameData[i]["id"]+`" class="widget `+gameData[i]["type"]+` `+(i>=currentDate || (i>0 && data[i-1] != "1") ? "disabled" : "")+`"><i class="material-icons">`+ (data[i] != "1" ? gameData[i]["type"] == "advent" ? "emoji_events" : "sports_esports" : "check") +`</i></div>`);
+                $(".widgets").append(`<div data-link="`+gameData[i]["link"]+`" data-id="`+gameData[i]["id"]+`" class="widget `+gameData[i]["type"]+` `+(i>=currentDate || (i>0 && data[i-1] != "1") ? "disabled" : "")+`"><i class="material-icons">`+ (data[i] != "1" ? gameData[i]["type"] == "advent" ? "emoji_events" : "sports_esports" : "check") +`</i></div>`);
             }
         }
 
@@ -72,7 +69,7 @@
 
         $(".widget").click(function (){
             if($(this).hasClass("advent")){
-                window.location.href = "advent/"+$(this).attr("data-code");
+                window.location.href = $(this).attr("data-link")+"/?id="+$(this).attr("data-id");
             }else{
                 window.location.href = "tavaline/?id="+$(this).attr("data-id");
             }

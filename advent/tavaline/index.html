@@ -28,7 +28,7 @@
         const data = JSON.parse(localStorage.getItem("joulud24-gamedata"))
             
         if(!data){
-            window.location.href = "/joulud";
+            window.location.href = "/advent";
         }
         
 
@@ -37,7 +37,7 @@
         const currentGameData = data.find(e=>e.id == gameID);
 
         if(!currentGameData){
-            window.location.href = "/joulud";
+            window.location.href = "/advent";
         }
 
         const correct = currentGameData.code;
@@ -98,7 +98,7 @@
                 localStorage.setItem("joulud24-data", data);
 
                 setTimeout(() => {
-                    window.location.href = "/joulud";
+                    window.location.href = "/advent";
                 }, 500);
             }
         });

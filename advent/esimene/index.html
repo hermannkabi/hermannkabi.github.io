@@ -2,25 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="master.css">
     <title>Esimene advent</title>
+    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
-    <div id="center">
-        <h1>Tähine taevas, valguste vihud,</h1>
-        <h1>Öine ilu ja võimsate aare,</h1>
-        <h1>maetud on seal, kus puhub tuul,</h1>
-        <h1>kus oli ja tuleb üks kuusepuu</h1>
-        <br>
-        <h1>Leia mind, siis omad mind,</h1>
-        <h1>ja valgustatud saagu su elu!</h1>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div class="container">
+        <h1 style="display: none;" class="greeting"></h1>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        async function showGreeting(){
+            var texts = ["Tere!", "Täna on esimene advent", "Ja sinu esimene vihje on järgmine..."]
+            
+            await new Promise(r => setTimeout(r, 1000));
+        
+            for (text of texts){
+                $(".greeting").text(text).fadeIn(5000);
+                await new Promise(r => setTimeout(r, 7000));
+                $(".greeting").fadeOut(5000);
+                await new Promise(r => setTimeout(r, 7000));
+            }
+
+            window.location.href = "../tavaline/?id="+new URLSearchParams(window.location.search).get("id");
+        }
+
+        showGreeting();
+    </script>
 </body>
 </html>
