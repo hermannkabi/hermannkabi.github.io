@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esimene advent</title>
+    <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+    <p>Leidsid kingi üles</p>
+
+    <script>
+        var data = localStorage.getItem("joulud24-data").split(",");
+        data[0] = "1";
+        data.join(",");
+
+        localStorage.setItem("joulud24-data", data);
+
+        window.location.href = "../../";
+    </script>
+</body>
+</html>
