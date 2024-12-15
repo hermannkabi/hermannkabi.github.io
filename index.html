@@ -146,6 +146,7 @@
                 date:"2023–",
                 text:"Reaaler on Tallinna Reaalkoolile arendatav arvutusäpp",
                 img:"/assets/reaaler.png",
+                font: "Sora",
                 links:[
                     {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
                 ],
@@ -155,6 +156,7 @@
                 date:"juuli–august 2024",
                 text:"Juuli keskpaigast augusti alguseni veetsin kolm tegusat nädalat advokaadibüroos TRINITI praktikandina.",
                 img:"/assets/triniti.png",
+                font: "FS Meridian",
                 links:[{text:"Loe edasi", href:"triniti"}],
             },
             {
@@ -162,6 +164,7 @@
                 date:"2023, 2024",
                 text:"Kaasuskonkurss on iga-aastane Riigikohtu korraldatud võistlus kooliõpilastele, kes on huvitatud kohtunikutööst",
                 img:"/assets/riigikohus.png",
+                font: "Georgia, serif",
                 links:[
                     {text:"Vaata edasi", href:"kaasuskonkurss"}
                 ],
@@ -170,6 +173,7 @@
                 title:"EMES veebileht",
                 date:"september–oktoober 2024",
                 text:"Lõin kodulehe Eesti Majandus- ja Ettevõtlusõpetajate seltsile.",
+                font: "Lekton",
                 img:"http://emes.edu.ee/images/logo_trans.png",
                 links:[
                     {text:"Vaata", href:"https://emes.edu.ee"}
@@ -180,6 +184,7 @@
                 date:"september 2024",
                 text:"Ernsti ja Emma REK presidendikampaania ametlik koduleht!",
                 img:"https://ernstxemma.ee/assets/main-background-original.jpg",
+                font:"Syne",
                 links:[
                     {text:"Vaata", href:"https://ernstxemma.ee"}
                 ],
@@ -189,6 +194,7 @@
                 date:"2023–2024",
                 text:"Olen koondanud enda veebilehele Reaalkooli gümnaasiumi muusikakursuste kuulamiskavad, kus saab ka enda teadmisi testida",
                 img:"muusika/icons/logo.png",
+                font:"Inter",
                 links:[{text:"Kuulamiskavad", href:"muusika"}],
             },
             {
@@ -196,6 +202,7 @@
                 date:"2024",
                 text:"See on kunstiline ja informatiivne ajatelg kunstiajaloost, mille tegin kursuse kodutööks.",
                 img:"assets/kunstiajalugu.jpg",
+                font:"Lexend",
                 links:[{text:"Vaata", href:"kunstiajalugu"}],
             },
             {
@@ -213,13 +220,12 @@
 
 
         for(project of projects){
-            console.log("adding "+project.title);
             $(".projects").append(`
-            <div onclick="window.location.href = '`+project.links[0].href+`';" style="cursor:pointer;" class="project">
+            <div style="font-family: `+(project.font ?? "inherit")+`;" onclick="window.location.href = '`+project.links[0].href+`';" style="cursor:pointer;" class="project">
                 <img src="`+project.img+`" alt="">
                 <div class="info">
                     <span>`+project.date+`</span>
-                    <h2>`+project.title+`</h2>
+                    <h2 `+(project.font ? 'style="font-family: '+(project.font)+';"' : "")+`>`+project.title+`</h2>
                     <p>`+project.text+`</p>
                     <div class="links">
                         `+ project.links.map((e)=>'<a href="'+e.href+'">'+e.text+'</a>').join(" ") +`
