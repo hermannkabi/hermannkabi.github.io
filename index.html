@@ -145,7 +145,7 @@
                 title:"Reaaler",
                 date:"2023–",
                 text:"Reaaler on Tallinna Reaalkoolile arendatav arvutusäpp",
-                img:"https://reaaler.real.edu.ee/logo.png",
+                img:"/assets/reaaler.png",
                 links:[
                     {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
                 ],
@@ -154,14 +154,14 @@
                 title:"TRINITI praktika",
                 date:"juuli–august 2024",
                 text:"Juuli keskpaigast augusti alguseni veetsin kolm tegusat nädalat advokaadibüroos TRINITI praktikandina.",
-                img:"https://media.licdn.com/dms/image/v2/C4D0BAQGZWQ_aqXq5MA/company-logo_200_200/company-logo_200_200/0/1630501978531/triniti_estonia_logo?e=2147483647&v=beta&t=v1Rj41p5plN36jT0-KjHeb70TsJAvk983Xp-3kBrIOg",
+                img:"/assets/triniti.png",
                 links:[{text:"Loe edasi", href:"triniti"}],
             },
             {
                 title:"Riigikohtu kaasuskonkurss",
                 date:"2023, 2024",
                 text:"Kaasuskonkurss on iga-aastane Riigikohtu korraldatud võistlus kooliõpilastele, kes on huvitatud kohtunikutööst",
-                img:"https://www.riigikohus.ee/kaasuskonkurss/2024/images/logo-rk.jpg",
+                img:"/assets/riigikohus.png",
                 links:[
                     {text:"Vaata edasi", href:"kaasuskonkurss"}
                 ],
@@ -215,7 +215,7 @@
         for(project of projects){
             console.log("adding "+project.title);
             $(".projects").append(`
-            <div class="project">
+            <div onclick="window.location.href = '`+project.links[0].href+`';" style="cursor:pointer;" class="project">
                 <img src="`+project.img+`" alt="">
                 <div class="info">
                     <span>`+project.date+`</span>

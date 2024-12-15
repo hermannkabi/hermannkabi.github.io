@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Prata&display=swap');
 
 body{
     font-size: var(--medium-font);
@@ -10,12 +9,14 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
+    font-family: var(--display-font);
 }
 
 a{
     color: var(--link-color);
     display: inline-flex;
     text-decoration: none;
+    transition: filter 140ms;
 }
 
 a:not(.noarrow)::after{
@@ -30,6 +31,10 @@ a:not(.noarrow)::after{
 
 a:hover::after{
     transform: translateX(1px);
+}
+
+a:hover{
+    filter: brightness(80%);
 }
 
 a:visited{
