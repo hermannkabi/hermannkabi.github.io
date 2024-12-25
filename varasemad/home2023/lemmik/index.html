@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemmikud | Hermann Käbi</title>
+    <link rel="stylesheet" href="../master.css">
+    <link rel="stylesheet" href="favorite.css">
+</head>
+<body>
+    <!-- <div class="dialog-back">
+        <div class="dialog">
+            <img src="https://cdn.waterstones.com/bookjackets/large/9780/7515/9780751573756.jpg" alt="">
+            <div class="info">
+                <h2>2001: A Space Odyssey</h2>
+                <p></p>
+            </div>
+        </div>
+    </div> -->
+    <div class="main-content">
+        <h1 class="name">MINU<br>LEMMIKUD</h1>
+
+        <br><br>
+        <div style="height: 75px;"></div>
+        <div class="fav-container">
+            <div class="collection book">
+                <h2>RAAMATUD</h2>
+                <img title="2001: A Space Odyssey" text="Nii nagu filmgi, on ka raamat mulle sügavale südamesse jäänud. Mäletan, kuidas olen korduvalt ja korduvalt seda lugenud, ent ikka suudab see lõpp mind täielikult endasse haarata ja lummata, nagu ei ükski teine." src="https://cdn.waterstones.com/bookjackets/large/9780/7515/9780751573756.jpg" alt="">
+                <img title="The Handmaid's Tale" text="Margaret Atwood on kirjanik, kelle kõik teosed, mida lugenud olen, mulle meeldinud on. Kuigi mul on tunne, et 'Testamendid' on vahest isegi parem raamat, tundus paslik panna siia tema kuulsaim, sest ilma selleta ei tähendaks järg ju midagi." src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651677426i/50885244.jpg" alt="">
+                <img title="Kafka mererannas" text="Ohh, Murakami! Kõik su raamatud on veidrad, isegi veidramad kui mina suudaks kirjutada (see ütleb mõndagi). Aga miks nad mulle nii meeldivad? Ma ei teagi, aga mind paelub sügavalt tema raamatute ülitavaline, isegi igav atmosfäär, mis kiiresti maagiliste elementidega seguneb. Mul tekivad külmavärinad, kui mõtlen taevale, kus on kaks kuud: üks suur, valge, teine väike ja roheline. Aga siin loendis pole '1Q84', vaid 'Kafka mererannas'. Aga võiks olla! Ja 'Tazaki Tsukuru' ka. Ütleme, et ongi, et nad kõik on siin ühe raamatu kaane all." src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1323890842i/13235105.jpg" alt="">
+            </div>
+            <div class="collection movie">
+                <h2>FILMID/SARJAD</h2>
+                <img src="https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_.jpg" alt="">
+                <img src="https://imageservice.disco.peacocktv.com/pcms/db395da6-5904-11ec-a795-83e9f49b289e/BOXART?territory=US&proposition=NBCUOTT&language=eng" alt="">
+                <img src="https://play-lh.googleusercontent.com/nGEs1sJAS74RgAnT0BSFyo6eTRDcZOTNBbCmjYT26G0NkA4g0ymtzmOYgcru4o8Dl6qCDYygtOKFYUQgYDU" alt="">
+            </div>
+            <div class="collection game">
+                <h2>MÄNGUD</h2>
+                <img src="https://m.media-amazon.com/images/M/MV5BMGNlMWM3NmMtYTBjNC00Yzc0LTg1YzgtMTk0ZDdiZDFiMDNkXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="">
+            </div>
+            <div class="collection hobby">
+                <h2>HOBID</h2>
+                <img text="Golf" src="https://sarahmaker.com/wp-content/uploads/2022/05/sarahmaker-knitting-cast-off-819x1024.jpg.webp" alt="">
+                <img src="https://www.theleader.com.au/images/transform/v1/crop/frm/JbL8dJ5dh2XzNFST9PPkaJ/f2d94411-59d7-4b35-a5c3-f3fe96a5e3ab.jpg/r373_256_3801_2604_w4174_h2859_fmax.jpg" alt="">
+                <img src="https://hermannkabi.com/assets/new2.jpg" alt="">
+            </div>
+            <div class="collection"></div>
+        </div>
+    </div>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $(".collection").hover(function (){
+            $("img", this).each(function (){
+            });
+        });
+    </script>
+    <script>
+        $(".dialog-back").click(function (){
+            $(".dialog-back").fadeOut(50);
+        });
+
+        $(".dialog").click(function (e){
+            e.stopPropagation();
+        });
+
+        // Open dialog
+        $(".collection img").click(function (){
+            var title = $(this).attr("title");
+            var text = $(this).attr("text") ?? "";
+
+
+            if(title != null){
+                $(".dialog .info h2").text(title);
+                $(".dialog .info p").text(text);
+
+                $(".dialog img").attr("src", $(this).attr("src"));
+
+                $(".dialog-back").fadeIn(50);
+            }
+        });
+    </script>
+</body>
+</html>
