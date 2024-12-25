@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lekton:ital,wght@0,400;0,700;1,400&family=Lexend:wght@100..900&family=Prata&family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=Lexend:wght@100..900&family=Sen:wght@400..800&family=Sora:wght@100..800&family=Syne:wght@400..800&display=swap');
 @font-face {
     font-family: FS Meridian;
     src: url(/assets/fonts/FSMeridian.ttf);
-} 
+}
 
 body{
     font-size: var(--medium-font);
@@ -51,6 +51,9 @@ a:visited{
     align-items: center;
     margin: auto;
     font-size: var(--small-font);
+    background-color: #DFDCC9;
+    border-radius: 32px;
+    padding: 8px 16px;
 }
 
 .banner .content{
@@ -83,10 +86,11 @@ a:visited{
 
 .big-img{
     width: min(100%, 500px);
+    border-radius: 6px;
 }
 
 .footer{
-    background-color: wheat;
+    background-color: #DFDCC9;
     margin: -8px;
     padding: 16px 24px;
 }
@@ -128,27 +132,36 @@ a:visited{
 }
 .subtitle{
     color: var(--grey-color);
-    margin-top: 0;
+    margin-block: 0;
 }
 
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px 16px;
+    gap: 16px;
     margin-block: 64px;
 }
 
 .project{
     display: flex;
-    align-items: center;
-    flex-direction: row;
     gap: 64px;
+    background-color: #DFDCC9;
+    border-radius: var(--border-radius);
+    padding: 24px 48px;
+    transition: filter 100ms;
+    flex-direction: column;
+    align-items: start;
+}
+
+.project:hover{
+    filter: brightness(90%);
 }
 
 .project img{
     aspect-ratio: 1;
     object-fit: cover;
-    height: 300px;
+    height: 200px;
+    border-radius: 24px;
 }
 
 .project .info span{
@@ -162,7 +175,55 @@ a:visited{
 .project .info p{
     margin-block-start: 0;
     color: var(--grey-color);
-    max-width: 300px;
+    max-width: 400px;
+}
+
+
+.chip{
+    border-radius: 48px;
+    background-color: #CCC7AC;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 24px;
+    align-self: stretch;
+    position: relative;
+}
+
+.chip:has(.multiline){
+    padding-block: 8px;
+}
+
+.chip.gold{
+    background-color: #E7DB99;
+}
+
+.chip .multiline{
+    text-align: start;
+}
+
+.chip .multiline p{
+    margin: 0;
+}
+
+.chip .multiline p:nth-of-type(2){
+    color: #706D6D;
+    font-size: calc(var(--medium-font) - 6px);
+}
+
+.chip > *{
+    margin: 0;
+}
+
+.chip a{
+    all: unset;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .about-links{
@@ -178,11 +239,14 @@ a:visited{
     flex-direction: row;
     gap: 24px;
     align-items: start;
-    margin-block: 48px;
+    margin-block: 24px;
+    background-color: #DFDCC9;
+    border-radius: var(--border-radius);
+    padding: 24px 36px;
 }
 
 .cv-section h2{
-    width: 350px;
+    width: 300px;
     margin-block: 0;
     margin-top: 16px;
 }
@@ -211,32 +275,39 @@ input, textarea, button{
     display: block;
     margin-block: 16px;
     margin-inline: 0;
-    width: min(400px, 90%);
+    width: min(400px, 75%);
+    background-color: #DFDCC9;
+    border-radius: var(--border-radius);
+    padding: 24px 36px;
+    transition: filter 100ms;
+}
+
+input:hover, textarea:hover{
+    filter: brightness(95%);
 }
 
 textarea{
     height: 200px;
-    resize: vertical;
+    resize: none;
 }
 
 input:focus, textarea:focus, button:focus{
-    outline: 2px solid wheat;
+    outline: 2px solid #CCC7AC;
     outline-offset: 1px;
 }
 
 button{
-    background-color: wheat;
+    background-color: #CCC7AC;
     cursor: pointer;
-    width: min(424px, calc(90% + 24px));
+    width: min(474px, calc(90% + 24px));
     color:#967E40;
+    transition: filter 100ms;
 }
 
-@media only screen and (max-width: 1750px){
-    .project{
-        flex-direction: column;
-        align-items: start;
-    }
+button:hover{
+    filter: brightness(90%);
 }
+
 
 @media only screen and (max-width: 900px){
     .projects{
@@ -292,6 +363,19 @@ button{
     }  
 
     .projects{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project{
+        padding-inline: 16px;
+    }
+
+    .project h2, .project p{
+        overflow-wrap: anywhere;
+    }
+
+    .project .links a{
+        margin-block: 4px;
     }
 }

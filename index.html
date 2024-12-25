@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="master.css">
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
 <body>
-        <!-- <div class="banner">
-            <div class="content">Reaaler uuenes!</div>
+        <div class="banner">
+            <div class="content">Taas kord kaasuskonkursi parimate hulgas!</div>
             <div class="links">
-                <a href="https://reaaler.real.edu.ee">Reaaler</a>
+                <a href="kaasuskonkurss/">Vaata</a>
             </div>
-        </div> -->
+        </div>
 
 
     <div class="main-content home">
-        <div class="title-container">
+        <div class="title-container" style="background-color: #DFDCC9;border-radius: var(--border-radius);padding: 24px 48px;">
             <h1 class="name">Hermann Käbi</h1>
             <p class="subtitle">Õigushuviline</p>
         </div>
@@ -142,13 +142,13 @@
 
         const projects = [
             {
-                title:"Reaaler",
-                date:"2023–",
-                text:"Reaaler on Tallinna Reaalkoolile arendatav arvutusäpp",
-                img:"/assets/reaaler.png",
-                font: "Sora",
+                title:"Riigikohtu kaasuskonkurss",
+                date:"2023, 2024",
+                text:"Kaasuskonkurss on iga-aastane Riigikohtu korraldatud võistlus kooliõpilastele, kes on huvitatud kohtunikutööst",
+                img:"/assets/riigikohus.png",
+                font: "Georgia, serif",
                 links:[
-                    {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
+                    {text:"Vaata edasi", href:"kaasuskonkurss"}
                 ],
             },
             {
@@ -160,13 +160,13 @@
                 links:[{text:"Loe edasi", href:"triniti"}],
             },
             {
-                title:"Riigikohtu kaasuskonkurss",
-                date:"2023, 2024",
-                text:"Kaasuskonkurss on iga-aastane Riigikohtu korraldatud võistlus kooliõpilastele, kes on huvitatud kohtunikutööst",
-                img:"/assets/riigikohus.png",
-                font: "Georgia, serif",
+                title:"Reaaler",
+                date:"2023–",
+                text:"Reaaler on Tallinna Reaalkoolile arendatav arvutusäpp",
+                img:"/assets/reaaler.png",
+                font: "Sora",
                 links:[
-                    {text:"Vaata edasi", href:"kaasuskonkurss"}
+                    {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
                 ],
             },
             {
@@ -194,7 +194,6 @@
                 date:"2023–2024",
                 text:"Olen koondanud enda veebilehele Reaalkooli gümnaasiumi muusikakursuste kuulamiskavad, kus saab ka enda teadmisi testida",
                 img:"muusika/icons/logo.png",
-                font:"Inter",
                 links:[{text:"Kuulamiskavad", href:"muusika"}],
             },
             {
@@ -221,14 +220,14 @@
 
         for(project of projects){
             $(".projects").append(`
-            <div style="font-family: `+(project.font ?? "inherit")+`;" onclick="window.location.href = '`+project.links[0].href+`';" style="cursor:pointer;" class="project">
+            <div onclick="window.location.href='`+project.links[0].href+`';" style="font-family: `+(project.font ?? "inherit")+`;" style="cursor:pointer;" class="project">
                 <img src="`+project.img+`" alt="">
                 <div class="info">
                     <span>`+project.date+`</span>
                     <h2 `+(project.font ? 'style="font-family: '+(project.font)+';"' : "")+`>`+project.title+`</h2>
                     <p>`+project.text+`</p>
                     <div class="links">
-                        `+ project.links.map((e)=>'<a href="'+e.href+'">'+e.text+'</a>').join(" ") +`
+                        `+ project.links.map((e)=>'<a class="noarrow" style="color: unset" href="'+e.href+'"><div class="chip">'+e.text+'</div></a>').join(" ") +`
                     </div>
                 </div>
             </div>
@@ -238,7 +237,7 @@
     <script>
 
         var customBanner = {
-            "title":"Kaasuskonkursi võit",
+            "title":"Taas kord kaasuskonkursi parimate hulgas",
             "links":[
                 {
                     "title":"Link",
