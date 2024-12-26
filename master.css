@@ -97,14 +97,14 @@ a:visited{
 
 .footer a {
     display: flex;
-    margin-block: 6px;
+    margin-top: 8px;
 }
 
 .footer .copyright{
     text-align: left;
     color: grey;
     margin-bottom: 0;
-    margin-top: 32px;
+    margin-top: 8px;
 }
 
 .main-content{
@@ -157,7 +157,7 @@ a:visited{
     filter: brightness(90%);
 }
 
-.project img{
+.project > img{
     aspect-ratio: 1;
     object-fit: cover;
     height: 200px;
@@ -190,6 +190,7 @@ a:visited{
     padding: 12px 24px;
     align-self: stretch;
     position: relative;
+    margin-block: 4px;
 }
 
 .chip:has(.multiline){
