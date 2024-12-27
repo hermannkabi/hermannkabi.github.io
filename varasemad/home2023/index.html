@@ -16,6 +16,85 @@
     </div>
 </div> -->
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Space+Grotesk:wght@300..700&display=swap');
+                
+    .new-banner a{
+        display: inline-flex;
+        text-decoration: none;
+        transition: filter 140ms;
+    }
+
+    .new-banner a:not(.noarrow)::after{
+        content: url('/icons/arrow_right_grey.svg');
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 2px;
+        transition: transform 100ms;
+        height: 32px;
+        aspect-ratio: 1;
+    }
+
+    .new-banner a:hover::after{
+        transform: translateX(1px);
+    }
+
+    .new-banner a:hover{
+        filter: brightness(80%);
+    }
+
+    .new-banner{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-size: var(--small-font);
+        background-color: #DFDCC9;
+        border-radius: 32px;
+        padding: 8px 16px;
+        color: black;
+        font-family: "Sen", sans-serif;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font-size: 16px;
+    }
+
+    .new-banner .content{
+        margin-left: 8px;
+        margin-right: 16px;
+    }
+
+    .new-banner .info{
+        font-size: 20px;
+    }
+
+    .new-banner a{
+        color: #8a8787;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .new-banner a::after{
+        content: url('icons/arrow_right_grey.svg');
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px;
+        transition: transform 100ms;
+    }
+    .new-banner a:hover::after{
+        transform: translateX(1px);
+    }
+</style>
+
+<div class="new-banner">
+    <div class="content">Külastad minu veebilehe varasemat versiooni! Uusima info jaoks palun kasuta uut lehte</div>
+    <div class="links">
+        <a href="/">Mine</a>
+    </div>
+</div>
+
 
     <div class="main-content home">
         <div class="title-container">
