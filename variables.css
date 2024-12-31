@@ -3,6 +3,8 @@
     --text-color: black;
     --grey-color: #8a8787;
     --link-color: #658DF3;
+    --primary-color: #DFDCC9;
+    --primary-accent-color: #CCC7AC;
     --text-font: "Sen";
     --display-font:"Space Grotesk";
     --large-font: 56px;
@@ -10,6 +12,16 @@
     --small-font: 16px;
     --btn-border-width:1px;
     --border-radius: 48px;
+    --icon-invert: invert(0);
+}
+
+
+[data-theme="dark"]{
+    --background-color: #20201b;
+    --text-color: rgb(230, 227, 227);
+    --primary-color: #2b2a1f;
+    --primary-accent-color: #585124;
+    --icon-invert: invert(1);
 }
 
 @media only screen and (max-width: 600px){

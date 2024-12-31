@@ -10,7 +10,7 @@ body{
 }
 
 .background{
-    background-color:#DFDCC9;
+    background-color:var(--primary-color);
     padding: 8px 16px 16px 16px;
     margin: 8px;
     border-radius: 48px;
@@ -28,6 +28,7 @@ body{
     gap: 12px;
     align-items: center;
     flex-direction: row;
+    justify-content: center;
 }
 
 .text{

@@ -26,7 +26,7 @@
 
 
     <div class="main-content home">
-        <div class="title-container" style="background-color: #DFDCC9;border-radius: var(--border-radius);padding: 24px 48px;">
+        <div class="title-container" style="background-color: var(--primary-color);border-radius: var(--border-radius);padding: 24px 48px;">
             <h1 class="name">Hermann Käbi</h1>
             <p class="subtitle">Õigushuviline</p>
         </div>
@@ -140,13 +140,14 @@
         <a href="loovtoo/">Loovtöö</a>
         <a href="otsirt/">OtsiRT</a>
         <a href="brat/">brat</a>
+        <a href="privacy/">Privaatsustingimused</a>
 
         <br>
         <div style="display: inline-block; transform: translateX(-24px);">
             <a style="display: inline-block; width: 55px;" class="noarrow" href="https://www.facebook.com/kabihermann"><img src="icons/facebook.png" alt=""></a>
             <a style="display: inline-block; width: 55px;" class="noarrow" href="https://www.goodreads.com/user/show/108111958-hermann-k-bi"><img src="icons/goodreads.png" alt=""></a>
             <a style="display: inline-block; width: 55px;" class="noarrow" href="https://github.com/hermannkabi"><img src="icons/github-sign.png" alt=""></a>
-            <a style="display: inline-block; width: 55px;" class="noarrow" href="https://www.linkedin.com/in/hermann-k%C3%A4bi-7a1096222/"><img src="icons/linkedin.png" alt=""></a>    
+            <a style="display: inline-block; width: 55px;" class="noarrow" href="https://www.linkedin.com/in/hermann-k%C3%A4bi-7a1096222/"><img src="icons/linkedin.png" alt=""></a>            
         </div>
 
         <p class="copyright">© <span class="year"></span> Hermann Käbi <a class="noarrow" style="color: grey; display: inline; font-size: 14px;" href="varasemad/">(varasemad kodulehed)</a> </p>
@@ -243,7 +244,7 @@
                     <h2 `+(project.font ? 'style="font-family: '+(project.font)+';"' : "")+`>`+project.title+`</h2>
                     <p>`+project.text+`</p>
                     <div class="links">
-                        `+ project.links.map((e)=>'<a class="noarrow" style="color: unset" href="'+e.href+'"><div class="chip"><p style="color:black;">'+e.text+'</p> <img src="/assets/icons/arrow.png" alt=""></div></a>').join(" ") +`
+                        `+ project.links.map((e)=>'<a class="noarrow" style="color: unset" href="'+e.href+'"><div class="chip"><p style="color:black;">'+e.text+'</p> <img class="nochange" src="/assets/icons/arrow.png" alt=""></div></a>').join(" ") +`
                     </div>
                 </div>
             </div>
@@ -283,5 +284,6 @@
     <script>
         $(".copyright .year").text((new Date(Date.now())).getFullYear());
     </script>
+    <script src="/theme.js"></script>
 </body>
 </html>
