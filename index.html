@@ -175,6 +175,7 @@
                 img:"/assets/triniti.png",
                 font: "FS Meridian",
                 links:[{text:"Loe edasi", href:"triniti"}],
+                invertImg:true,
             },
             {
                 title:"Reaaler",
@@ -185,6 +186,7 @@
                 links:[
                     {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
                 ],
+                invertImg:true,
             },
             {
                 title:"EMES veebileht",
@@ -195,6 +197,7 @@
                 links:[
                     {text:"Vaata", href:"https://emes.edu.ee"}
                 ],
+                invertImg:true,
             },
             {
                 title:"Ernst x Emma",
@@ -212,6 +215,7 @@
                 text:"Olen koondanud enda veebilehele Reaalkooli gümnaasiumi muusikakursuste kuulamiskavad, kus saab ka enda teadmisi testida",
                 img:"muusika/icons/logo.png",
                 links:[{text:"Kuulamiskavad", href:"muusika"}],
+                invertImg:true,
             },
             {
                 title:"Kunstiajaloo ajatelg",
@@ -238,7 +242,7 @@
         for(project of projects){
             $(".projects").append(`
             <div onclick="window.location.href='`+project.links[0].href+`';" style="font-family: `+(project.font ?? "inherit")+`;" style="cursor:pointer;" class="project">
-                <img src="`+project.img+`" alt="">
+                <img style='filter: `+(project.invertImg ? "var(--icon-invert)" : "none")+`;' src="`+project.img+`" alt="">
                 <div class="info">
                     <span>`+project.date+`</span>
                     <h2 `+(project.font ? 'style="font-family: '+(project.font)+';"' : "")+`>`+project.title+`</h2>

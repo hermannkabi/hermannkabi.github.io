@@ -31,7 +31,7 @@ themeBtn.addEventListener("click", function (){
         localStorage.setItem("site-theme", "dark");
     }
 
-    document.body.style.transition = "all 100ms";
+    document.body.style.transition = "all 150ms";
     checkTheme();
 });
 
