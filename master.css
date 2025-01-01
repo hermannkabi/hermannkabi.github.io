@@ -190,6 +190,10 @@ a:visited{
     margin-top: auto;
 }
 
+.projects .project:nth-child(2n+1):last-child{
+    grid-column: auto / span 2;
+}
+
 .chip{
     border-radius: 48px;
     background-color: var(--primary-accent-color);

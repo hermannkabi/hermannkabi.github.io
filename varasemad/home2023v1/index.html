@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermann Käbi</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Space+Grotesk:wght@300..700&display=swap');
+                    
+        .new-banner a{
+            display: inline-flex;
+            text-decoration: none;
+            transition: filter 140ms;
+        }
+    
+        .new-banner a:not(.noarrow)::after{
+            content: url('/icons/arrow_right_grey.svg');
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 2px;
+            transition: transform 100ms;
+            height: 32px;
+            aspect-ratio: 1;
+        }
+    
+        .new-banner a:hover::after{
+            transform: translateX(1px);
+        }
+    
+        .new-banner a:hover{
+            filter: brightness(80%);
+        }
+    
+        .new-banner{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: var(--small-font);
+            background-color: #DFDCC9;
+            border-radius: 32px;
+            padding: 8px 16px;
+            color: black;
+            font-family: "Sen", sans-serif;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            font-size: 16px;
+        }
+    
+        .new-banner .content{
+            margin-left: 8px;
+            margin-right: 16px;
+        }
+    
+        .new-banner .info{
+            font-size: 20px;
+        }
+    
+        .new-banner a{
+            all: unset;
+            cursor: pointer;
+            color: #8a8787;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+    
+        .new-banner a::after{
+            content: url('icons/arrow_right_grey.svg');
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            transition: transform 100ms;
+        }
+        .new-banner a:hover::after{
+            transform: translateX(1px);
+        }
+    </style>
+    
+    <div class="new-banner" style="margin-top: 60px;">
+        <div class="content">Külastad minu veebilehe varasemat versiooni! Uusima info jaoks palun kasuta uut lehte</div>
+        <div class="links">
+            <a href="/">Mine</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar-content">
+            <!-- Div needed for flex alignment -->
+            <div>
+                <a class="no-style" href=""><img src="favicon.ico" alt="Logo" class="nav-logo"></a>
+                <h1>Hermann Käbi</h1>
+            </div>
+            <div class="options">
+                <a href="#about">Minust</a>
+                <a href="#projects">Projektid</a>
+                <a href="#tech">Oskused</a>
+                <a href="#contact">Võta ühendust</a>
+            </div>
+        </div>
+    </div>
+    <div id="navbar-margin"></div>
+    
+    <section>
+        <div class="main-container">
+            <div class="popup message-hidden" id="top-message" hidden></div>
+
+            <div class="top-spacer"></div>
+            
+            <h1 class="main-heading first appear">Hei, hei, <br>olen <span class="primary-color">Hermann</span></h1>
+            <img src="https://hermannkabi.com/assets/hermann.jpg" alt="Pilt" id="main-photo" class="third appear">
+            <p class="subheader primary-color second appear"><span class="hobbies">Programmeerimis</span>entusiast</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="section-header">Veidi <span class="primary-color">minust</span></h1>
+        <p class="animate-opacity">Hei, minu nimi on Hermann Käbi. Olen 17-aastane programmeerimisentusiast. Juba viimased paar aastat olen õppinud nii mobiili- kui veebiarendust. Sellest ajast olen loonud põnevaid ja ilusaid projekte, mõnda neist saad näha <a class="no-style" style="text-decoration: underline; cursor: pointer;" href="#projects">siin</a>.</p>
+        <p class="animate-opacity">Alustasin programmeerimist juba varakult, umbes seitsmeaastasena <span class="python">Pythonis</span>, kuid vaevalt saab mu paarirealiste koodide kirjutamist "päris" programmeerimiseks nimetada. Mida aeg edasi, seda komplekssemaks mu koodid muutusid ja seda enam unistasin tegelikult kasutatavate rakenduste tegemisest. Seda teekonda alustasin samuti Pythonis, Tkinteri teegiga todoliste tehes. Kuid siis, 2020. aasta aprillikuus, koroona-ajal kodus istudes otsustasin oma kauaaegse unistuse teoks teha. Alustasin mobiiliarenduse õppimist <span class="flutter">Flutteriga</span> loovtöö kirjutamiseks, kuid mõistsin kiiresti, et sedasorti rakenduste tegemine on minu suur kirg. Aasta hiljem, kui aega veidi rohkem, alustasin ka veebiarenduse õppimist. Mõlemad on mulle olulised ja täiendavad üksteist hästi. Veebiarendust olen aga viimasel ajal rohkem õppinud ja proovinud ka mõnda raamistikku, täpsemalt Djangot. Järgmisel aastal teen uurimistööd, kasutades selleks Laraveli, nii et suvel õpin ka seda.</p>
+        <p class="animate-opacity">Väljaspool koodi tegelen golfiga, jooksen ja muidugi ka õpin Tallinna Reaalkooli 10. klassis.</p>
+    </section>
+
+    <section id="projects">
+        <h1 class="section-header">Minu <span class="primary-color">projektid</span></h1>
+        <div class="project-parent " group="projects">
+            <div class="pro-div1 project animate-opacity animate-opacity-100" >
+                <div class="project-front">
+                    <h1>ParemGolf</h1>
+                    <p>ParemGolf on golfiäpp, millega saab salvestada oma tulemusi, automaatselt statistikat teha ja ka rajal olles on see kasulik!</p>    
+                </div>
+                <div class="project-back">
+                    <img style="float: right; vertical-align: top;" src="https://play-lh.googleusercontent.com/F4fyv-COhyenCgPh0XCPOQAlq3VlqNX4-q7J1uDlpHHHw2jr-SSjNRNwkuz95yI34q4n=w240-h480" alt="">
+
+                    <div class="data">
+                        <h2>2022-</h2>
+                        <p>Aasta</p>
+                    </div>
+                    <div class="data">
+                        <h2 class="flutter">Flutter</h2>
+                        <p>Tehnoloogia</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://play.google.com/store/apps/details?id=com.hermannkabi.parem_golf">Google</a>, <a href="https://apps.apple.com/app/paremgolf/id6443506351">Apple</a></h2>
+                        <p>Lingid</p>
+                    </div>
+                    <br>
+                    <p>Minu kõige edasijõudnum mobiiliprojekt, kus kasutasin kõiki teadmisi nii Flutterist kui kasutajaliidese loomisest. Kuigi tagantjärele teeksin mõned lahendused teisiti, on see siiski minu mobiiliarenduse viimane tase.</p>
+                </div>
+            </div>
+            <div class="pro-div2 project animate-opacity animate-opacity-200" style="color: black;">
+                <div class="project-front">
+                    <h1>Jõulumäng</h1>
+                    <p>Jõulud on käes. Aga hädaoht varitseb</p>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2022</h2>
+                        <p>Aasta</p>
+                    </div>
+                    <div class="data">
+                        <h2><span class="flutter">Flutter</span></h2>
+                        <p>Tehnoloogia</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://hermannkabi.com/joulud">Jõulumäng</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>Jõulud on tore aeg küll, aga mõtlesin, et palju toredam oleks, kui saaks mängida midagi uut ja teemakohast. Seetõttu korraldasin sugulastele ja perele ühe lõbusa mängu. Mängija oli detektiiv, kelle ülesandeks oli päästa jõulud Grinchi käest. Selleks oli kasutada moodne vidin: Detektiivi Spetsiaaltelefon. Äpp jäljendaski ühe operatsioonisüsteemi käitumist ja välimust. Kasutada sai mitut äppi, nt meil, kaamera, terminal, brauser, jne. Mängu käigus tuli käia jalutamas teatud punktidesse (geolocation), lahendada mõistatusi ja langetada raskeid valikuid. Kogu selle ühendamine ja tegemine oli paras väljakutse, ent tagasiside oli väga positiivne. Ise jäin ka rahule, aga rohkem tehnilise lahendusega.</p>
+                </div>
+            </div>
+            <div class="pro-div3 project animate-opacity animate-opacity-300">
+                <div class="project-front">
+                    <h1>Füüsikaõppe leht (WIP)</h1>
+                    <p>Põnev projekt, mille käigus õpin ise Djangot ja õpetan teistele füüsikat</p>    
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2023</h2>
+                        <p>Aasta</p>
+                    </div>
+                    <div class="data">
+                        <h2><span class="html">HTML</span>, <span class="css">CSS</span>, <span class="js">JS</span> + <span class="django">Django</span></h2>
+                        <p>Tehnoloogiad</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://fysaapp.pythonanywhere.com">Veebileht (WIP)</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>See on esimene tarkvara, mida olen teinud koostöös teiste arendajatega: nimelt on see projekt programmeerimistunni jaoks tehtud koos kahe minu klassivennaga. Ausalt öeldes tegin suurema osa (front-end + enamus back-endi ka) ise ära, aga jätsin ka klassikaaslastele võimaluse Djangot õppida. Selle lehe front-endi paindlikkusega jäin nii rahule, et kasutasin seda alusena ka oma kodulehel.</p>
+                </div>
+            </div>
+            <div class="pro-div4 project animate-opacity animate-opacity-400">
+                <div class="project-front">
+                    <h1>Söögiaeg</h1>
+                    <p>Kuidas küll otsustada, mida söögiks teha?</p>    
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2023</h2>
+                        <p>Aasta</p>
+                    </div>
+                    <div class="data">
+                        <h2><span class="html">HTML</span>, <span class="css">CSS</span>, <span class="js">JS</span> + <span class="nodejs">Express.js</span></h2>
+                        <p>Tehnoloogiad</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://soogiaeg.cyclic.app">Veebileht</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>See projekt oli tingitud elulisest probleemist: peres tekkis alati vaidlus, mida süüa. Niisiis, 'arendaja' nagu ma olen, haarasin ohjad enda kätte ja tegin sellise lihtsa rakenduse. Ühtlasi sain proovida vastõpitud Express.js-i kasutamist päris projektis. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <section id="tech">
+        <h1 class="section-header">Minu <span class="primary-color">oskused</span></h1>
+        <div class="project-parent animate-opacity" group="techstack">
+            <div class="tech-div1 project animate-opacity animate-opacity-100">
+                <div class="project-front">
+                    <h1 class="flutter-large">Flutter</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2020</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>9/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://flutter.dev/">Koduleht</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>Flutter on esimene kasutajaliidese raamistik, mida olen õppinud. Mulle jäi kohe silma selle süntaksi arusaadavus ja ülisuur kohandatavus. Lisaks avaldas muljet ka pidevad uuendused (nt null safety, uued platvormid jne) ja paljude teekide olemasolu. Nende tegurite mõjul olen jäänud Flutterit rõõmuga kasutama siiani ja tegin seda kasutades 8. klassis ka <a href="https://hermannkabi.com/loovtoo/">loovtöö</a>.</p>
+                </div>
+            </div>
+            <div class="tech-div2 project scroll-help animate-opacity animate-opacity-200">
+                <div class="project-front">
+                    <h1 class="python-large">Python</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2013</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>8/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://python.org/">Koduleht</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>Ei, õppimise algusaasta ei valeta! Küll aga on veidi eksitav. 2013 aastal olin ma seitsme-aastane ja just programmeerimisega alustanud. See tähendas aastaid oma lõbuks paarirealiste Pythoni-koodikeste kirjutamist. Siis võtsin kätte ja kirjutasin paar funktsionaalset programmi (meelde tuleb näiteks peastarvutamise õppeprogramm). Vahepeale jäi kindlasti hea mitu aastat muid tegevusi, aga mingi hetk avastasin Tkinteri näol kasutajaliidese ja tegin Todoliste, paroolihaldureid jne. Ühel hetkel jäi ka sellest väheks ja siis hakkasingi õppima mobiiliarendust. Pythonisse tõi mind tagasi gümnaasiumisse minek, sest  kasutame seda programmeerimistunnis. </p>
+                </div>
+            </div>
+            <div class="tech-div3 project animate-opacity animate-opacity-300">
+                <div class="project-front">
+                    <h1 class="django-large">Django</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2023</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>7/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://djangoproject.com/">Koduleht</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>Djangot hakkasin õppima programmeerimistunni jaoks 2023. aasta aprillis. See oli mulle uus ja väga paeluv kogemus. Raamistik tegi nii palju, nagu routing, andmebaas, autentimine jne, sinu eest ise ära, et kogu arendusprotsess tundus veidike sohitegemisena. Siiski olen õppinud,et just nii peakski veebiarendus käima.</p>
+                </div>
+            </div>
+            <div class="tech-div4 project animate-opacity animate-opacity-400">
+                <div class="project-front">
+                    <h1 class="js-large">JavaScript</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2021</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>8/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <div class="data">
+                        <h2><a href="https://javascript.com/">Koduleht</a></h2>
+                        <p>Link</p>
+                    </div>
+                    <p>Alates veebiarenduse õppimise algusega olen internetis kohanud palju JavaScripti-vastaseid. Olen nõus, et sellel keelel on palju veidrusi, kuid süntaks on väga klassikaline ja erakordselt lihtne, tehes veebiarenduse kättesaadavamaks. Seetõttu olen mina oma paariaastase kogemuse põhjalt valmis ütlema, et JavaScript ei ole minu arvates sugugi halb keel. Ka seesama veebileht kasutab ju seda.</p>
+                </div>
+            </div>
+            <div class="tech-div5 project scroll-help animate-opacity animate-opacity-500">
+                <div class="project-front">
+                    <h1 class="html-large">HTML</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2021</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>9/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <p>Kui ma veebiarenduse õppimisega alustasin, kartsin HTMLi enim. Olin 7. klassis informaatikas väga pinnapealselt seda keelt õppinud ja teadsin, et süntaks on veider, palju tähiseid ja ebatavalisi sümboleid. Minu suureks üllatuseks osutus selline tagi-põhine süntaks erakordselt võimsaks ja kasutades koodiredaktorit pole ka vaja pidevalt suurem-kui märke otsida.</p>
+                </div>
+            </div>
+            <div class="tech-div6 project scroll-help animate-opacity animate-opacity-600">
+                <div class="project-front">
+                    <h1 class="css-large">CSS</h1>
+                </div>
+                <div class="project-back">
+                    <div class="data">
+                        <h2>2021</h2>
+                        <p>Õppinud alates</p>
+                    </div>
+                    <div class="data">
+                        <h2>8/10</h2>
+                        <p>Meeldivus</p>
+                    </div>
+                    <p>CSS on viis, kuidas olen kaks aastat oma lehti kujundanud. Mulle väga meeldib see keel, kuid pidevaks nuhtluseks on, nagu veebiarenduses kombeks, brauseritugedega arvestamine (eriti :has, mis pole Firefoxi tuge veel saanud). Loodan, et ägedate CSSi laienduste, nagu näiteks Sass abil muutub CSS aina loetavamaks, loogilisemaks ja väiksemaks.</p>
+            </div>
+    
+        </div>
+    </section>
+    <br><br><br>
+    <section id="contact">
+        <h1 class="section-header">Võta <span class="primary-color">ühendust</span></h1>
+
+        <form action="https://formsubmit.co/hermann.kaebi@gmail.com" method="POST" class="">
+            <input type="hidden" name="_subject" value="Võta ühendust | Hermann Käbi">
+            <input type="hidden" name="_autoresponse" value="Tere! Tänan, et võtsid minuga ühendust. Vastan sulle esimesel võimalusel sellele e-posti aadressile.">
+            <input type="hidden" name="_next" value="https://hermannkabi.com/?m=thanks!">
+            <input name="Nimi" type="text" placeholder="Nimi" class="animate-opacity">
+            <input name="E-post" type="email" placeholder="E-posti aadress" class="animate-opacity">
+            <textarea name="Sõnum" id="" placeholder="Sinu sõnum..." class="animate-opacity"></textarea><br>
+            <button class="filled send-btn animate-opacity">Saada</button>
+        </form>
+    </section>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+    <script>
+        var navbar = document.querySelector(".navbar")
+        function setNavbarMargin() {
+            document.getElementById("navbar-margin").style.height = navbar.offsetHeight + "px";
+        }
+        setNavbarMargin()
+
+        new ResizeObserver(setNavbarMargin).observe(navbar);        
+    </script>
+
+    <script>
+        const hobbies = ["Programmeerimis", "Veebi", "Mobiili", "Kasutajaliidese-"];
+        var count = 0;
+
+        setInterval(() => {
+            $(".hobbies").animate({"width":"hide"}, 1000, function (){
+                count ++;
+                $(this).text(hobbies[count % hobbies.length]);
+                setTimeout(() => {
+                    $(this).animate({"width":"show"}, 900);
+                }, 250);
+            });
+        }, 5000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+    <script>
+        var showContentTimeout;
+        var animatedOpacityTimeout;
+        var hoverOutTimeout;
+        var removeElementsTimeout;
+        $(".project").hover(function() {
+            clearTimeout(hoverOutTimeout);
+            const group = $(this).parent().attr("group");
+            // Don't do anything if you just scroll through
+            animatedOpacityTimeout = setTimeout(() => {
+                if($(window).width() > 900){
+                    $(".project-parent[group="+group+"] .project").css("opacity", "0");
+                    $(this).css("opacity", "1");
+
+                }
+            }, 50);
+            showContentTimeout = setTimeout(() => {
+                // if($(this).hasClass("scroll-help") && $(window).width() > 900){
+                //     $("body").scrollTo($(this)[0], 100);
+                // }
+
+                
+                $(".project-front", this).animate({"height":"hide"}, 400);
+                $(".project-back", this).animate({"height":"show"}, 600);
+
+            }, 200);
+        }, function() {
+            clearTimeout(showContentTimeout);
+            clearTimeout(animatedOpacityTimeout);
+            clearTimeout(removeElementsTimeout);
+
+            hoverOutTimeout = setTimeout(() => {
+                $(".project").css("opacity", "1");
+                setTimeout(() => {
+                    $(".project-parent[group="+group+"] .project").css("display", "block");
+                }, 400);
+            }, 50);
+        });
+
+        $(".project-parent").hover(null, function (){
+            $(".project-back").animate({"height":"hide"}, 400);
+            $(".project-front").animate({"height":"show"}, 400);
+
+        });
+    </script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("visible-opacity");
+                }
+            });
+        });
+
+        const hidden = document.querySelectorAll(".animate-opacity");
+
+        hidden.forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const message = params.get("m");
+
+
+        if(message != null){
+            console.log(message == "thanks" ? "Aitäh kirjutamast! Vastan esimesel võimalusel!" : message);
+            window.history.replaceState({}, document.title, "/" + "");
+            $("#top-message").text(message);
+            $("#top-message").removeClass("message-hidden");
+
+            $("#top-message").addClass("message");
+            setTimeout(() => {
+                $("#top-message").addClass("message-hidden");
+                setTimeout(() => {
+                    $("#top-message").css("display", "none");
+                }, 5000);
+            }, 5000);
+
+        }
+    </script>
+    
+</body>
+</html>
