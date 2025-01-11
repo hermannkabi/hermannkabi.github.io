@@ -8,8 +8,8 @@ const backBtn = document.createElement('div');
 backBtn.className = 'theme-btn back-btn';
 backBtn.innerHTML = '<img src="/icons/back.png">';
 
-
-if((window.location.pathname.replaceAll("/", ""))){
+var path = window.location.pathname.replaceAll("/", "");
+if(path && path != "index.html"){
     document.body.prepend(backBtn);
 }
 
