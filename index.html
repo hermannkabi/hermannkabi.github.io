@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="master.css">
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
 <body>
-       <div class="banner">
+       <!-- <div class="banner">
             <div class="content">Praktikal Tallinna Halduskohtus!</div>
             <div class="links">
                 
             </div>
-       </div> 
+       </div>  -->
 
 
     <div class="main-content home">
@@ -31,8 +31,13 @@
             <p class="subtitle">Õigushuviline</p>
         </div>
 
-        <img class="big-img" src="assets/triniti.jpg" alt="">
+        <img id="main-img" class="big-img" src="" alt="">
     </div>
+
+    <script>
+        var imgs = ["assets/triniti.jpg", "/halduskohus/TalHK_praktika_Käbi2.jpg"];
+        document.getElementById("main-img").setAttribute("src", imgs[Math.floor(Math.random() * imgs.length)]);
+    </script>
 
     <div class="main-content">
         <h2 class="name">Minu projektid</h2>
@@ -50,8 +55,8 @@
             <div class="cv-section">
                 <h2>Haridus</h2>
                 <div class="details">
-                    <p>2022–</p>
-                    <p>Tallinna Reaalkool, reaal-programmeerimine</p>
+                    <p>2022–2025</p>
+                    <p>Tallinna Reaalkool, reaal-programmeerimine (kuldmedaliga)</p>
 
                     <p>2019–2022</p>
                     <p>Tallinna Reaalkool, 7.–9. klass (kiitusega)</p>
@@ -94,7 +99,10 @@
             <div class="cv-section">
                 <h2>Töökogemus</h2>
                 <div class="details">
-                    <p>2024–</p>
+                    <p>2025</p>
+                    <p>praktikant, Tallinna Halduskohus</p>
+
+                    <p>2024–2025</p>
                     <p>keeletoimetaja, Reaali Poiss</p>
 
                     <p>2024</p>
@@ -178,11 +186,18 @@
 
         const projects = [
             {
+                title:"Tallinna Halduskohtu praktika",
+                date:"mai–juuni 2025",
+                text:"2025. aastal, täpselt enne gümnaasiumi lõpetamist, veetsin töise kuu Tallinna Halduskohtu praktikandina.",
+                img:"/halduskohus/TalHK_logo.jpg",
+                font: "Georgia, serif",
+                links:[{text:"Loe edasi", href:"halduskohus"}],
+            },
+            {
                 title:"Riigikohtu kaasuskonkurss",
                 date:"2023, 2024",
                 text:"Kaasuskonkurss on iga-aastane Riigikohtu korraldatud võistlus kooliõpilastele, kes on huvitatud kohtunikutööst",
                 img:"/assets/riigikohus.png",
-                font: "Georgia, serif",
                 links:[
                     {text:"Vaata edasi", href:"kaasuskonkurss"}
                 ],
