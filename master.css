@@ -150,7 +150,7 @@ a:visited{
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     padding: 24px 48px;
-    transition: filter 100ms, box-shadow 100ms;
+    transition: filter 100ms, box-shadow 100ms, scale 100ms;
     flex-direction: column;
     align-items: start;
 }
@@ -158,6 +158,7 @@ a:visited{
 .project:hover{
     filter: brightness(90%);
     box-shadow: 0px 0px 55px 8px var(--primary-color);
+    scale: 1.02;
 }
 
 .project > img{

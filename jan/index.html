@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Hendrik Järvemets | REKi valimised 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle-button navbar-mobile navbar-mobile-open">
+        <span>Menüü</span>
+    </div>
+
+    <div class="links-mobile" style="display: none;">
+        <div class="circle-button navbar-mobile navbar-mobile-close">
+            <span>Sulge</span>
+        </div>
+        <div class="logo no-anim">
+            <h2>JAN HENDRIK<br>JÄRVEMETS</h2>
+            <p>JASPER KESKPAIK</p>
+        </div>
+
+        <p style="color: var(--grey-color);">Kandidaat nr X</p>
+        
+        <a href="">Valimisprogramm</a>
+
+        <a href="">Meeskond</a>
+
+        <a href="">Instagram</a>
+    </div>
+
+    <div class="navbar">
+        <div class="links">
+            <p style="color: var(--grey-color);">Kandidaat nr X</p>
+
+            <a href="">Valimisprogramm</a>
+        </div>
+
+        <div class="logo">
+            <h2>JAN HENDRIK<br>JÄRVEMETS</h2>
+            <p>JASPER KESKPAIK</p>
+        </div>
+
+        <div class="links">
+            <a href="">Meeskond</a>
+            <a href="">Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="circle-button scroll-top" style="display: none;">
+        <span><img style="height: 24px;" src="thin-arrow.png" alt=""></span>
+    </div>
+
+    <div style="height: 250px;"></div>
+
+    <div class="main-content">
+        <img src="" alt="" style="height: 500px; width: min(90%, 350px);">
+
+        <div class="campaign-slogan">
+            <h1>Kampaania lööklause tuleb siia! <span class="blue-dot"></span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus fringilla magna nec dapibus. Donec convallis, ante in faucibus bibendum, nulla nibh maximus diam, id auctor elit quam a ex.</p>
+        </div>
+    </div>
+
+    <div style="height: 200vh;"></div>
+
+    <div style="display: flex; flex-direction: column; justify-content: end; align-items: end;">
+        <p class="big-jan" style="font-weight: 800; font-size:7.2vw;text-align:center; margin-bottom:-16px;padding-bottom: -16px; text-transform: var(--text-transform);">Jan Hendrik Järvemets</p>
+        <p style="margin-block: 0; text-align: end; font-size: 14px; color: black;">Veebilehe tegi <a style="color: black;" href="https://hermannkabi.com">Hermann Käbi</a> </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                $(".links").css("opacity", "0");
+                $(".logo:not(.no-anim)").css("scale", "0.75");
+                $(".navbar").css("padding-top", "0");
+                $(".scroll-top").fadeIn(200);
+            }else{
+                $(".links").css("opacity", "1");
+                $(".logo:not(.no-anim)").css("scale", "1");
+                $(".navbar").css("padding-top", "32px");
+                $(".scroll-top").fadeOut(200);
+
+            }
+        } 
+    </script>
+
+    <script>
+        $(".navbar-mobile-close").click(function (){
+            $(".links-mobile").fadeOut(200);
+        });
+
+        $(".navbar-mobile-open").click(function (){
+            $(".links-mobile").fadeIn(200);
+        });
+    </script>
+
+    <script>
+        $(".scroll-top").click(function (){window.scrollTo({top: 0, behavior: 'smooth'});})
+    </script>
+
+</body>
+</html>
