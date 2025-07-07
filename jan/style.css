@@ -28,6 +28,8 @@
 body, html{
     font-family: var(--font);
     background-color: var(--background-color);
+    text-align: center;
+    scroll-behavior: smooth;
 }
 
 h1,p,a{
@@ -59,6 +61,7 @@ h1,p,a{
     gap: 0;
     transition: scale 200ms;
     text-transform: var(--text-transform);
+    flex: 1;
 }
 
 .logo h2{
@@ -66,6 +69,7 @@ h1,p,a{
     font-size: 24px;  
     margin-block: 0; 
     line-height: 125%;
+    color: var(--primary-color);
 }
 
 .logo p{
@@ -80,6 +84,8 @@ h1,p,a{
     align-items: center;
     gap: 100px;
     transition: opacity 200ms;
+    flex: 1;
+    justify-content: center;
 }
 
 .links a, .links-mobile a{
@@ -176,11 +182,12 @@ h1,p,a{
 .main-content{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
 }
 
 .campaign-slogan{
+    margin-top: 64px;
     text-align: end;
     display: flex;
     flex-direction: column;
@@ -207,11 +214,149 @@ h1,p,a{
 
 .blue-dot{
     position: absolute;
-    right: 8px;
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 10px 10px 233px 66px var(--primary-color);
 }
+
+.subtitle{
+    position: relative;
+    text-transform: var(--text-transform);
+    font-size: 64px;    
+    padding-top: 100px;
+}
+
+.subtitle .blue-dot{
+    bottom: 16px;
+}
+
+.promises{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 8px;
+}
+
+.promise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: fit-content;
+}
+
+.promise img{
+    border-radius: 16px 24px 32px 24px;
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.promise .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.promise h3{
+    color: var(--primary-color);
+    margin-bottom: 0;
+    text-transform: var(--text-transform);
+}
+
+.promise p{
+    margin-top: 0;
+    color: var(--grey-color);
+    max-width: min(75%, 300px);
+}
+
+.commissions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.commission{
+    background-color: var(--primary-color);
+    border-radius: 24px;
+    width: 40%;
+    color: white;
+    padding: 16px 8px;
+    margin-block: 16px;
+}
+
+.commission h3{
+    text-transform: var(--text-transform);
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.commission .members{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-block: 24px;
+}
+
+.commission-member{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.commission-member.leader{
+    flex-direction: column;
+    scale: 1.1;
+}
+
+.commission-member img{
+    height: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.commission-member h4{
+    margin-block: 0;
+    text-transform: var(--text-transform);
+}
+
+.commission-member p{
+    color: var(--grey-color);
+    margin-block: 0;
+}
+
+.commission-member .info{
+    text-align: start;
+}
+
+.commission-member.leader .info{
+    text-align: center;
+}
+
+.names-campaign{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: min(400px, 90%);
+    margin: auto;
+}
+
+.names-campaign p:nth-child(2n+1):last-child {
+	grid-column: auto / span 2;
+}
+
+
+@media only screen and (max-width: 1300px){
+    .promises{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 @media only screen and (max-width: 1100px){
     .links{
@@ -225,6 +370,7 @@ h1,p,a{
     .main-content{
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .campaign-slogan, .campaign-slogan p{
@@ -239,5 +385,24 @@ h1,p,a{
 
     .campaign-slogan p{
         font-size: 20px;
+    }
+
+    .subtitle{
+        font-size: 32px;
+    }
+
+    .commission{
+        width: 90%;
+    }
+
+    .commission .members{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .promises{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
