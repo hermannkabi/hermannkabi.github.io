@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Hendrik Järvemets | REKi valimised 2025</title>
+    <title>Jan Hendrik Järvemets & Jasper Keskpaik | REKi presidendi valimised 2025</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +26,8 @@
 
         <a href="#meeskond">Meeskond</a>
 
-        <a href="">Instagram</a>
+        <a href="#meeskond">Instagram</a>
+    
     </div>
 
     <div class="navbar">
@@ -43,7 +44,11 @@
 
         <div class="links end">
             <a href="#meeskond">Meeskond</a>
-            <a href="">Instagram</a>
+
+            <div class="insta-btn">
+                <a href="">Instagram</a>
+                <img src="instagram.png" alt="">
+            </div>
         </div>
 
     </div>
@@ -251,12 +256,12 @@
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                $(".links").css("opacity", "0");
+                $(".links").css("opacity", "0").css("pointer-events", "none");
                 $(".logo:not(.no-anim)").css("scale", "0.75");
                 $(".navbar").css("padding-top", "0");
                 $(".scroll-top").fadeIn(200);
             }else{
-                $(".links").css("opacity", "1");
+                $(".links").css("pointer-events", "auto").css("opacity", "1");
                 $(".logo:not(.no-anim)").css("scale", "1");
                 $(".navbar").css("padding-top", "32px");
                 $(".scroll-top").fadeOut(200);
@@ -283,6 +288,50 @@
         $(".links-mobile a").click(function (){
             $(".links-mobile").fadeOut(200);
         });
+    </script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const el = entry.target;
+
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
+            el.classList.add('hovered');
+            } else {
+            el.classList.remove('hovered');
+            }
+        });
+        }, {
+        threshold: [0, 0.5, 1], // Observe when 50% or more is visible
+        root: null
+        });
+
+        document.querySelectorAll('.commission').forEach(el => observer.observe(el));        
+    </script>
+
+    <script>
+        const promises = document.querySelectorAll('.promise');
+
+        const observer2 = new IntersectionObserver((entries, obs) => {
+        const visiblePromises = [];
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            visiblePromises.push(entry.target);
+            obs.unobserve(entry.target); // Optional: stop watching once it's animated
+            }
+        });
+
+        visiblePromises.forEach((el, i) => {
+            setTimeout(() => {
+            el.classList.add('visible');
+            }, i * 200);
+        });
+        }, {
+        threshold: 0.1
+        });
+
+        promises.forEach(p => observer2.observe(p));
     </script>
 </body>
 </html>

@@ -78,6 +78,7 @@ h1,p,a{
     font-size: 20px;
     color: var(--grey-color);
     margin-block: 0;
+    font-weight: 500;
 }
 
 .links{
@@ -86,7 +87,7 @@ h1,p,a{
     align-items: center;
     gap: 6vw;
     transition: opacity 200ms;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: -8px;
     width: 400px;
 }
@@ -103,13 +104,6 @@ h1,p,a{
     text-decoration-thickness: 2px;
 }
 
-.links.start{
-    justify-content: start;
-}
-
-.links.end{
-    justify-content: center;
-}
 
 .circle-button{
     font-size: 12px;
@@ -128,8 +122,8 @@ h1,p,a{
 }
 
 .navbar-mobile{
-    top: 8px;
-    right: 8px;
+    top: 16px;
+    right: 16px;
     z-index: 2;
     display: none;
 }
@@ -187,6 +181,39 @@ h1,p,a{
 .links-mobile a{
     color: white;
     font-size: 24px;
+}
+
+
+.insta-btn{
+    padding: 8px 16px;
+    margin: -8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    transition: all 200ms;
+}
+
+.insta-btn img{
+    height: 24px;
+    opacity: 0;
+}
+
+.insta-btn:hover{
+    background: #833ab4;
+    background: linear-gradient(
+        to right,
+        #833ab4,#fd1d1d,#fcb045
+    );
+    border-radius: 2px;
+}
+
+.insta-btn:hover a{
+    color: white;
+}
+
+.insta-btn:hover img{
+    opacity: 1;
 }
 
 
@@ -255,11 +282,16 @@ h1,p,a{
     justify-content: center;
     gap: 16px;
     width: fit-content;
-    transition: all 200ms;
+    transition: all 200ms, opacity 2000ms;
     background-color: transparent;
     padding: 24px 8px;
     border-radius: 16px;
     margin: 8px 24px;
+    opacity: 0;
+}
+
+.promise.visible{
+    opacity: 1;
 }
 
 .promise:hover{
@@ -308,12 +340,12 @@ h1,p,a{
     color: white;
     padding: 16px 8px;
     margin-block: 16px;
-    box-shadow: 8px 8px 26px 7px rgba(8,44,80,0.37);
+    /* box-shadow: 8px 8px 26px 7px rgba(8,44,80,0.37); */
     transition: all 200ms;
 }
 
-.commission:hover{
-    transform: translateY(-1px);
+.commission.hovered{
+    transform: translateY(-2px);
     scale: 1.01;
     box-shadow: 8px 8px 30px 10px rgba(8,44,80,0.37);
     filter: brightness(110%);
