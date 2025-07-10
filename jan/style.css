@@ -216,7 +216,13 @@ h1,p,a{
     opacity: 1;
 }
 
+.big-space{
+    height: 250px;
+}
 
+.medium-space{
+    height: 100px;
+}
 
 .main-content{
     display: flex;
@@ -440,6 +446,7 @@ h1,p,a{
         text-align: center;
         max-width: none;
         align-items: center;
+        margin-top: 32px;
     }
 
     .campaign-slogan h1{
@@ -462,10 +469,22 @@ h1,p,a{
         grid-template-columns: 1fr;
     }
 
+    .big-space{
+        height: 150px;
+    }
+
 }
 
 @media only screen and (max-width: 800px){
     .promises{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blue-dot:not(.first){
+        display: none;
+    }
+
+    .medium-space{
+        height: 0;
     }
 }
