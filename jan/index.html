@@ -26,9 +26,11 @@
         <a href="#valimisprogramm">Valimisprogramm</a>
 
         <a href="#meeskond">Meeskond</a>
-
-        <a href="">Instagram</a>
-    
+        <br><br>
+        <div class="insta-btn">
+            <a href="">Instagram</a>
+            <img src="instagram.png" alt="">
+        </div>    
     </div>
 
     <div class="navbar">
@@ -292,23 +294,31 @@
     </script>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const el = entry.target;
+function updateHoveredCommission() {
+  const commissions = document.querySelectorAll('.commission');
+  let closest = null;
+  let minDistance = Infinity;
+  const screenMid = window.innerHeight / 2;
 
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
-            el.classList.add('hovered');
-            } else {
-            el.classList.remove('hovered');
-            }
-        });
-        }, {
-        threshold: [0, 0.5, 1], // Observe when 50% or more is visible
-        root: null
-        });
+  commissions.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const elemMid = rect.top + rect.height / 2;
+    const distance = Math.abs(elemMid - screenMid);
 
-        document.querySelectorAll('.commission').forEach(el => observer.observe(el));        
-    </script>
+    if (distance < minDistance) {
+      minDistance = distance;
+      closest = el;
+    }
+  });
+
+  commissions.forEach(el => {
+    el.classList.toggle('hovered', el === closest);
+  });
+}
+
+window.addEventListener('scroll', updateHoveredCommission);
+window.addEventListener('resize', updateHoveredCommission);
+document.addEventListener('DOMContentLoaded', updateHoveredCommission);    </script>
 
     <script>
         const promises = document.querySelectorAll('.promise');

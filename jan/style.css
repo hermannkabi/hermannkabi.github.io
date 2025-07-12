@@ -7,8 +7,8 @@
 
 :root{
     --primary-color: #082C50;
-    --background-color: #D8DCEA;
-    --navbar-background-color: #D8DCEA80;
+    --background-color: #ffffff;
+    --navbar-background-color: #ffffff80;
     --grey-color: #acacac;
     --font: "Poppins";
     --text-transform: uppercase;
@@ -199,7 +199,11 @@ h1,p,a{
     opacity: 0;
 }
 
-.insta-btn:hover{
+.links-mobile .insta-btn img{
+    opacity: 1;
+}
+
+.insta-btn:hover, .links-mobile .insta-btn{
     background: #833ab4;
     background: linear-gradient(
         to right,
@@ -347,14 +351,19 @@ h1,p,a{
     padding: 16px 8px;
     margin-block: 16px;
     /* box-shadow: 8px 8px 26px 7px rgba(8,44,80,0.37); */
-    transition: all 200ms;
+    transition: all 200ms, filter 200ms;
+    background: linear-gradient(225deg,rgba(26, 82, 143, 1) 0%, rgba(8, 44, 80, 0.96) 100%);
 }
 
 .commission.hovered{
-    transform: translateY(-2px);
-    scale: 1.01;
-    box-shadow: 8px 8px 30px 10px rgba(8,44,80,0.37);
+    transform: translateY(-3px);
+    scale: 1.05;
+    box-shadow: 0px 0px 50px 20px rgba(19, 82, 146, 0.37);
     filter: brightness(110%);
+}
+
+.commission:not(.hovered){
+    filter: grayscale(35%);
 }
 
 .commission h3{
