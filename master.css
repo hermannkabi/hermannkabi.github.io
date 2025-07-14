@@ -148,11 +148,39 @@ a:visited{
     display: flex;
     gap: 64px;
     background-color: var(--primary-color);
-    border-radius: var(--border-radius);
-    padding: 24px 48px;
-    transition: filter 100ms, box-shadow 100ms, scale 100ms;
+    border-radius: 16px;
+    padding: 36px;
+    transition: filter 100ms, box-shadow 100ms, scale 100ms, opacity 2200ms, transform 2200ms;
     flex-direction: column;
     align-items: start;
+    opacity: 0;
+    transform: scale(0.75);
+}
+
+.project.visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project:nth-child(1){
+    border-top-left-radius: var(--border-radius);
+}
+
+.project:nth-child(2){
+    border-top-right-radius: var(--border-radius);
+}
+
+.project.odd:last-child{
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.project.even:nth-last-child(1){   
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.project.even:nth-last-child(2){   
+    border-bottom-left-radius: var(--border-radius);
 }
 
 .project:hover{
@@ -165,7 +193,7 @@ a:visited{
     aspect-ratio: 1;
     object-fit: cover;
     height: 200px;
-    border-radius: 24px;
+    border-radius: calc(var(--border-radius) - 36px);
 }
 
 .project .info{
@@ -197,7 +225,7 @@ a:visited{
 }
 
 .chip{
-    border-radius: 48px;
+    border-radius: 22px;
     background-color: var(--primary-accent-color);
     display: inline-flex;
     flex-direction: row;
@@ -264,9 +292,26 @@ a:visited{
     align-items: start;
     margin-block: 24px;
     background-color: var(--primary-color);
-    border-radius: var(--border-radius);
+    border-radius: 16px;
     padding: 24px 36px;
+    transition: opacity 2200ms, transform 2200ms;
+    opacity: 0;
+    transform: scale(0.75);
 }
+
+.cv-section.visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cv-section:first-child{
+    border-radius: var(--border-radius) var(--border-radius) 16px 16px;
+}
+
+.cv-section:last-child{
+    border-radius: 16px 16px var(--border-radius) var(--border-radius);
+}
+
 
 .cv-section h2{
     min-width: 250px;
@@ -313,6 +358,7 @@ input:hover, textarea:hover{
 textarea{
     height: 200px;
     resize: none;
+    border-radius: 24px;
 }
 
 input:focus, textarea:focus, button:focus{
@@ -392,6 +438,37 @@ button:hover{
     .cv-section .details p:nth-of-type(even){
         margin-block: 8px 32px;
     }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project{
+        padding-inline: 16px;
+    }
+
+    .project h2, .project p{
+        overflow-wrap: anywhere;
+    }
+
+    .project .links a{
+        margin-block: 4px;
+    }
+
+    .project{
+        border-radius: 16px !important;
+    }
+
+    .project:first-child{
+        border-top-left-radius: var(--border-radius) !important;
+        border-top-right-radius: var(--border-radius) !important;
+    }
+
+    .project:last-child{
+        border-bottom-left-radius: var(--border-radius) !important;
+        border-bottom-right-radius: var(--border-radius) !important;
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -415,23 +492,6 @@ button:hover{
         text-wrap: auto;
         word-wrap: anywhere;
     }  
-
-    .projects{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project{
-        padding-inline: 16px;
-    }
-
-    .project h2, .project p{
-        overflow-wrap: anywhere;
-    }
-
-    .project .links a{
-        margin-block: 4px;
-    }
 
     .theme-btn{
         top: unset;

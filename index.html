@@ -26,7 +26,7 @@
 
 
     <div class="main-content home">
-        <div class="title-container" style="background-color: var(--primary-color);border-radius: var(--border-radius);padding: 24px 48px;">
+        <div class="title-container" style="background-color: var(--primary-color);border-radius: calc(var(--border-radius) - 10px);padding: 24px 48px;">
             <h1 class="name">Hermann Käbi</h1>
             <p class="subtitle">Õigushuviline</p>
         </div>
@@ -275,8 +275,9 @@
 
 
         for(project of projects){
+            var isEven = projects.length % 2 == 0 ? "even" : "odd";
             $(".projects").append(`
-            <div onclick="window.location.href='`+project.links[0].href+`';" style="font-family: `+(project.font ?? "inherit")+`;" style="cursor:pointer;" class="project">
+            <div onclick="window.location.href='`+project.links[0].href+`';" style="font-family: `+(project.font ?? "inherit")+`;" style="cursor:pointer;" class="project `+isEven+`">
                 <img style='filter: `+(project.invertImg ? "var(--icon-invert)" : "none")+`;' src="`+project.img+`" alt="">
                 <div class="info">
                     <span>`+project.date+`</span>
@@ -319,6 +320,19 @@
             }
 
         }
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+            }
+        });
+        }, {
+        threshold: 0.25
+        });
+        document.querySelectorAll('.project, .cv-section').forEach(el => observer.observe(el));
     </script>
     <script>
         $(".copyright .year").text((new Date(Date.now())).getFullYear());
