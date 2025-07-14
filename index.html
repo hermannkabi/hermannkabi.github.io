@@ -26,7 +26,7 @@
 
 
     <div class="main-content home">
-        <div class="title-container" style="background-color: var(--primary-color);border-radius: calc(var(--border-radius) - 10px);padding: 24px 48px;">
+        <div class="title-container home-title">
             <h1 class="name">Hermann Käbi</h1>
             <p class="subtitle">Õigushuviline</p>
         </div>
@@ -39,14 +39,14 @@
         document.getElementById("main-img").setAttribute("src", imgs[Math.floor(Math.random() * imgs.length)]);
     </script>
 
-    <div class="main-content">
-        <h2 class="name">Minu projektid</h2>
+    <div id="projects" class="main-content">
+        <h2 scrollto="projects" class="name">Minu projektid</h2>
         
         <div class="projects"></div>
     </div>
 
-    <div class="main-content">
-        <h2 class="name">Minust</h2>
+    <div id="about" class="main-content">
+        <h2 scrollto="about" class="name">Minust</h2>
         <div class="about-links">
             <a href="https://www.linkedin.com/in/hermann-k%C3%A4bi/" class="about-link"><img style="margin: 0 8px;" src="icons/linkedin.png" alt=""> LinkedIn</a><a href="https://www.facebook.com/kabihermann" class="about-link"> <img style="margin: 0 8px;" src="icons/facebook.png" alt="">Facebook</a><a href="https://www.github.com/hermannkabi" class="about-link"><img style="margin: 0 8px;" src="icons/github-sign.png" alt="">GitHub</a><a href=" https://www.goodreads.com/hermannkabi" class="about-link"><img style="margin: 0 8px;" src="icons/goodreads.png" alt="">GoodReads</a>
         </div>
@@ -144,8 +144,8 @@
     </div>
 
 
-    <div class="main-content">
-        <h2 class="name">Võta ühendust</h2>
+    <div id="contact" class="main-content">
+        <h2 scrollto="contact" class="name">Võta ühendust</h2>
 
         <form style="margin-top: 64px;" action="https://formsubmit.co/365da52d9d42c9ec402a974de10e2d52" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_template" value="box">
@@ -333,6 +333,9 @@
         threshold: 0.25
         });
         document.querySelectorAll('.project, .cv-section').forEach(el => observer.observe(el));
+    </script>
+    <script>
+        $("h2.name").click(function (){window.location.href = "#"+$(this).attr("scrollto")});
     </script>
     <script>
         $(".copyright .year").text((new Date(Date.now())).getFullYear());

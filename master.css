@@ -11,6 +11,10 @@ body{
     background-color: var(--background-color);
 }
 
+body, html{
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
     font-family: var(--display-font);
@@ -132,9 +136,29 @@ a:visited{
     margin-block: 0;
     text-wrap: balance;
 }
+
+h2.name, .title-container:not(.home-title){
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: var(--background-color);
+    padding: 16px 0;
+    border-radius: 0 !important;
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    transition: background-color 150ms;
+}
+
+
 .subtitle{
     color: var(--grey-color);
     margin-block: 0;
+}
+
+.title-container{
+    border-radius: calc(var(--border-radius) - 10px);
+    padding: 24px 48px; 
+    box-sizing: border-box;
 }
 
 .projects{
@@ -343,7 +367,8 @@ input, textarea, button{
     display: block;
     margin-block: 16px;
     margin-inline: 0;
-    width: min(400px, 75%);
+    width: min(400px, 100%);
+    box-sizing: border-box;
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     padding: 24px 36px;
@@ -369,7 +394,6 @@ input:focus, textarea:focus, button:focus{
 button{
     background-color: var(--primary-accent-color);
     cursor: pointer;
-    width: min(474px, calc(90% + 24px));
     color:#967E40;
     transition: filter 100ms;
 }
@@ -388,11 +412,20 @@ button:hover{
     border-radius: 20px;
     height: 50px;
     aspect-ratio: 1;
-    transition: filter 100ms, box-shadow 200ms;
+    transition: filter 100ms, box-shadow 200ms, transform 200ms, opacity 200ms;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4px;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.theme-btn.hidden{
+    opacity: 0;
+    transform: scale(0.75);
+    pointer-events: none;
 }
 
 .theme-btn img{
@@ -409,7 +442,24 @@ button:hover{
 }
 
 
+
 @media only screen and (max-width: 900px){
+    .main-content.home{
+        flex-direction: column-reverse;
+        justify-content: start;
+        gap: 16px;
+    }
+
+    .title-container{
+        background-color: var(--primary-color);
+        width: min(500px, 100%);
+        margin: auto;
+    }
+
+    .big-img{
+        margin: 0 auto;
+    }
+
     .projects{
         grid-template-columns: 1fr 1fr;
     }
@@ -473,14 +523,9 @@ button:hover{
 
 @media only screen and (max-width:600px){
 
-    .main-content.home{
-        flex-direction: column-reverse;
-        justify-content: start;
-        gap: 16px;
-    }
 
     .main-content{
-        margin-inline: 16px;
+        margin-inline: 4px;
         margin-top: 64px;
     }
 
@@ -498,9 +543,11 @@ button:hover{
         position: fixed;
         bottom: 16px;
         right: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
     }
 
     .theme-btn.back-btn{
-        top: 16px;
+        top: 8px;
     }
 }

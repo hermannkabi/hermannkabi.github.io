@@ -42,7 +42,7 @@ themeBtn.addEventListener("click", function (){
         localStorage.setItem("site-theme", "dark");
     }
 
-    document.body.style.transition = "all 150ms";
+    document.body.style.transition = "all 250ms";
     checkTheme();
 });
 
@@ -57,4 +57,13 @@ backBtn.addEventListener("click", function (){
             window.location.href = fallbackUrl; 
         }
     }, 100);
+});
+
+
+const themeBtn2 = document.querySelectorAll('.theme-btn');
+
+window.addEventListener('scroll', () => {
+    if(window.innerWidth <= 600){
+        themeBtn2.forEach(btn => btn.classList.toggle('hidden', window.scrollY > 0));
+    }
 });
