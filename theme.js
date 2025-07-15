@@ -17,12 +17,13 @@ if(path && path != "index.html"){
 
 function checkTheme(){
     if(!window.localStorage.getItem("site-theme")){
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // dark mode
-            localStorage.setItem("site-theme", "dark");
-        }else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
-            //light mode
-            localStorage.setItem("site-theme", "light");
+        var currentHour = (new Date()).getHours();
+        console.log(currentHour);
+        
+        if((9 <= currentHour && 17 >= currentHour)){
+            window.localStorage.setItem("site-theme", "light");
+        }else{
+            window.localStorage.setItem("site-theme", "dark");
         }
     }
     

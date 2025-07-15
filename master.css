@@ -59,10 +59,7 @@ a:visited{
     background-color: var(--primary-accent-color);
     border-radius: 32px;
     padding: 8px 16px;
-    position: absolute;
-    top: 16px;
-    left: calc(10% + 24px);
-    margin-top: 0px;
+    margin: 8px;
 }
 
 .banner .content{
@@ -94,7 +91,7 @@ a:visited{
 
 
 .big-img{
-    width: min(100%, 450px);
+    width: min(90%, 450px);
     border-radius: 6px;
 }
 
@@ -134,12 +131,21 @@ a:visited{
 }
 
 .main-page-background{
-    width: 90%;
+    width: 90vw;
     margin: -8px -4px;
     margin-left: auto;
     border-bottom-left-radius: 150px;
     background-color: var(--primary-color);
     animation: background-slide 2000ms 1 alternate;
+    box-shadow: 0px 0px 55px 8px var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#projects{
+    opacity: 0;
 }
 
 .main-content.home{
@@ -176,6 +182,10 @@ a:visited{
     box-sizing: border-box;
 }
 
+.home-title, .big-img{
+    animation: background-slide 2000ms 1 alternate;
+}
+
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -187,7 +197,7 @@ a:visited{
     display: flex;
     gap: 64px;
     background-color: var(--primary-color);
-    border-radius: 16px;
+    border-radius: var(--small-border-radius);
     padding: 36px;
     transition: filter 100ms, box-shadow 100ms, scale 100ms, opacity 1100ms, transform 1100ms;
     flex-direction: column;
@@ -232,7 +242,7 @@ a:visited{
     aspect-ratio: 1;
     object-fit: cover;
     height: 200px;
-    border-radius: max(16px, calc(var(--border-radius) - 36px));
+    border-radius: max(var(--small-border-radius), calc(var(--border-radius) - 36px));
 }
 
 .project .info{
@@ -331,16 +341,16 @@ a:visited{
     align-items: start;
     margin-block: 24px;
     background-color: var(--primary-color);
-    border-radius: 16px;
+    border-radius: var(--small-border-radius);
     padding: 24px 36px;
 }
 
 .cv-section:first-child{
-    border-radius: var(--border-radius) var(--border-radius) 16px 16px;
+    border-radius: var(--border-radius) var(--border-radius) var(--small-border-radius) var(--small-border-radius);
 }
 
 .cv-section:last-child{
-    border-radius: 16px 16px var(--border-radius) var(--border-radius);
+    border-radius: var(--small-border-radius) var(--small-border-radius) var(--border-radius) var(--border-radius);
 }
 
 
@@ -412,7 +422,7 @@ button:hover{
 
 .theme-btn{
     position: absolute;
-    z-index: 100;
+    z-index: 10000;
     top: 8px;
     right: 16px;
     background-color: var(--primary-accent-color);
@@ -451,6 +461,11 @@ button:hover{
 
 
 @media only screen and (max-width: 900px){
+
+    .quick-links{
+        display: none;
+    }
+
     .main-content.home{
         flex-direction: column-reverse;
         justify-content: start;
@@ -458,13 +473,13 @@ button:hover{
     }
 
     .title-container{
-        background-color: var(--primary-color);
         width: min(450px, 100%);
         margin: auto;
     }
 
     .big-img{
         margin: 0 auto;
+        margin-top: 24px;
     }
 
     .projects{
@@ -514,7 +529,7 @@ button:hover{
     }
 
     .project{
-        border-radius: 16px !important;
+        border-radius: var(--small-border-radius) !important;
     }
 
     .project:first-child{
@@ -563,10 +578,7 @@ button:hover{
     }
 
     .main-page-background{
-        all: unset;
-    }
-
-    .banner{
-        left: 8px;
+        width: 100vw;
+        border-bottom-left-radius: 100px;
     }
 }

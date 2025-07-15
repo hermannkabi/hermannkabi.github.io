@@ -12,6 +12,7 @@
     --small-font: 16px;
     --btn-border-width:1px;
     --border-radius: 48px;
+    --small-border-radius: 16px;
     --icon-invert: invert(0);
 }
 
@@ -30,5 +31,6 @@
         --medium-font: 24px !important;
         --small-font: 16px !important;
         --border-radius: 24px;
+        --small-border-radius: 8px;
     }
 }

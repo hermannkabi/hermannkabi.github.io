@@ -17,20 +17,32 @@
     <link rel="stylesheet" href="master.css">
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
 <body>
-       <!-- <div class="banner">
+       
+
+    <div class="main-page-background">
+        <!-- <div class="banner">
             <div class="content">Praktikal Tallinna Halduskohtus!</div>
             <div class="links">
                 
             </div>
        </div>  -->
 
-
-    <div class="main-page-background">
-        <div class="main-page-background">
+            <div class="main-page-background">
             <div class="main-content home">
                 <div class="title-container home-title">
                     <h1 class="name">Hermann Käbi</h1>
                     <p class="subtitle">Õigushuviline</p>
+                    <div class="quick-links" style="margin-top: 16px;">
+                        <a class="noarrow" style="color: unset;" href="#projects">
+                            <div class="chip"><p>Minu projektid</p></div>
+                        </a>
+                        <a class="noarrow" style="color: unset;" href="#about">
+                            <div class="chip"><p>Minust</p></div>
+                        </a>
+                        <a class="noarrow" style="color: unset;" href="#contact">
+                            <div class="chip"><p>Võta ühendust</p></div>
+                        </a>
+                    </div>
                 </div>
 
                 <img id="main-img" class="big-img" src="" alt="">
@@ -42,6 +54,10 @@
         var imgs = ["assets/triniti.jpg", "/halduskohus/TalHK_praktika_Käbi2.jpg"];
         document.getElementById("main-img").setAttribute("src", imgs[Math.floor(Math.random() * imgs.length)]);
     </script>
+
+    <div style="height:35vh;"></div>
+
+    
 
     <div id="projects" class="main-content">
         <h2 scrollto="projects" class="name">Minu projektid</h2>
@@ -337,16 +353,12 @@
         threshold: 0.25
         });
 
-        if(window.innerWidth > 600){
-            document.querySelectorAll('.project').forEach(el => observer.observe(el));
-        }else{
-            document.querySelectorAll('.project').forEach(el => {el.style.opacity = 1; el.style.transform = "scale(1)"});
-        }
+        document.querySelectorAll('.project').forEach(el => observer.observe(el));
     </script>
     <script>
          window.addEventListener('scroll', () => {
             const scrollX = window.scrollY * 0.2; // adjust speed factor
-            document.querySelector('.main-page-background').style.transform = `translate(${3*scrollX}px, -${0.8*scrollX}px)`;
+            document.querySelector('.main-page-background').style.transform = `translate(${0*scrollX}px, -${7*scrollX}px)`;
         });
     </script>
 
@@ -397,6 +409,16 @@
 
   window.addEventListener('scroll', updateTransforms);
   window.addEventListener('resize', updateTransforms);
+    </script>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 30){
+                $("#projects").css("opacity", Math.min(1, window.scrollY/$('#projects').offset().top));
+            }else{
+                $("#projects").css("opacity", "0");
+            }
+        });
     </script>
 
     <script>
