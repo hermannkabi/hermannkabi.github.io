@@ -22,6 +22,11 @@
     --text-color: rgb(230, 227, 227);
     --primary-color: #2b2a1f;
     --primary-accent-color: #585124;
+
+    --background-color: #151c10;
+    --text-color:rgb(230, 227, 227);
+    --primary-color: #232b1f;
+    --primary-accent-color: #415824;
     --icon-invert: invert(1);
 }
 

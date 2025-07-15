@@ -30,7 +30,6 @@ a{
 
 a:not(.noarrow)::after{
     content: url('icons/arrow_right.svg');
-    display: inline-flex;
     align-items: center;
     margin-bottom: 2px;
     transition: transform 100ms;
@@ -141,6 +140,8 @@ a:visited{
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: -8px;
+    margin-right: -8px;
     z-index: 1000;
 }
 
@@ -411,7 +412,7 @@ input:focus, textarea:focus, button:focus{
 button{
     background-color: var(--primary-accent-color);
     cursor: pointer;
-    color:#967E40;
+    color: var(--text-color);
     transition: filter 100ms;
 }
 

@@ -44,7 +44,14 @@ themeBtn.addEventListener("click", function (){
     }
 
     document.body.style.transition = "all 250ms";
-    checkTheme();
+    document.documentElement.style.transition = "all 250ms";
+    document.documentElement.style.filter = "blur(100px)";
+
+    setTimeout(() => {
+        checkTheme();
+        document.documentElement.style.filter = "none";
+    }, 150);
+
 });
 
 backBtn.addEventListener("click", function (){
@@ -63,8 +70,11 @@ backBtn.addEventListener("click", function (){
 
 const themeBtn2 = document.querySelectorAll('.theme-btn');
 
+var lastScrollY = 0;
+
 window.addEventListener('scroll', () => {
     if(window.innerWidth <= 600){
-        themeBtn2.forEach(btn => btn.classList.toggle('hidden', window.scrollY > 0));
+        themeBtn2.forEach(btn => btn.classList.toggle('hidden', window.scrollY > lastScrollY));
+        lastScrollY = window.scrollY;
     }
 });
