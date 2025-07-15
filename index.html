@@ -336,11 +336,69 @@
         }, {
         threshold: 0.25
         });
-        document.querySelectorAll('.project, .cv-section').forEach(el => observer.observe(el));
+
+        if(window.innerWidth > 600){
+            document.querySelectorAll('.project').forEach(el => observer.observe(el));
+        }else{
+            document.querySelectorAll('.project').forEach(el => {el.style.opacity = 1; el.style.transform = "scale(1)"});
+        }
     </script>
     <script>
-        $("h2.name").click(function (){window.location.href = "#"+$(this).attr("scrollto")});
+         window.addEventListener('scroll', () => {
+            const scrollX = window.scrollY * 0.2; // adjust speed factor
+            document.querySelector('.main-page-background').style.transform = `translate(${3*scrollX}px, -${0.8*scrollX}px)`;
+        });
     </script>
+
+    <script>
+          const sections = document.querySelectorAll('.cv-section');
+  const visibleSections = new Set();
+  const maxOffset = 200;
+
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        visibleSections.add(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach((section, index) => {
+    const dir = index % 2 === 0 ? -1 : 1;
+    section.dataset.dir = dir;
+    section.style.transform = `translateX(${dir * maxOffset}px)`;
+    observer2.observe(section);
+  });
+
+  function updateTransforms() {
+    const isWide = window.innerWidth > 600;
+    const windowHeight = window.innerHeight;
+
+    sections.forEach((section) => {
+      if (!visibleSections.has(section)) return;
+
+      const rect = section.getBoundingClientRect();
+      const progress = 1 - Math.min(Math.max(rect.top / windowHeight, 0), 1); // 0 to 1
+      const dir = parseInt(section.dataset.dir);
+
+      if (isWide) {
+        // Flow through: -offset → 0 → +offset
+        const offset = (0.5 - progress) * 2 * maxOffset * dir;
+        section.style.transform = `translateX(${offset}px)`;
+      } else {
+        // Stop at center: -offset → 0, clamp to 0
+        const limitedProgress = Math.min(progress, 0.5); // max halfway
+        const offset = (0.5 - limitedProgress) * 3 * maxOffset * dir;
+        section.style.transform = `translateX(${offset}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateTransforms);
+  window.addEventListener('resize', updateTransforms);
+    </script>
+
     <script>
         $(".copyright .year").text((new Date(Date.now())).getFullYear());
     </script>

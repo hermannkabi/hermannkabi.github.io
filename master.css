@@ -13,6 +13,7 @@ body{
 
 body, html{
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -122,12 +123,23 @@ a:visited{
     min-height: 100vh;
 }
 
+@keyframes background-slide{
+    0%{
+        transform: translateY(-400px);
+    }
+    
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .main-page-background{
     width: 90%;
     margin: -8px -4px;
     margin-left: auto;
     border-bottom-left-radius: 150px;
     background-color: var(--primary-color);
+    animation: background-slide 2000ms 1 alternate;
 }
 
 .main-content.home{
@@ -135,9 +147,9 @@ a:visited{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     gap: 64px;
-    padding-top: 15%;
+    padding-top: 5%;
     padding-bottom: 24px;
     min-height: fit-content;
 }
@@ -150,18 +162,6 @@ a:visited{
     font-size: var(--large-font);
     margin-block: 0;
     text-wrap: balance;
-}
-
-h2.name, .title-container:not(.home-title){
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    background-color: var(--background-color);
-    padding: 16px 0;
-    border-radius: 0 !important;
-    border-bottom-left-radius: 16px !important;
-    border-bottom-right-radius: 16px !important;
-    transition: background-color 150ms;
 }
 
 
@@ -189,11 +189,11 @@ h2.name, .title-container:not(.home-title){
     background-color: var(--primary-color);
     border-radius: 16px;
     padding: 36px;
-    transition: filter 100ms, box-shadow 100ms, scale 100ms, opacity 2200ms, transform 2200ms;
+    transition: filter 100ms, box-shadow 100ms, scale 100ms, opacity 1100ms, transform 1100ms;
     flex-direction: column;
     align-items: start;
     opacity: 0;
-    transform: scale(0.75);
+    transform: scale(0.85);
 }
 
 .project.visible{
@@ -232,7 +232,7 @@ h2.name, .title-container:not(.home-title){
     aspect-ratio: 1;
     object-fit: cover;
     height: 200px;
-    border-radius: calc(var(--border-radius) - 36px);
+    border-radius: max(16px, calc(var(--border-radius) - 36px));
 }
 
 .project .info{
@@ -333,14 +333,6 @@ h2.name, .title-container:not(.home-title){
     background-color: var(--primary-color);
     border-radius: 16px;
     padding: 24px 36px;
-    transition: opacity 2200ms, transform 2200ms;
-    opacity: 0;
-    transform: scale(0.75);
-}
-
-.cv-section.visible{
-    opacity: 1;
-    transform: scale(1);
 }
 
 .cv-section:first-child{
@@ -439,7 +431,7 @@ button:hover{
 
 .theme-btn.hidden{
     opacity: 0;
-    transform: scale(0.75);
+    transform: scale(0.85);
     pointer-events: none;
 }
 
@@ -546,6 +538,10 @@ button:hover{
 
     .main-content > p, .main-content li{
         max-width: 90%;
+    }
+
+    .main-content.home{
+        padding-top: 8px;
     }
 
     .name{
