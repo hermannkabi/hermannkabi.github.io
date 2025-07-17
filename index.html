@@ -20,14 +20,23 @@
        
 
     <div class="main-page-background">
-        <!-- <div class="banner">
-            <div class="content">Praktikal Tallinna Halduskohtus!</div>
-            <div class="links">
-                
-            </div>
-       </div>  -->
+        
 
             <div class="main-page-background">
+                <!-- <div class="banner">
+                    <div class="content">Praktikal Tallinna Halduskohtus!</div>
+                    <div class="links">
+                        
+                    </div>
+                </div>  -->
+
+                <br>
+                <div class="banner firefox-recommend" style="margin-top: 0px;">
+                    <div class="content" style="display: flex; align-items: center; gap: 8px;"><img style="height: 24px;" src="icons/firefox.png" alt=""> Mina soovitan kasutada Firefoxi!</div>
+                    <div class="links">
+                        <a href="https://firefox.com">Laadi alla</a>
+                    </div>
+                </div>
             <div class="main-content home">
                 <div class="title-container home-title">
                     <h1 class="name">Hermann Käbi</h1>
@@ -419,6 +428,12 @@
                 $("#projects").css("opacity", "0");
             }
         });
+    </script>
+
+    <script>
+        var isFirefox = navigator.userAgent.indexOf("Firefox") != -1;
+
+        if(isFirefox){$(".firefox-recommend").hide()}
     </script>
 
     <script>
