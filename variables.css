@@ -5,8 +5,8 @@
     --link-color: #658DF3;
     --primary-color: #DFDCC9;
     --primary-accent-color: #CCC7AC;
-    --text-font: "Sen";
-    --display-font:"Space Grotesk";
+    --text-font: "Sen", sans-serif;
+    --display-font:"Space Grotesk", sans-serif;
     --large-font: 56px;
     --medium-font: 24px;
     --small-font: 16px;

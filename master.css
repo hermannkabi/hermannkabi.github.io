@@ -347,6 +347,7 @@ a:visited{
     border-radius: var(--small-border-radius);
     padding: 24px 36px;
     box-shadow: 0px 0px 55px 8px var(--primary-color);
+    filter: blur(12px);
     transition: filter 0.2s ease;   
 }
 

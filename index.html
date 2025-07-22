@@ -405,7 +405,7 @@
         // Clamp to [0, 1]
         const clampedDistance = Math.min(distanceFromCenter, 1);
 
-        // Max blur is 8px, min is 0
+        // Max blur is 12px, min is 0
         const blur = clampedDistance * 12;
         section.style.filter = `blur(${blur}px)`;    });
   }
@@ -423,7 +423,6 @@
             }
         });
     </script>
-
     <script>
         var isFirefox = navigator.userAgent.indexOf("Firefox") != -1;
 

@@ -13,9 +13,10 @@
     --font: "Poppins";
     --text-transform: uppercase;
     --text-filter: none;
+    --text-color: black;
 }
 
-/* :root{
+:root{
     --primary-color: #64881c;
     --background-color: #8ad000;
     --navbar-background-color: #8ad00080;
@@ -23,13 +24,14 @@
     --font: "Arial Narrow";
     --text-transform: lowercase;
     --text-filter: blur(0.5px);
-} */
+}
 
 body, html{
     font-family: var(--font);
     background-color: var(--background-color);
     text-align: center;
     scroll-behavior: smooth;
+    color: var(--text-color);
 }
 
 h1,p,a{
@@ -95,7 +97,7 @@ h1,p,a{
 .links a, .links-mobile a{
     text-decoration: none;
     font-weight: 500;
-    color: black;
+    color: var(--text-color);
 }
 
 .links a:hover{
