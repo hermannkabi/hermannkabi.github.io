@@ -22,7 +22,7 @@
     <div class="main-page-background">
         
 
-            <div class="main-page-background">
+            <div id="main-img" class="main-page-background">
                 <!-- <div class="banner">
                     <div class="content">Praktikal Tallinna Halduskohtus!</div>
                     <div class="links">
@@ -54,14 +54,13 @@
                     </div>
                 </div>
 
-                <img id="main-img" class="big-img" src="" alt="">
             </div>
         </div>
     </div>
 
     <script>
-        var imgs = ["assets/triniti.jpg", "/halduskohus/TalHK_praktika_Käbi2.jpg"];
-        document.getElementById("main-img").setAttribute("src", imgs[Math.floor(Math.random() * imgs.length)]);
+        var imgs = ["assets/new.jpg", "assets/new2.jpg", "/halduskohus/homepage.jpg"];
+        document.getElementById("main-img").style.backgroundImage = "url("+imgs[Math.floor(Math.random() * imgs.length)]+")";
     </script>
 
     <div style="height:35vh;"></div>

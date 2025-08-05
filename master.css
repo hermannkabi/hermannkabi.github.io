@@ -132,8 +132,7 @@ a:visited{
 
 .main-page-background{
     width: 90vw;
-    margin: -8px -4px;
-    margin-left: auto;
+    margin: -8px 0;
     border-bottom-left-radius: 150px;
     background-color: var(--primary-color);
     animation: background-slide 2000ms 1 alternate;
@@ -142,8 +141,12 @@ a:visited{
     top: 0;
     right: 0;
     margin-top: -8px;
-    margin-right: -8px;
     z-index: 1000;
+    background-image: url(/assets/new2.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: scroll;
+    background-position-x: center;
 }
 
 #projects{
@@ -159,7 +162,7 @@ a:visited{
     gap: 64px;
     padding-top: 5%;
     padding-bottom: 24px;
-    min-height: fit-content;
+    min-height: 75vh;
 }
 
 .main-content > p, .main-content li{
@@ -480,11 +483,12 @@ button:hover{
         flex-direction: column-reverse;
         justify-content: start;
         gap: 16px;
+        min-height: 70vh;
     }
 
     .title-container{
         width: min(450px, 100%);
-        margin: auto;
+        margin-top: auto;
     }
 
     .big-img{
@@ -588,7 +592,7 @@ button:hover{
     }
 
     .main-page-background{
-        width: 100vw;
+        width: 95vw;
         border-bottom-left-radius: 100px;
     }
 }
