@@ -367,6 +367,8 @@
          window.addEventListener('scroll', () => {
             const scrollX = window.scrollY * 0.2; // adjust speed factor
             document.querySelector('.main-page-background').style.transform = `translate(${0*scrollX}px, -${7*scrollX}px)`;
+            document.querySelector('#main-img').style.backgroundPositionY = `${3*scrollX}px`;
+
         });
     </script>
 

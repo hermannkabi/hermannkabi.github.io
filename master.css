@@ -9,6 +9,7 @@ body{
     color: var(--text-color);
     font-family: var(--text-font);
     background-color: var(--background-color);
+    margin-inline: 0;
 }
 
 body, html{
@@ -561,7 +562,7 @@ button:hover{
 
 
     .main-content{
-        margin-inline: 4px;
+        margin-inline: 12px;
         margin-top: 64px;
     }
 
