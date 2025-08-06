@@ -373,47 +373,48 @@
     </script>
 
     <script>
-          const sections = document.querySelectorAll('.cv-section');
+  const sections = document.querySelectorAll('.cv-section');
   const visibleSections = new Set();
   const maxOffset = 200;
 
-  const observer2 = new IntersectionObserver((entries) => {
+  // Observer to track visibility of .cv-sections
+  const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         visibleSections.add(entry.target);
+      } else {
+        visibleSections.delete(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
   sections.forEach((section, index) => {
-    observer2.observe(section);
+    sectionObserver.observe(section);
   });
 
   function updateTransforms() {
     const windowHeight = window.innerHeight;
+    const isWide = window.innerWidth > 600;
 
-    sections.forEach((section) => {
-      if (!visibleSections.has(section)) return;
-        const rect = section.getBoundingClientRect();
-        const centerY = windowHeight / 2;
-        const elementCenter = rect.top + rect.height / 2;
-        let distanceFromCenter = Math.abs(elementCenter - centerY) / centerY;
+    visibleSections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const dir = parseInt(section.dataset.dir);
+      // blur based on distance from center
+      const centerY = windowHeight / 2;
+      const elementCenter = rect.top + rect.height / 2;
+      let distanceFromCenter = Math.abs(elementCenter - centerY) / centerY;
+      distanceFromCenter = Math.pow(distanceFromCenter, 4); // flattened curve
+      const clamped = Math.min(distanceFromCenter, 1);
+      const blur = clamped * 12;
 
-        // Make it stay unblurred longer
-        distanceFromCenter = Math.pow(distanceFromCenter, 4); // or 1.5, or use divide method
-
-        // Clamp to [0, 1]
-        const clampedDistance = Math.min(distanceFromCenter, 1);
-
-        // Max blur is 12px, min is 0
-        const blur = clampedDistance * 12;
-        section.style.filter = `blur(${blur}px)`;    });
+      section.style.filter = `blur(${blur}px)`;
+    });
   }
 
   window.addEventListener('scroll', updateTransforms);
   window.addEventListener('resize', updateTransforms);
-    </script>
+</script>
 
     <script>
         window.addEventListener('scroll', () => {

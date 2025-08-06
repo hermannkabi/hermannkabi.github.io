@@ -188,6 +188,10 @@ a:visited{
     box-sizing: border-box;
 }
 
+.title-container:not(.home-title){
+    padding-left: 0;
+}
+
 .home-title, .big-img{
     animation: background-slide 2000ms 1 alternate;
 }
