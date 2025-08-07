@@ -145,7 +145,7 @@ a:visited{
     z-index: 1000;
     background-image: url(/assets/new2.jpg);
     background-size: cover;
-    background-blend-mode: overlay;
+    background-blend-mode: var(--image-filter);
     background-attachment: scroll;
     background-position-x: center;
 }

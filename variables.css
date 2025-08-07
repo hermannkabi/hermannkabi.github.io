@@ -14,6 +14,7 @@
     --border-radius: 48px;
     --small-border-radius: 16px;
     --icon-invert: invert(0);
+    --image-filter: overlay;
 }
 
 
@@ -28,6 +29,7 @@
     --primary-color: #232b1f;
     --primary-accent-color: #415824;
     --icon-invert: invert(1);
+    --image-filter: difference;
 }
 
 @media only screen and (max-width: 600px){
