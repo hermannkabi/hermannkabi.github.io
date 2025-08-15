@@ -246,7 +246,7 @@
                 img:"/assets/reaaler.png",
                 font: "Sora",
                 links:[
-                    {text:"Koduleht", href:"https://reaaler.real.edu.ee"}
+                    {text:"Vaata edasi", href:"reaaler"}
                 ],
                 invertImg:true,
             },
@@ -406,7 +406,7 @@
       let distanceFromCenter = Math.abs(elementCenter - centerY) / centerY;
       distanceFromCenter = Math.pow(distanceFromCenter, 4); // flattened curve
       const clamped = Math.min(distanceFromCenter, 1);
-      const blur = clamped * 12;
+      const blur = clamped * 6;
 
       section.style.filter = `blur(${blur}px)`;
     });

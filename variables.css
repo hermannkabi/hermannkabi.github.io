@@ -17,7 +17,6 @@
     --image-filter: overlay;
 }
 
-
 [data-theme="dark"]{
     --background-color: #20201b;
     --text-color: rgb(230, 227, 227);
@@ -29,7 +28,6 @@
     --primary-color: #232b1f;
     --primary-accent-color: #415824;
     --icon-invert: invert(1);
-    --image-filter: difference;
 }
 
 @media only screen and (max-width: 600px){
@@ -39,5 +37,9 @@
         --small-font: 16px !important;
         --border-radius: 24px;
         --small-border-radius: 8px;
+    }
+
+    [data-theme="dark"]{
+        --image-filter: difference;
     }
 }
