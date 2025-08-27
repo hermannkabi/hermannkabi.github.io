@@ -26,7 +26,7 @@
         <br><br>
         <div style="background-color: var(--primary-color); border-radius: var(--border-radius); padding: 24px 36px;">
             <p>Reaaler on Tallinna Reaalkoolile arendatud peastarvutamisrakendus. Reaaleris saab õpilane matemaatikat harjutada, aga ka enda klassiga liituda ja omavahel sõbralikult mõõtu võtta ning võistlustel osaleda. Õpetajale on Reaaler kasulik, sest ta saab enda õpilaste arengut jälgida ning seeläbi paremini mõista, kellel on vaja täiendavat abi ja kellel on kõik hästi.</p>
-            <p>Reaaleri back-end on kirjutatud PHP Laravelis ning front-end Reactis. Tegemist on igas mõttes kõige suurema veebirakendusega, mille olen loonud. Tänaseks kasutab Reaalerit juba üle 750 kasutaja!</p>
+            <p>Reaaleri back-end on kirjutatud PHP Laravelis ning front-end Reactis. Tegemist on igas mõttes kõige suurema veebirakendusega, mille olen loonud. Tänaseks kasutab Reaalerit juba üle <span id="output">750</span> kasutaja ja mängitud on enam kui <span id="output2">17900</span> mängukorda!</p>
             
             <img class="image" src="r1.png" alt="">
             <img class="image" src="r2.png" alt="">
@@ -34,6 +34,22 @@
         </div>
     </div>
 
+    <script>
+        const url = "https://reaaler.real.edu.ee/api/stats"; 
+        
+        fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        document.getElementById("output").textContent = data.total_users;
+        document.getElementById("output2").textContent = data.total_games;
+
+      });
+    </script>
     <script src="/theme.js"></script>
 </body>
 </html>
