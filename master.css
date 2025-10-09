@@ -394,7 +394,7 @@ a img{
     margin: 8px 24px;
 }
 
-input, textarea, button{
+input, textarea, button, select{
     border: none;
     font-family: var(--text-font);
     padding: 16px 12px;

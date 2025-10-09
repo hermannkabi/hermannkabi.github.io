@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tähtaja kalkulaator | Hermann Käbi</title>
+    <link rel="stylesheet" href="../master.css">
+    <link rel="stylesheet" href="../variables.css">
+    <style>
+        input, select{
+            border: 2px solid var(--primary-accent-color);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+
+        label{
+            margin-left: 24px;
+            font-size: 14px;
+            color: var(--grey-color);
+            margin-bottom: -16px;
+        }
+        
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .answer-box{
+            border-left: 2px solid var(--primary-accent-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center; 
+            gap: 8px;
+        }
+
+        #duration{
+            width: 250px;
+            margin-top: 4px;
+        }
+
+        #unit{
+            width: 200px;
+            margin-top: 4px;
+        }
+
+        @media only screen and (max-width:1000px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+
+            .answer-box{
+                border-left: none;
+                border-top: 2px solid var(--primary-accent-color);
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            .input-row{
+                flex-direction: column;
+                gap: 0;
+                align-items: start;
+            }
+
+            .label{
+                margin-left: 8px;
+            }
+
+            #duration, #unit{
+                width: 75vw;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="title-container">
+            <h1 class="name">Tähtaja kalkulaator</h1>
+            <p class="subtitle">Põhineb TsÜS regulatsioonil!</p>
+        </div>
+        <br><br>
+        <div style="background-color: var(--primary-color); border-radius: var(--border-radius); padding: 24px 36px;">
+            <div class="container">    
+                <div class="input-box">
+                    <label for="date">Tähtaja algus</label>
+                    <input style="margin-top: 4px;" name="date" type="date" id="datePicker" placeholder="Tähtaja algus">
+                    <div class="input-row">
+                        <div>
+                            <label for="duration">Tähtaja kestus</label>
+                            <input name="duration" type="number" placeholder="Tähtaja kestus" id="duration">
+                        </div>
+                        <div>
+                            <label for="unit">Ühik</label>
+                            <select name="" id="unit">
+                                <option selected="selected" value="paev">päeva</option>
+                                <option value="nadal">nädalat</option>
+                                <option value="kuu">kuud</option>
+                                <option value="aasta">aastat</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <button id="btn">Arvuta tähtaeg</button>
+                </div>
+                <div class="answer-box"> 
+                    <div id="placeholder">
+                        <p style="color: var(--grey-color);">Siia ilmub vastus</p>
+                    </div>
+
+                    <div style="text-align: start; margin: 16px;" id="results" hidden>
+                        <label style="margin-left: 0;" for="answer_day">Tähtpäev on</label>
+                        <p style="margin-bottom: 0; margin-top: 4px; font-size: 28px;" id="answer_day" name="answer_day"></p>
+                        <p style="margin-bottom: 0; margin-top: 8px; font-size: 28px;" id="answer_date" name="answer_date"></p>
+                        <label style="margin-left: 0; font-size: 16px;" for="answer_date" id="answer_reason"></label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            Date.prototype.addDays = function(days) {
+                var date = new Date(this.valueOf());
+                date.setDate(date.getDate() + days);
+                return date;
+            }
+
+            document.getElementById('datePicker').valueAsDate = new Date();
+
+            let holidays = [];
+
+            fetch("pyhad.json")
+            .then(response => {
+                if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                holidays = data;
+            })
+            .catch(error => {
+                console.error("Failed to fetch holidays:", error);
+            });
+
+            function getNextWorkingDay(fromDate, holidays) {
+                const holidayDates = holidays
+                    .filter(h => h.kind_id === "1")
+                    .map(h => h.date);
+
+                const formatDate = (date) =>
+                    date.toLocaleDateString("et-EE", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric"
+                    });
+
+                let date = new Date(fromDate);
+                const inputDate = new Date(fromDate);
+
+                let reason = null;
+
+                const inputIso = inputDate.toISOString().split("T")[0];
+                const inputDayOfWeek = inputDate.getDay();
+                const inputIsWeekend = inputDayOfWeek === 0 || inputDayOfWeek === 6;
+                const inputIsHoliday = holidayDates.includes(inputIso);
+
+                while (true) {
+                    const isoDate = date.toISOString().split("T")[0];
+                    const dayOfWeek = date.getDay();
+                    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+                    const isHoliday = holidayDates.includes(isoDate);
+
+                    if (!isWeekend && !isHoliday) {
+                        if (date.getTime() !== inputDate.getTime()) {
+                            const formattedInput = formatDate(inputDate);
+                            if (inputIsHoliday) reason = `${formattedInput} langeb riigipühale`;
+                            if (inputIsWeekend) reason = `${formattedInput} langeb nädalavahetusele`;
+                        }
+                        return { date, reason };
+                    }
+
+                    date.setDate(date.getDate() + 1);
+                }
+            }
+
+            function addMonths(startDate, duration) {
+                const date = new Date(startDate);
+                const day = date.getDate();
+
+                const targetMonth = date.getMonth() + parseInt(duration);
+                
+                date.setMonth(targetMonth);
+
+                if (date.getDate() < day) {
+                    date.setDate(0);
+                }
+
+                return date;
+            }
+
+            function addYears(startDate, duration) {
+                const date = new Date(startDate);
+                const day = date.getDate();
+
+                const targetYear = parseInt(date.getFullYear()) + parseInt(duration);
+                
+                date.setFullYear(targetYear);
+
+
+                if (date.getDate() < day) {
+                    date.setDate(0);
+                }
+
+                return date;
+            }
+
+            function calculateDeadline(startDate, duration, unit){
+                var initialDate = null;
+                console.log("Starting calculation");                
+
+                if(unit === "paev" || unit === "nadal"){
+                    var multiplier = {"paev":1, "nadal":7};
+                    initialDate = startDate.addDays(duration*multiplier[unit]);
+                    console.log("Päev või nädal");
+                    console.log(initialDate);
+                    
+                }else if(unit === "kuu"){
+                    initialDate = addMonths(startDate, duration);
+
+                    console.log("Kuu");
+                    console.log(initialDate);
+                }else if(unit === "aasta"){
+                    initialDate = addYears(startDate, duration);
+                    
+                    console.log("Aasta");
+                    console.log(initialDate);
+
+                }
+
+                if(initialDate != null){
+                    var finalDate = getNextWorkingDay(initialDate, holidays);
+                    console.log(finalDate);
+                    const options = {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                    };
+                    var dayOfWeek = {0:"pühapäev", 1:"esmaspäev", 2:"teisipäev", 3:"kolmapäev", 4:"neljapäev", 5:"reede", 6:"laupäev"}[finalDate.date.getDay()] + (finalDate.date.getDay() == 5 ? "l" : "al") + ",";
+                    var humanReadableDate = finalDate.date.toLocaleDateString("et-EE", options);
+                    var reason = finalDate.reason;
+
+                    document.getElementById("placeholder").style.display = "none";
+                    document.getElementById("results").style.display = "block";
+
+                    document.getElementById("answer_day").textContent = dayOfWeek;
+                    document.getElementById("answer_date").textContent = humanReadableDate;
+                    document.getElementById("answer_reason").textContent = reason;
+
+                }
+
+                
+            }
+
+            document.getElementById('btn').addEventListener("click", function (){
+                var startDate = new Date(Date.parse(document.getElementById("datePicker").value));
+                var duration = document.getElementById("duration").value;
+                var unit = document.getElementById("unit").value;
+
+                calculateDeadline(startDate, duration, unit)
+            });
+
+
+
+        </script>
+    </div>
+
+    <script>
+        
+    </script>
+    <script src="/theme.js"></script>
+</body>
+</html>
